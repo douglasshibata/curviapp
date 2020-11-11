@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
 function Resume() {
   const [user, setUser] = useState([])
   const [show, setHide] = useState(false)
+  const [loading,setLoading] = useState(false)
   let { id } = useParams()
   useEffect(() => {
     async function getUser() {
@@ -49,6 +50,7 @@ function Resume() {
         const response = await api.get(`/user/${id}`)
         setUser(response.data)
         setHide(true)
+        setLoading(true)
       } catch (error) {
         console.log(error);
       }
@@ -61,6 +63,7 @@ function Resume() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        {loading?<>
         {show &&<PDFDownloadLink fileName={`${user.name}.pdf`} document={
             <Document>
               <Page size="A4" style={styles.page}>
@@ -73,7 +76,7 @@ function Resume() {
             </Document>
         }>
            {({ blob, url, loading, error }) =>
-          loading ? <ReactLoading type='bars' color="black" height={'5%'} width={'100%'} />
+          loading ? <ReactLoading type='spin' color="black" height={'5vh'} width={'10vh'} />
           : <button type='button'>Baixar o Currículo</button> 
           
         }
@@ -109,7 +112,7 @@ function Resume() {
             <h2>Formação Complementar</h2>
             <p>{user.courses}</p>
           </div>
-        </Form>
+        </Form></>:<ReactLoading type='bars' color="black" height={'5vh'} width={'10vh'} />}
       </header>
     </div>
   );
