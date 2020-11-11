@@ -28,3 +28,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+button {
+  color: #3aa39f;
+  font-size: 23px;
+  background: #000;
+  height: 56px;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+}
