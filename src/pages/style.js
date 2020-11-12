@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   width: 400px;
-  background: #3aa39f;
+  background: #2DBEB7;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -27,9 +27,9 @@ export const Form = styled.form`
     height: 46px;
     margin-bottom: 15px;
     padding: 0 20px;
-    color: #924;
+    color: #000;
     font-size: 15px;
-    width: 100%;
+    width: 50%;
     border: 1px solid #ddd;
     &::placeholder {
       color: #999;
