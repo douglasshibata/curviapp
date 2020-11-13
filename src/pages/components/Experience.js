@@ -1,51 +1,41 @@
 import React from 'react';
+
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import Title from './Title';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        paddingTop: 30,
-        paddingLeft: 15,
-        '@media max-width: 400': {
-            paddingTop: 10,
-            paddingLeft: 0,
-        },
-    },
-    entryContainer: {
         marginBottom: 10,
     },
-    date: {
-        fontSize: 11,
+    title:{
+        borderBottomWidth: 2,
+        borderBottomColor: '#112131',
+        borderBottomStyle: 'solid',
     },
-    headerContainer: {
-        flexDirection: 'row',
-        marginBottom: 10,
+    occupation: {
+        marginTop:10,
+        fontSize: 14,
     },
-    title: {
-        fontSize: 11,
-        color: 'black',
-        textDecoration: 'none',
+    companyName: {
+        fontSize: 12,
     },
+    companyDescription:{
+        fontSize:12,
+        textAlign:'justify',
+
+    }
 });
 function Experience(props) {
-    const user = props.user;
+    const user = props.user
     return (
 
         <View style={styles.container}>
-            <Title>Experience</Title>
-            <View style={styles.entryContainer}>
-                <View style={styles.headerContainer}>
-                    <View>
-                        <Text style={styles.title}>{user.companyName}</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.date}>{user.companyStart} - {user.companyEnd}</Text>
-                    </View>
-                </View>
-            </View>
+            <Title>Experiência</Title>
+            <Text style={styles.title}></Text>
+            <Text style={styles.occupation}>{user.companyOccupation} de {user.companyStart} até {user.companyEnd} </Text>
+            <Text style={styles.companyName}>{user.companyName}</Text>
+            <Text style={styles.companyDescription}>{user.companyDescription}</Text>
         </View>
     )
 }
-
 export default Experience;

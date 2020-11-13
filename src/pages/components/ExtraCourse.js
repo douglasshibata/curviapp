@@ -7,33 +7,27 @@ const styles = StyleSheet.create({
     container: {
         marginBottom: 10,
     },
-    title:{
+    title: {
         borderBottomWidth: 2,
         borderBottomColor: '#112131',
         borderBottomStyle: 'solid',
     },
-    school: {
-        marginTop:10,
+    companyDescription: {
+        marginTop: 10,
         fontSize: 12,
-    },
-    degree: {
-        fontSize: 12,
-    },
-    year: {
-        fontSize: 12,
-    },
+        textAlign: 'justify',
+
+    }
 });
-function Education(props) {
+function ExtraCourse(props) {
     const user = props.user
     return (
 
         <View style={styles.container}>
-            <Title>Formação Acadêmica</Title>
+            <Title>Formação Complementar</Title>
             <Text style={styles.title}></Text>
-            <Text style={styles.school}>{user.courseSchool}</Text>
-            <Text style={styles.degree}>{user.courseName}</Text>
-            <Text style={styles.year}>{user.courseStartYear} - {user.courseEndYear}</Text>
+            <Text style={styles.companyDescription}>{user.courses}</Text>
         </View>
     )
 }
-export default Education;
+export default ExtraCourse;

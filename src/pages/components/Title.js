@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginBottom: 10,
     textTransform: 'uppercase',
+    fontWeight:'bold',
+    color:'black'
   },
 });
 
