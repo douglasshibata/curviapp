@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
         borderBottomColor: '#112131',
         borderBottomStyle: 'solid',
     },
-    companyDescription: {
-        marginTop: 10,
+    socialMedia: {
+        marginTop: 14,
         fontSize: 12,
         textAlign: 'justify',
 
@@ -26,7 +26,7 @@ function SocialMedia(props) {
         <View style={styles.container}>
             <Title>Midias Sociais</Title>
             <Text style={styles.title}></Text>
-            <Text style={styles.companyDescription}>LINKEDIN: {user.linkedln_link}</Text>
+            <Text style={styles.socialMedia}>LINKEDIN: {user.linkedln_link}</Text>
         </View>
     )
 }
