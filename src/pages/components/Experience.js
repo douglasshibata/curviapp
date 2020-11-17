@@ -32,7 +32,7 @@ function Experience(props) {
         <View style={styles.container}>
             <Title>Experiência</Title>
             <Text style={styles.title}></Text>
-            <Text style={styles.occupation}>{user.companyOccupation} de {user.companyStart} até {user.companyEnd} </Text>
+            <Text style={styles.occupation}>{user.companyOccupation}  {user.companyStartEnd} </Text>
             <Text style={styles.companyName}>{user.companyName}</Text>
             <Text style={styles.companyDescription}>{user.companyDescription}</Text>
         </View>

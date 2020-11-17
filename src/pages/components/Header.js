@@ -22,7 +22,10 @@ const styles = StyleSheet.create({
         justifySelf: 'flex-end',
     },
     name: {
-        fontSize: 36,
+        fontSize: 20,
+    },
+    scholarity: {
+        fontSize: 12,
     },
     link: {
         fontSize: 12,
@@ -37,7 +40,9 @@ function Header(props) {
     return (
         <View style={styles.container}>
             <View style={styles.detailColumn}>
-                <Text style={styles.name}>{user.name}</Text>
+                <Text style={styles.name}>{user.name}, {user.age}</Text>
+                <Text style={styles.scholarity}>{user.scholarity}</Text>
+                <Text style={styles.scholarity}>{user.area} - {user.area_level}</Text>
             </View>
             <View style={styles.linkColumn}>
                 <Link style={styles.link}>Telefone: {user.cellphone}</Link>
