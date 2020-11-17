@@ -56,7 +56,22 @@ function LandingPage() {
     getUser();
   }, [email])
   console.log(user);
-
+  function hasXp(){
+    if ( 
+      user.companyOccupation !== null ||
+      user.companyOccupation !== undefined ||
+      user.companyStartEnd  !== null ||
+      user.companyStartEnd  !== undefined ||
+      user.companyName !== null ||
+      user.companyName !== undefined ||
+      user.companyDescription !== null ||
+      user.companyDescription !== undefined
+      ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   return (
     <div className="App">
       <header className="App-header-1">
@@ -76,9 +91,11 @@ function LandingPage() {
                 <Header user={user} />
                 <Goal user={user} />
                 <Education user={user} />
-                <Experience user={user} />
-                <ExtraCourse user={user} />
-                <SocialMedia user={user} />
+              { hasXp()? <Experience user={user} />:<></>}
+              {(user.courses !== null || user.courses !==undefined)?  
+                <ExtraCourse user={user} />:<></>}
+                {(user.linkedln_link !== null || user.linkedln_link !== undefined)?
+                <SocialMedia user={user} />:<></>}
                 <Text style={styles.footer}>{user.name} - Candidato(a) ideal para a sua Empresa - Resume Made by Curvi</Text>
               </Page>
             </Document>
@@ -104,27 +121,30 @@ function LandingPage() {
               <h2>Objetivo</h2>
               <p> {user.goal} </p>
             </div>
+            {hasXp()?
             <div className="content">
               <h2>Experiencia</h2>
               <p> Cargo: {user.companyOccupation} </p>
               <p> Período: {user.companyStartEnd} </p>
               <p>{user.companyName}</p>
               <p> {user.companyDescription}</p>
-            </div>
+            </div>:<></>}
             <div className="content">
               <h2>Curso</h2>
               <p>{user.courseName}</p>
               <p>{user.courseSchool}</p>
               <p>{user.courseEndYear}</p>
             </div>
+            {(user.courses !== null || user.courses !==undefined)?
             <div className="content">
               <h2>Formação Complementar</h2>
               <p>{user.courses}</p>
-            </div>
+            </div>:<></>}
+            {(user.linkedln_link !== null || user.linkedln_link !== undefined)?
             <div className="content">
               <h2>Midias Sociais</h2>
               <p> <a href={user.linkedln_link} target='_blank'  rel="noreferrer" >{user.linkedln_link}</a></p>
-            </div>
+            </div>:<></>}
             <div className="content">
               <h2>Feedback</h2>
               <p>{user.feedback}</p>
