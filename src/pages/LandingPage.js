@@ -10,6 +10,7 @@ import ReactLoading from 'react-loading';
 import logo from '../assets/logo.gif';
 import Goal from './components/Goal';
 import ExtraCourse from './components/ExtraCourse';
+import SocialMedia from './components/SocialMedia';
 // Create styles
 const styles = StyleSheet.create({
   page: {
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
   footer: {
     fontSize: 12,
     textAlign: 'center',
-    marginTop: 25,
+    marginTop: '50%',
     paddingTop: 10,
     borderWidth: 3,
     borderColor: 'gray',
@@ -77,11 +78,12 @@ function LandingPage() {
                 <Education user={user} />
                 <Experience user={user} />
                 <ExtraCourse user={user} />
+                <SocialMedia user={user} />
                 <Text style={styles.footer}>{user.name} - Candidato(a) ideal para a sua Empresa - Resume Made by Curvi</Text>
               </Page>
             </Document>
           }>
-              {({ blob, url, loading, error }) =>
+            {({ blob, url, loading, error }) =>
               loading ? <ReactLoading type='spin' color="black" height={'5vh'} width={'10vh'} />
                 : <button type='button'>Baixar o Currículo</button>
 
@@ -91,7 +93,8 @@ function LandingPage() {
           <Form>
             <div className="content">
               <h1>Dados Pessoais</h1>
-              <p>{user.name}</p>
+              <p>{user.name}, {user.age}</p>
+              <p>{user.area} - {user.area_level}</p>
               <p>{user.email}</p>
               <p>Celular: {user.cellphone}</p>
               <p>Endereço: {user.address}</p>
@@ -104,7 +107,7 @@ function LandingPage() {
             <div className="content">
               <h2>Experiencia</h2>
               <p> Cargo: {user.companyOccupation} </p>
-              <p> Período: {user.companyStart} - {user.companyEnd} </p>
+              <p> Período: {user.companyStartEnd} </p>
               <p>{user.companyName}</p>
               <p> {user.companyDescription}</p>
             </div>
@@ -112,11 +115,24 @@ function LandingPage() {
               <h2>Curso</h2>
               <p>{user.courseName}</p>
               <p>{user.courseSchool}</p>
-              <p>{user.courseStartYear} - {user.courseEndYear}</p>
+              <p>{user.courseEndYear}</p>
             </div>
             <div className="content">
               <h2>Formação Complementar</h2>
               <p>{user.courses}</p>
+            </div>
+            <div className="content">
+              <h2>Midias Sociais</h2>
+              <p> <a href={user.linkedln_link} target='_blank'  rel="noreferrer" >{user.linkedln_link}</a></p>
+            </div>
+            <div className="content">
+              <h2>Feedback</h2>
+              <p>{user.feedback}</p>
+              <p>{user.grade}</p>
+            </div>
+            <div className="content">
+              <h2>Criado em</h2>
+              <p>{user.created_at}</p>
             </div>
           </Form></> : <ReactLoading type='bars' color="black" height={'5vh'} width={'10vh'} />}
       </header>
