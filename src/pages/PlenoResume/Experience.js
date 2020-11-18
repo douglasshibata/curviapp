@@ -32,9 +32,10 @@ function Experience(props) {
         <View style={styles.container}>
             <Title>Experiência</Title>
             <Text style={styles.title}></Text>
-            <Text style={styles.occupation}>{user.companyOccupation}  {user.companyStartEnd} </Text>
+            <Text style={styles.occupation}>{user.companyOccupation !== "NOT_PRINT"?user.companyOccupation:<></>}
+             { user.companyStartEnd  !== "NOT_PRINT"? user.companyStartEnd:<></>} </Text>
             <Text style={styles.companyName}>{user.companyName}</Text>
-            <Text style={styles.companyDescription}>{user.companyDescription}</Text>
+            <Text style={styles.companyDescription}>{user.companyDescription !== "NOT_PRINT" ?user.companyDescription:<></>}</Text>
         </View>
     )
 }
