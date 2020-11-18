@@ -26,7 +26,7 @@ function SocialMedia(props) {
         <View style={styles.container}>
             <Title>Midias Sociais</Title>
             <Text style={styles.title}></Text>
-            <Text style={styles.socialMedia}>LINKEDIN: {user.linkedln_link}</Text>
+            <Text style={styles.socialMedia}>Linkedln: {user.linkedln_link}</Text>
         </View>
     )
 }

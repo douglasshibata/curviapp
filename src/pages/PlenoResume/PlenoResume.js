@@ -34,17 +34,6 @@ const styles = StyleSheet.create({
 
 function PlenoResume(props) {
   const user = props.user;
-  function hasXp(){
-    if ( 
-      user.companyOccupation !== "NOT_PRINT" &&
-      user.companyStartEnd  !== "NOT_PRINT" &&
-      user.companyDescription !== "NOT_PRINT" 
-      ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
   return (
     <div className="App">
          <PDFDownloadLink fileName={`${user.name}.pdf`} document={
@@ -53,7 +42,7 @@ function PlenoResume(props) {
                 <Header user={user} />
                 <Goal user={user} />
                 <Education user={user} />
-              { hasXp()? <Experience user={user} />:<></>}
+              <Experience user={user} />
               {(user.courses !== 'NOT_PRINT' )?  
                 <ExtraCourse user={user} />:<></>}
                 {(user.linkedln_link !== 'NOT_PRINT')?

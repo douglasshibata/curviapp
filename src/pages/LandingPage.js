@@ -31,7 +31,6 @@ function LandingPage() {
     if (
       user.companyOccupation !== 'NOT_PRINT' ||
       user.companyStartEnd !== 'NOT_PRINT' ||
-      user.companyName !== 'NOT_PRINT' ||
       user.companyDescription !== 'NOT_PRINT') {
       return true;
     } else {
