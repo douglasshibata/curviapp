@@ -53,7 +53,10 @@ export const Form = styled.form`
   a {
     font-size: 16;
     font-weight: bold;
-    color: #999;
+    color: #402;
     text-decoration: none;
+  }
+  a:hover{
+    color: #869;
   }
 `;
