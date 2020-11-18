@@ -27,16 +27,7 @@ function LandingPage() {
     };
     getUser();
   }, [email])
-  function hasXp() {
-    if (
-      user.companyOccupation !== 'NOT_PRINT' ||
-      user.companyStartEnd !== 'NOT_PRINT' ||
-      user.companyDescription !== 'NOT_PRINT') {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -50,7 +41,7 @@ function LandingPage() {
         </Form>
         {loading ? <>
           {show &&
-            (user.area_level === 'Estágiario(a)' || user.area_level === 'Jovem Aprendiz') ? <BasicResume user={user} />
+            (user.area_level === 'Estágiario(a)' || user.area_level === 'Jovem aprendiz') ? <BasicResume user={user} />
             :
             user.area_level === 'Júnior' ? <JuniorResume user={user} />
               :
@@ -73,14 +64,13 @@ function LandingPage() {
               <h2>Objetivo</h2>
               <p> {user.goal} </p>
             </div>
-            {hasXp() ?
               <div className="content">
                 <h2>Experiencia</h2>
                 {user.companyOccupation !== 'NOT_PRINT' ? <p> Cargo: {user.companyOccupation} </p> : <></>}
                 {user.companyStartEnd !== 'NOT_PRINT' ? <p> Período: {user.companyStartEnd} </p> : <></>}
                 <p>{user.companyName}</p>
                 {user.companyDescription !== 'NOT_PRINT' ? <p>{user.companyDescription}</p> : <></>}
-              </div> : <></>}
+              </div> 
             <div className="content">
               <h2>Curso</h2>
               <p>{user.courseName}</p>
@@ -100,7 +90,7 @@ function LandingPage() {
             <div className="content">
               <h2>Feedback</h2>
               <p>{user.feedback}</p>
-              <p>{user.grade}</p>
+              <p>NOTA: {user.grade}</p>
             </div>
             <div className="content">
               <h2>Criado em</h2>
