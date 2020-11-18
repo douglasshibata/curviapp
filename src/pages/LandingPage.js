@@ -27,12 +27,12 @@ function LandingPage() {
     };
     getUser();
   }, [email])
-  function hasXp(){
-    if ( 
+  function hasXp() {
+    if (
       user.companyOccupation !== 'NOT_PRINT' ||
-      user.companyStartEnd  !== 'NOT_PRINT' ||
+      user.companyStartEnd !== 'NOT_PRINT' ||
       user.companyName !== 'NOT_PRINT' ||
-      user.companyDescription !== 'NOT_PRINT'       ) {
+      user.companyDescription !== 'NOT_PRINT') {
       return true;
     } else {
       return false;
@@ -50,16 +50,16 @@ function LandingPage() {
           </div>
         </Form>
         {loading ? <>
-        {show&&
-        (user.area_level === 'Estágiario(a)'|| user.area_level === 'Jovem Aprendiz')?<BasicResume user={user}/>
-        : 
-        user.area_level === 'Júnior'?<JuniorResume user={user}/>
-        :
-        user.area_level === 'Sênior'? <SeniorResume user={user}/>
-        : 
-        user.area_level === 'Pleno'? <PlenoResume user={user}/>
-        :           
-        <></>}
+          {show &&
+            (user.area_level === 'Estágiario(a)' || user.area_level === 'Jovem Aprendiz') ? <BasicResume user={user} />
+            :
+            user.area_level === 'Júnior' ? <JuniorResume user={user} />
+              :
+              user.area_level === 'Sênior' ? <SeniorResume user={user} />
+                :
+                user.area_level === 'Pleno' ? <PlenoResume user={user} />
+                  :
+                  <></>}
           <Form>
             <div className="content">
               <h1>Dados Pessoais</h1>
@@ -74,30 +74,30 @@ function LandingPage() {
               <h2>Objetivo</h2>
               <p> {user.goal} </p>
             </div>
-            {hasXp()?
-            <div className="content">
-              <h2>Experiencia</h2>
-              <p> Cargo: {user.companyOccupation} </p>
-              <p> Período: {user.companyStartEnd} </p>
-              <p>{user.companyName}</p>
-              <p> {user.companyDescription}</p>
-            </div>:<></>}
+            {hasXp() ?
+              <div className="content">
+                <h2>Experiencia</h2>
+                {user.companyOccupation !== 'NOT_PRINT' ? <p> Cargo: {user.companyOccupation} </p> : <></>}
+                {user.companyStartEnd !== 'NOT_PRINT' ? <p> Período: {user.companyStartEnd} </p> : <></>}
+                <p>{user.companyName}</p>
+                {user.companyDescription !== 'NOT_PRINT' ? <p>{user.companyDescription}</p> : <></>}
+              </div> : <></>}
             <div className="content">
               <h2>Curso</h2>
               <p>{user.courseName}</p>
               <p>{user.courseSchool}</p>
               <p>{user.courseEndYear}</p>
             </div>
-            {(user.courses !== 'NOT_PRINT' )?
-            <div className="content">
-              <h2>Formação Complementar</h2>
-              <p>{user.courses}</p>
-            </div>:<></>}
-            {(user.linkedln_link !== 'NOT_PRINT' )?
-            <div className="content">
-              <h2>Midias Sociais</h2>
-              <p> <a href={user.linkedln_link} target='_blank'  rel="noreferrer" >{user.linkedln_link}</a></p>
-            </div>:<></>}
+            {(user.courses !== 'NOT_PRINT') ?
+              <div className="content">
+                <h2>Formação Complementar</h2>
+                <p>{user.courses}</p>
+              </div> : <></>}
+            {(user.linkedln_link !== 'NOT_PRINT') ?
+              <div className="content">
+                <h2>Midias Sociais</h2>
+                <p> <a href={user.linkedln_link} target='_blank' rel="noreferrer" >{user.linkedln_link}</a></p>
+              </div> : <></>}
             <div className="content">
               <h2>Feedback</h2>
               <p>{user.feedback}</p>
