@@ -2,40 +2,12 @@ import React, { useEffect, useState } from 'react';
 import '../App.css';
 import api from '../services/api';
 import { Form } from './style';
-import { Page, Text, Document, StyleSheet, PDFDownloadLink } from '@react-pdf/renderer';
-import Header from './components/Header';
-import Experience from './components/Experience';
-import Education from './components/Education';
 import ReactLoading from 'react-loading';
 import logo from '../assets/logo.gif';
-import Goal from './components/Goal';
-import ExtraCourse from './components/ExtraCourse';
-import SocialMedia from './components/SocialMedia';
-// Create styles
-const styles = StyleSheet.create({
-  page: {
-    padding: 30,
-  },
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    '@media max-width: 400': {
-      flexDirection: 'column',
-    },
-  },
-  image: {
-    marginBottom: 10,
-  },
-  footer: {
-    fontSize: 12,
-    textAlign: 'center',
-    marginTop: '50%',
-    paddingTop: 10,
-    borderWidth: 3,
-    borderColor: 'gray',
-    borderStyle: 'solid',
-  },
-});
+import BasicResume from './BasicResume/BasicResume';
+import JuniorResume from './JuniorResume/JuniorResume';
+import SeniorResume from './SeniorResume/SeniorResume';
+import PlenoResume from './PlenoResume/PlenoResume';
 
 function LandingPage() {
   const [user, setUser] = useState([])
@@ -55,18 +27,12 @@ function LandingPage() {
     };
     getUser();
   }, [email])
-  console.log(user);
   function hasXp(){
     if ( 
-      user.companyOccupation !== null ||
-      user.companyOccupation !== undefined ||
-      user.companyStartEnd  !== null ||
-      user.companyStartEnd  !== undefined ||
-      user.companyName !== null ||
-      user.companyName !== undefined ||
-      user.companyDescription !== null ||
-      user.companyDescription !== undefined
-      ) {
+      user.companyOccupation !== 'NOT_PRINT' ||
+      user.companyStartEnd  !== 'NOT_PRINT' ||
+      user.companyName !== 'NOT_PRINT' ||
+      user.companyDescription !== 'NOT_PRINT'       ) {
       return true;
     } else {
       return false;
@@ -74,7 +40,7 @@ function LandingPage() {
   }
   return (
     <div className="App">
-      <header className="App-header-1">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Bem vindo a Curvi</p>
         <Form>
@@ -84,29 +50,16 @@ function LandingPage() {
           </div>
         </Form>
         {loading ? <>
-
-          {show && <PDFDownloadLink fileName={`${user.name}.pdf`} document={
-            <Document>
-              <Page size="A4" style={styles.page}>
-                <Header user={user} />
-                <Goal user={user} />
-                <Education user={user} />
-              { hasXp()? <Experience user={user} />:<></>}
-              {(user.courses !== null || user.courses !==undefined)?  
-                <ExtraCourse user={user} />:<></>}
-                {(user.linkedln_link !== null || user.linkedln_link !== undefined)?
-                <SocialMedia user={user} />:<></>}
-                <Text style={styles.footer}>{user.name} - Candidato(a) ideal para a sua Empresa - Resume Made by Curvi</Text>
-              </Page>
-            </Document>
-          }>
-            {({ blob, url, loading, error }) =>
-              loading ? <ReactLoading type='spin' color="black" height={'5vh'} width={'10vh'} />
-                : <button type='button'>Baixar o Currículo</button>
-
-            }
-          </PDFDownloadLink>
-          }
+        {show&&
+        (user.area_level === 'Estágiario(a)'|| user.area_level === 'Jovem Aprendiz')?<BasicResume user={user}/>
+        : 
+        user.area_level === 'Júnior'?<JuniorResume user={user}/>
+        :
+        user.area_level === 'Sênior'? <SeniorResume user={user}/>
+        : 
+        user.area_level === 'Pleno'? <PlenoResume user={user}/>
+        :           
+        <></>}
           <Form>
             <div className="content">
               <h1>Dados Pessoais</h1>
@@ -135,12 +88,12 @@ function LandingPage() {
               <p>{user.courseSchool}</p>
               <p>{user.courseEndYear}</p>
             </div>
-            {(user.courses !== null || user.courses !==undefined)?
+            {(user.courses !== 'NOT_PRINT' )?
             <div className="content">
               <h2>Formação Complementar</h2>
               <p>{user.courses}</p>
             </div>:<></>}
-            {(user.linkedln_link !== null || user.linkedln_link !== undefined)?
+            {(user.linkedln_link !== 'NOT_PRINT' )?
             <div className="content">
               <h2>Midias Sociais</h2>
               <p> <a href={user.linkedln_link} target='_blank'  rel="noreferrer" >{user.linkedln_link}</a></p>
