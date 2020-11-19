@@ -33,9 +33,11 @@ function Experience(props) {
             <Title>Experiência</Title>
             <Text style={styles.title}></Text>
             <Text style={styles.occupation}>{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>}
-             {user.companyStartEnd  !== "NOT_PRINT"?  `Período: ${user.companyStartEnd}` :<></>} </Text>
-            <Text style={styles.companyName}>{user.companyName}</Text>
-            <Text style={styles.companyDescription}>{user.companyDescription !== "NOT_PRINT" ?user.companyDescription:<></>}</Text>
+             {user.companyStartEnd  !== "NOT_PRINT"?  `\nPeríodo: ${user.companyStartEnd}` :<></>} </Text>
+            <Text style={styles.companyName}>
+            {user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?
+            `Empresa: ${user.companyName}`:user.companyName}</Text>
+            <Text style={styles.companyDescription}>{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades: ${user.companyDescription}`:<></>}</Text>
         </View>
     )
 }
