@@ -17,7 +17,7 @@ function LandingPage() {
   useEffect(() => {
     async function getUser() {
       try {
-        const response = await api.get(`/user`, { headers: { email: email } })
+        const response = await api.get(`/api/user`, { headers: { email: email } })
         setUser(response.data)
         setHide(true)
         setLoading(true)
@@ -41,7 +41,7 @@ function LandingPage() {
         </Form>
         {loading ? <>
           {show &&
-            (user.area_level === 'Estágiario(a)' || user.area_level === 'Jovem aprendiz') ? <BasicResume user={user} />
+            (user.area_level === 'Estagiário(a)' || user.area_level === 'Jovem aprendiz') ? <BasicResume user={user} />
             :
             user.area_level === 'Júnior' ? <JuniorResume user={user} />
               :

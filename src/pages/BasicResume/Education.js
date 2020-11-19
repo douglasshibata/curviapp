@@ -30,8 +30,8 @@ function Education(props) {
         <View style={styles.container}>
             <Title>Formação Acadêmica</Title>
             <Text style={styles.title}></Text>
-            <Text style={styles.school}>{user.courseSchool}</Text>
-            <Text style={styles.degree}>{user.courseName}</Text>
+            <Text style={styles.school}>Instituição: {user.courseSchool}</Text>
+            <Text style={styles.degree}>Curso: {user.courseName}</Text>
             <Text style={styles.year}>Conclusão em: {user.courseEndYear}</Text>
         </View>
     )
