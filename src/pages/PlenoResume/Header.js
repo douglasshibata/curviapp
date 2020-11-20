@@ -23,6 +23,15 @@ const styles = StyleSheet.create({
     },
     name: {
         fontSize: 20,
+        left: '4.76%',
+        right: '26.53 %',
+        top: '3.3 %',
+        bottom: '89.1 %',
+
+        lineHeight: '64px',
+
+        color: '#404041',
+
     },
     scholarity: {
         fontSize: 12,
