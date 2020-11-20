@@ -36,9 +36,9 @@ export const Form = styled.form`
     }
   }
   button {
-    color: #fff;
-    font-size: 16px;
-    background: #fc6963;
+    color: #3aa39f;
+    font-size: 23px;
+    background: #000;
     height: 56px;
     border: 0;
     border-radius: 5px;
@@ -58,5 +58,33 @@ export const Form = styled.form`
   }
   a:hover{
     color: #869;
+  }
+`;
+
+export const Box = styled.div`
+  button {
+    margin-top:20px;
+    color: #3aa39f;
+    font-size: 23px;
+    background: #fff;
+    height: 56px;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+  }
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+    width: 100%;
+  }
+  a {
+    font-size: 16;
+    font-weight: bold;
+    color: #402;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #978429;
   }
 `;
