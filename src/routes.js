@@ -1,12 +1,15 @@
 import React from "react";
 import { BrowserRouter, Route, Switch} from "react-router-dom";
+import ErrorPage from "./pages/Error/ErrorPage";
+import GenerateResume from "./pages/GenerateResume/GenerateResume";
 import LandingPage from "./pages/LandingPage";
 
 const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={LandingPage} />
-      <Route path="*" component={() => <h1>Page not found</h1>} />
+      <Route path="/resume" component={GenerateResume} />
+      <Route path="*" component={ErrorPage} />
     </Switch>
   </BrowserRouter>
 );
