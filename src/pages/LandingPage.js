@@ -9,7 +9,7 @@ function LandingPage() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Bem vindo a Curvi</p>
+        <p>Bem vindo o Curvi</p>
         <p>Converse agora mesmo com o Curvi</p>
         <p>Clicando na caixinha azul no canto inferior da tela</p>
         <ChatBot/>
