@@ -30,15 +30,39 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="webchat"></div>
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        WebChat.default.init({
+            selector: "#webchat",
+            interval: 1000,
+            customData: { "language": "pt-BR" },
+            socketUrl: "https://5cbc484f9b4b.ngrok.io",
+            socketPath: "/socket.io/",
+            title: "Curvi",
+            subtitle: "Digite Oi para começarmos seu currículo",
+            inputTextFieldHint: "Sua mensagem...",
+            connectingText: "Conectando...",
+            hideWhenNotConnected: true,
+            fullScreenMode: true,
+            showFullScreenButton: true,
+            profileAvatar: "./open.jpg",
+            openLauncherImage: "./open.jpg",
+            params: {
+                images: {
+                    dims: {
+                        width: 450,
+                        height: 400,
+                    }
+                },
+                storage: "local",
+            },
+            params: { "storage": "session" }
+        })
+    </script>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+
   </body>
 </html>
