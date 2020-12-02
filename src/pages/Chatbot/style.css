@@ -1,16 +1,16 @@
 .rw-conversation-container .rw-header{
-    background-color: #231F20;
+    background-color: #000;
 }
 
 .rw-conversation-container .rw-client{
-       background-color: #231F20 !important; 
+       background-color: #000 !important; 
 }
 .conversation-container close-button {
-    background-color: #231F20;
+    background-color: #000;
 }
 
 .rw-launcher{
-    background-color: #231F20;
+    background-color: #000;
 }
 
 #back{
