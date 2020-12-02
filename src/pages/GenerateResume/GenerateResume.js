@@ -3,7 +3,7 @@ import '../../App.css';
 import api from '../../services/api';
 import { Form } from '../style';
 import ReactLoading from 'react-loading';
-import logo from '../../assets/logo.gif';
+import logo from '../../assets/bot.jpg';
 import BasicResume from '../BasicResume/BasicResume';
 import JuniorResume from '../JuniorResume/JuniorResume';
 import SeniorResume from '../SeniorResume/SeniorResume';
@@ -32,7 +32,7 @@ function GenerateResume() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Bem vindo a Curvi</p>
+        <p>Bem vindo ao Curvi</p>
         <Form>
           <div className="content">
             <p><label>Confirme o seu Email para baixar o Currículo</label></p>
