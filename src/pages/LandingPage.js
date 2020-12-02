@@ -11,7 +11,6 @@ function LandingPage() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Bem vindo o Curvi</p>
         <p>Converse agora mesmo com o Curvi</p>
-        <p>Clicando na caixinha azul no canto inferior da tela</p>
         <ChatBot/>
         {/* <Box>
         <button><a  href='/resume'>Ver Currículo</a></button>
