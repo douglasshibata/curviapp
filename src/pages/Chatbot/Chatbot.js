@@ -1,7 +1,6 @@
 import React from 'react';
 import { Widget } from 'rasa-webchat';
 import './style.css'
-import logo from './logo.jpg'
 import open from './open.jpg'
 
 export default function ChatBot() {
@@ -20,7 +19,7 @@ export default function ChatBot() {
             hideWhenNotConnected={true}
             fullScreenMode={true}
             showFullScreenButton={true}
-            profileAvatar={logo}
+            profileAvatar={open}
 	    openLauncherImage={open}
             params={{
                 images: {
