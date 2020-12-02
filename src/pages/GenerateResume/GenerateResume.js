@@ -32,7 +32,7 @@ function GenerateResume() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Bem vindo ao Curvi</p>
+        <p>Bem-vindo ao Curvi</p>
         <Form>
           <div className="content">
             <p><label>Confirme o seu Email para baixar o Currículo</label></p>
