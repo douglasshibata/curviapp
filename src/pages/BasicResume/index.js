@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     fontSize: 12,
+    textTransform: 'uppercase',
     textAlign: 'center',
     marginTop: '20%',
     paddingTop: 10,
