@@ -10,7 +10,7 @@ export default function ChatBot() {
             selector={"#webchat"}
             interval={1000}
             customData={{ "language": "pt-BR" }}
-            socketUrl={"https://5cbc484f9b4b.ngrok.io"}
+            socketUrl={"https://b84830ca459f.ngrok.io"}
             socketPath={"/socket.io/"}
             title={"Curvi"}
             subtitle={"Digite Oi para começarmos seu currículo"}
@@ -28,7 +28,7 @@ export default function ChatBot() {
                         height: 200,
                     }
                 },
-                "storage": "session"
+                storage: "local"
             }}
         />
     );
