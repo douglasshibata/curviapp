@@ -26,3 +26,21 @@ button {
   border-radius: 5px;
   width: 100%;
 }
+.rw-conversation-container .rw-header{
+  background-color: #000;
+}
+
+.rw-conversation-container .rw-client{
+     background-color: #000 !important; 
+}
+.conversation-container close-button {
+  background-color: #000;
+}
+
+.rw-launcher{
+  background-color: #000;
+}
+
+#back{
+  background-color: #2DBEB7;
+}
