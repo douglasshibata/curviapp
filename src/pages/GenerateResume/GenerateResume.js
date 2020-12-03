@@ -4,10 +4,7 @@ import api from '../../services/api';
 import { Form } from '../style';
 import ReactLoading from 'react-loading';
 import logo from '../../assets/bot.jpg';
-import BasicResume from '../BasicResume/BasicResume';
-import JuniorResume from '../JuniorResume/JuniorResume';
-import SeniorResume from '../SeniorResume/SeniorResume';
-import PlenoResume from '../PlenoResume/PlenoResume';
+import BasicResume from '../BasicResume';
 
 function GenerateResume() {
   const [user, setUser] = useState([])
@@ -41,15 +38,8 @@ function GenerateResume() {
         </Form>
         {loading ? <>
           {show &&
-            (user.area_level === 'Estagiário(a)' || user.area_level === 'Jovem aprendiz') ? <BasicResume user={user} />
-            :
-            user.area_level === 'Júnior' ? <JuniorResume user={user} />
-              :
-              user.area_level === 'Sênior' ? <SeniorResume user={user} />
-                :
-                user.area_level === 'Pleno' ? <PlenoResume user={user} />
-                  :
-                  <></>}
+           <BasicResume user={user} />
+          }
           <Form>
             <div className="content">
               <h1>Dados Pessoais</h1>
