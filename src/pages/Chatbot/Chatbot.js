@@ -21,15 +21,7 @@ export default function ChatBot() {
             showFullScreenButton={true}
             profileAvatar={open}
 	    openLauncherImage={open}
-            params={{
-                images: {
-                    dims: {
-                        width: 250,
-                        height: 200,
-                    }
-                },
-                storage: "local"
-            }}
+            params={{storage:'local'}}
         />
     );
 }
