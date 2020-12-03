@@ -32,8 +32,9 @@ function GenerateResume() {
         <p>Bem-vindo ao Curvi</p>
         <Form>
           <div className="content">
-            <p><label>Confirme o seu Email para baixar o Currículo</label></p>
+            <p><label>Digite o Email que foi colocado na nossa conversa.</label></p>
             <input type="email" name="email" onChange={e => setEmail(e.target.value)} id="email" />
+            <p>E aguarde o botão aparecer</p>
           </div>
         </Form>
         {loading ? <>
