@@ -7,12 +7,12 @@ import Education from './Education';
 import ReactLoading from 'react-loading';
 import Goal from './Goal';
 import ExtraCourse from './ExtraCourse';
-import SocialMedia from './SocialMedia';
+//import SocialMedia from './SocialMedia';
 // Create styles
 const styles = StyleSheet.create({
   page: {
     padding: 30,
-    color: 'green'
+    color:'#000'
   },
   container: {
     flex: 1,
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   footer: {
     fontSize: 12,
     textAlign: 'center',
-    marginTop: '50%',
+    marginTop: '20%',
     paddingTop: 10,
     borderWidth: 3,
     borderColor: 'gray',
@@ -36,7 +36,7 @@ function JuniorResume(props) {
   const user = props.user;
   return (
     <div className="App">
-         <PDFDownloadLink fileName={`${user.name}.pdf`} document={
+      <PDFDownloadLink fileName={`${user.name}.pdf`} document={
             <Document>
               <Page size="A4" style={styles.page}>
                 <Header user={user} />
@@ -45,8 +45,6 @@ function JuniorResume(props) {
               <Experience user={user} />
               {(user.courses !== 'NOT_PRINT' )?  
                 <ExtraCourse user={user} />:<></>}
-                {(user.linkedln_link !== 'NOT_PRINT')?
-                <SocialMedia user={user} />:<></>}
                 <Text style={styles.footer}>{user.name} - Candidato(a) ideal para a sua Empresa - Resume Made by Curvi</Text>
               </Page>
             </Document>
@@ -56,7 +54,20 @@ function JuniorResume(props) {
                 : <button type='button'>Baixar o Currículo</button>
 
             }
-          </PDFDownloadLink>
+          </PDFDownloadLink> 
+         {/*  <PDFViewer width={700} height={500} children={user.name}>
+          <Document>
+              <Page size="A4" style={styles.page}>
+                <Header user={user} />
+                <Goal user={user} />
+                <Education user={user} />
+              <Experience user={user} />
+              {(user.courses !== 'NOT_PRINT' )?  
+                <ExtraCourse user={user} />:<></>}
+                <Text style={styles.footer}>{user.name} - Candidato(a) ideal para a sua Empresa - Resume Made by Curvi</Text>
+              </Page>
+            </Document>
+          </PDFViewer>  */}
     </div>
   );
 }

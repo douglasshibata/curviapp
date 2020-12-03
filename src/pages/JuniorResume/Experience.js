@@ -6,11 +6,29 @@ import Title from './Title';
 const styles = StyleSheet.create({
     container: {
         marginBottom: 10,
+        marginTop: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+     /*    borderBottomWidth: 2,
+        borderBottomStyle: 'solid',
+        borderBottomColor: '#112131',
+        borderTopWidth: 0.5,
+        borderTopStyle: 'solid',
+        borderLeftWidth: 0.5,
+        borderLeftStyle: 'solid',
+        borderRightWidth: 0.5,
+        borderRightStyle: 'solid', */
     },
     title:{
         borderBottomWidth: 2,
-        borderBottomColor: '#112131',
         borderBottomStyle: 'solid',
+        borderBottomColor: '#112131',
+        /* borderTopWidth: 2,
+        borderTopStyle: 'solid',
+        borderLeftWidth: 2,
+        borderLeftStyle: 'solid',
+        borderRightWidth: 2,
+        borderRightStyle: 'solid', */
     },
     occupation: {
         marginTop:10,

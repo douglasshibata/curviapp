@@ -7,12 +7,12 @@ import Education from './Education';
 import ReactLoading from 'react-loading';
 import Goal from './Goal';
 import ExtraCourse from './ExtraCourse';
-import SocialMedia from './SocialMedia';
+//import SocialMedia from './SocialMedia';
 // Create styles
 const styles = StyleSheet.create({
   page: {
     padding: 30,
-    color: 'blue'
+    color:'#000'
   },
   container: {
     flex: 1,
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   footer: {
     fontSize: 12,
     textAlign: 'center',
-    marginTop: '50%',
+    marginTop: '20%',
     paddingTop: 10,
     borderWidth: 3,
     borderColor: 'gray',
@@ -36,7 +36,7 @@ function SeniorResume(props) {
   const user = props.user;
   return (
     <div className="App">
-         <PDFDownloadLink fileName={`${user.name}.pdf`} document={
+      <PDFDownloadLink fileName={`${user.name}.pdf`} document={
             <Document>
               <Page size="A4" style={styles.page}>
                 <Header user={user} />
@@ -45,8 +45,6 @@ function SeniorResume(props) {
               <Experience user={user} />
               {(user.courses !== 'NOT_PRINT' )?  
                 <ExtraCourse user={user} />:<></>}
-                {(user.linkedln_link !== 'NOT_PRINT')?
-                <SocialMedia user={user} />:<></>}
                 <Text style={styles.footer}>{user.name} - Candidato(a) ideal para a sua Empresa - Resume Made by Curvi</Text>
               </Page>
             </Document>
@@ -54,9 +52,8 @@ function SeniorResume(props) {
             {({ blob, url, loading, error }) =>
               loading ? <ReactLoading type='spin' color="black" height={'5vh'} width={'10vh'} />
                 : <button type='button'>Baixar o Currículo</button>
-
             }
-          </PDFDownloadLink>
+          </PDFDownloadLink> 
     </div>
   );
 }
