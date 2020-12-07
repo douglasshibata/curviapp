@@ -16,12 +16,21 @@ export default function ChatBot() {
             subtitle={"Digite Oi para começarmos seu currículo"}
             inputTextFieldHint={"Sua mensagem..."}
             connectingText={"Conectando..."}
-            hideWhenNotConnected={true}
+            hideWhenNotConnected={false}
             fullScreenMode={true}
             showFullScreenButton={true}
             profileAvatar={open}
-	    openLauncherImage={open}
-            params={{storage:'local'}}
+        openLauncherImage={open}
+        params={{
+            images: {
+              dims: {
+                width: 250,
+                height: 200
+              }
+            },
+            "storage":'local'
+          }
+        }
         />
     );
 }
