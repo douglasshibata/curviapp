@@ -17,8 +17,8 @@ export default function ChatBot() {
             inputTextFieldHint={"Sua mensagem..."}
             connectingText={"Conectando..."}
             hideWhenNotConnected={false}
-            fullScreenMode={true}
-            showFullScreenButton={true}
+            fullScreenMode={false}
+            showFullScreenButton={false}
             profileAvatar={open}
         openLauncherImage={open}
         params={{

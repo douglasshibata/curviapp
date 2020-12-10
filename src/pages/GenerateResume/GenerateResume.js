@@ -28,12 +28,12 @@ function GenerateResume() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {loading ===false?<img src={logo} className="App-logo" alt="logo" />:<></>}
         <p>Bem-vindo ao Curvi</p>
         <Form>
           <div className="content">
             <p><label>Digite o Email que foi colocado na nossa conversa.</label></p>
-            <input type="email" name="email" onChange={e => setEmail(e.target.value)} id="email" />
+            <input type="email" name="email" onChange={e => setEmail(e.target.value)} id="email" autoFocus required />
             <p>E aguarde o botão aparecer</p>
           </div>
         </Form>
