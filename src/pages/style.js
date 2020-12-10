@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const Form = styled.form`
   width: 90%;
   background: #2DBEB7;
-  padding: 20px;
+  margin-top:10px;
   display: flex;
   flex-direction: column;
   align-items: center;
