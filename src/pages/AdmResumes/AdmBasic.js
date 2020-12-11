@@ -1,11 +1,19 @@
 import React from 'react';
+const saveSvgAsPng = require('save-svg-as-png');
 
 function AdmBasic(props) {
     const user = props.user;
+    const imageOptions = {
+        backgroundColor: 'white',
+      }
+        function downloadResume(){
+            saveSvgAsPng.saveSvgAsPng(document.getElementById('admBasicResume'),`${user.name}.png`,imageOptions)
+        }
     return (
         <div className="admBasicResume">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enableBackground="new 0 0 595.28 841.89" xmlSpace="preserve">
+            <button onClick={downloadResume}>Baixar Currículo</button>
+            <svg version="1.1" id="admBasicResume" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               widths="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enableBackground="new 0 0 595.28 841.89" xmlSpace="preserve">
                 <text transform="matrix(1 0 0 1 28.2832 87.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="75.7377">{user.name}</text>
                 <text transform="matrix(1 0 0 1 229.0063 114.7466)" fill="#58595B" fontFamily="'MyriadPro-Regular'" fontSize="18">{user.area}</text>
                 <text transform="matrix(1 0 0 1 179.2959 279.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName}</text>
