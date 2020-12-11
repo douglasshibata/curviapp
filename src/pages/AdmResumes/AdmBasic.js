@@ -14,10 +14,10 @@ function AdmBasic(props) {
             <button onClick={downloadResume}>Baixar Currículo</button>
             <svg version="1.1" id="admBasicResume" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                widths="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enableBackground="new 0 0 595.28 841.89" xmlSpace="preserve">
-                <text transform="matrix(1 0 0 1 28.2832 87.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="75.7377">{user.name}</text>
+                <text transform="matrix(1 0 0 1 28.2832 87.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="40">{user.name.toUpperCase()}</text>
                 <text transform="matrix(1 0 0 1 229.0063 114.7466)" fill="#58595B" fontFamily="'MyriadPro-Regular'" fontSize="18">{user.area}</text>
-                <text transform="matrix(1 0 0 1 179.2959 279.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName}</text>
-                <text transform="matrix(1 0 0 1 126.6631 279.1904)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyOccupation}</tspan><tspan x="-72.899" y="14.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período - {user.companyStartEnd}</tspan></text>
+                <text transform="matrix(1 0 0 1 199.2959 279.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName}</text>
+                <text transform="matrix(1 0 0 1 90.6631 279.1904)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyOccupation}</tspan><tspan x="-42.899" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período - {user.companyStartEnd}</tspan></text>
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="383.709" y1="110.563" x2="566.867" y2="110.563" />
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="28.284" y1="110.563" x2="209.444" y2="110.563" />
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="240.686" y1="242.896" x2="528.269" y2="242.896" />
@@ -28,15 +28,11 @@ function AdmBasic(props) {
                 <rect x="28.711" y="422.368" fill="#DCDDDE" width="174.433" height="24" />
                 <rect x="28.284" y="615.701" fill="#DCDDDE" width="197.194" height="24" />
                 <rect x="179.225" y="288.552" fill="none" width="387.641" height="26.561" />
-                <text transform="matrix(1 0 0 1 179.2251 297.0723)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyDescription}</text>
-                {/*  <text transform="matrix(1 0 0 1 179.2959 351.8569)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">Empresa</text>
-            <text transform="matrix(1 0 0 1 126.6631 351.8569)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Cargo</tspan><tspan x="-72.899" y="14.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período (inicio e fim)</tspan></text>
-            <rect x="179.225" y="361.219" fill="none" width="387.642" height="26.561" />
-            <text transform="matrix(1 0 0 1 179.2251 369.7388)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Breve descrição do cargo</text> */}
-                <text transform="matrix(1 0 0 1 128.9209 479.8867)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.courseName}</tspan><tspan x="-76.571" y="14.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período - {user.courseEndYear}</tspan></text>
-                <text transform="matrix(1 0 0 1 179.2959 479.8887)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.courseSchool}</text>
+                <text transform="matrix(1 0 0 1 200.2251 297.0723)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyDescription}</text>
+                <text transform="matrix(1 0 0 1 88.9209 479.8867)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.courseName}</tspan><tspan x="-46.571" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período - {user.courseEndYear}</tspan></text>
+                <text transform="matrix(1 0 0 1 189.2959 479.8887)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.courseSchool}</text>
                 <rect x="180.521" y="489.25" fill="none" width="386.346" height="24.898" />
-                <text transform="matrix(1 0 0 1 180.5215 497.7695)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">breve descrção do curso: carga horária, componentes etc.</text>
+                <text transform="matrix(1 0 0 1 190.5215 497.7695)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">breve descrção do curso: carga horária, componentes etc.</text>
                 <path fillRule="evenodd" clipRule="evenodd" fill="#414042" d="M387.261,200.272c0-3.19,0-6.378,0-9.568
       c0.036-0.107,0.062-0.22,0.098-0.33c0.279-0.821,1.031-1.344,1.984-1.347c4.283-0.005,8.562-0.005,12.845,0
       c0.712,0,1.318,0.256,1.723,0.853c0.169,0.246,0.243,0.548,0.358,0.824c0,3.19,0,6.378,0,9.568c-0.03,0.107-0.062,0.223-0.094,0.33
@@ -178,7 +174,7 @@ function AdmBasic(props) {
                     <text transform="matrix(1 0 0 1 165.7563 198.9229)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">estado civl</text>
                 </g>
                 <g>
-                    <text transform="matrix(1 0 0 1 273.9355 198.9229)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.cellphone}</text>
+                    <text transform="matrix(1 0 0 1 273.9355 198.9229)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
                 </g>
                 <g>
                     <text transform="matrix(1 0 0 1 411.6025 198.9229)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.email}</text>

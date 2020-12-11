@@ -6,6 +6,7 @@ import ReactLoading from 'react-loading';
 import logo from '../../assets/bot.jpg';
 //import BasicResume from '../BasicResume';
 import AdmBasic from '../AdmResumes/AdmBasic';
+import Admin from '../AdmResumes/Adm';
 
 function GenerateResume() {
   const [user, setUser] = useState([])
@@ -47,6 +48,7 @@ function GenerateResume() {
           <>
            {/* <BasicResume user={user} /> */}
            <AdmBasic user={user}/>
+           <Admin user={user} />
            </>
           }
           <Form>
