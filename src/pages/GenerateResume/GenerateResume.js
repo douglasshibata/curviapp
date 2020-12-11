@@ -9,10 +9,11 @@ import AdmBasic from '../AdmResumes/AdmBasic';
 import Admin from '../AdmResumes/Adm';
 
 function GenerateResume() {
-  const [user, setUser] = useState([])
-  const [show, setHide] = useState(false)
-  const [email, setEmail] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [user, setUser] = useState([]);
+  const [show, setHide] = useState(false);
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error,setError] = useState(false)
   useEffect(() => {
     async function getUser() {
       try {
@@ -20,7 +21,9 @@ function GenerateResume() {
         setUser(response.data)
         setHide(true)
         setLoading(true)
+        setError(false)
       } catch (error) {
+        setError(true)
         console.log(error);
       }
     };
@@ -41,14 +44,16 @@ function GenerateResume() {
             <p><label>Digite o Email que foi colocado na nossa conversa.</label></p>
             <input type="email" placeholder='Digite o seu email' name="email" onChange={e => setEmail(e.target.value)} id="email" autoFocus required />
             <p>E aguarde o botão aparecer</p>
+            {error?<p className='error'>Email Não encontrado, Digite novamente</p>:<></>}
           </div>
         </Form>
         {loading ? <>
           {show &&
           <>
            {/* <BasicResume user={user} /> */}
-           <AdmBasic user={user}/>
-           <Admin user={user} />
+           {user.area === 'Administração'?
+           <AdmBasic user={user}/>:
+           <Admin user={user} />}
            </>
           }
           <Form>

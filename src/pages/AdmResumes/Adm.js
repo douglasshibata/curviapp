@@ -12,6 +12,7 @@ function Admin(props) {
     return (
         <div className="admBasicResume">
             <button onClick={downloadResume}>Baixar Currículo</button>
+            <div className="resumeReady">
             <svg version="1.1" id='adminResume' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enableBackground="new 0 0 595.28 841.89" xmlSpace="preserve">
                 <g id="Guias" display="none">
@@ -124,8 +125,8 @@ function Admin(props) {
                     <text transform="matrix(1 0 0 1 272.791 156.7739)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="22">{user.area} - {user.area_level}</text>
                 </g>
             </svg>
-
-        </div >
+            </div>
+        </div>
     )
 }
 export default Admin;
