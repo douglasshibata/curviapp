@@ -60,6 +60,10 @@ export const Form = styled.form`
   a:hover{
     color: #869;
   }
+  .error{
+    color:red;
+    font-weight:bold;
+  }
 `;
 
 export const Box = styled.div`
