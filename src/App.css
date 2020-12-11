@@ -9,7 +9,12 @@
   pointer-events: none;
 }
 .admBasicResume{
+  height: 100%;
+  width: 100%;
   background-color:rgba(255, 255, 255, 0.87);
+}
+.resumeReady{
+  display: none;  
 }
 .App-header {
   background-color:#2DBEB7;
