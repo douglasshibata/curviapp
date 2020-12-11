@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import { Page, Text, Document, StyleSheet, PDFDownloadLink } from '@react-pdf/renderer';
+import { Page, Text, Document, StyleSheet, PDFDownloadLink,PDFViewer } from '@react-pdf/renderer';
 import ReactLoading from 'react-loading';
 import Header from '../components/Header';
 import Goal from '../components/Goal';
@@ -11,7 +11,7 @@ import ExtraCourse from '../components/ExtraCourse';
 const styles = StyleSheet.create({
   page: {
     padding: 30,
-    color:'#000'
+    color:'#000',
   },
   container: {
     flex: 1,
@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
   },
 });
-
 function BasicResume(props) {
   const user = props.user;
   return (
@@ -54,6 +53,19 @@ function BasicResume(props) {
                 : <button type='button'>Baixar o Currículo</button>
             }
           </PDFDownloadLink> 
+     {/*  <PDFViewer width='700' height='700'>
+            <Document>
+              <Page size="A4" style={styles.page}>
+                <Header user={user} />
+                <Goal user={user} />
+                <Education user={user} />
+              <Experience user={user} />
+              {(user.courses !== 'NOT_PRINT' )?  
+                <ExtraCourse user={user} />:<></>}
+                <Text style={styles.footer}>{user.name} - Candidato(a) ideal para a sua Empresa - Resume Made by Curvi</Text>
+              </Page>
+            </Document>
+            </PDFViewer> */}
     </div>
   );
 }
