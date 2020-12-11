@@ -8,6 +8,9 @@
   margin-top: -10%;
   pointer-events: none;
 }
+.admBasicResume{
+  background-color:rgba(255, 255, 255, 0.87);
+}
 .App-header {
   background-color:#2DBEB7;
   min-height: 100vh;
