@@ -4,7 +4,8 @@ import api from '../../services/api';
 import { Form } from '../style';
 import ReactLoading from 'react-loading';
 import logo from '../../assets/bot.jpg';
-import BasicResume from '../BasicResume';
+//import BasicResume from '../BasicResume';
+import AdmBasic from '../AdmResumes/AdmBasic';
 
 function GenerateResume() {
   const [user, setUser] = useState([])
@@ -43,7 +44,10 @@ function GenerateResume() {
         </Form>
         {loading ? <>
           {show &&
-           <BasicResume user={user} />
+          <>
+           {/* <BasicResume user={user} /> */}
+           <AdmBasic user={user}/>
+           </>
           }
           <Form>
             <div className="content">
