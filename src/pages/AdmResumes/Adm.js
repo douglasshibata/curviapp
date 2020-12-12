@@ -10,7 +10,7 @@ function Admin(props) {
         saveSvgAsPng.saveSvgAsPng(document.getElementById('adminResume'), `${user.name}.png`, imageOptions)
     }
     return (
-        <div className="admBasicResume">
+        <div className="resumeBackground">
             <button onClick={downloadResume}>Baixar Currículo</button>
             <div className="resumeReady">
             <svg version="1.1" id='adminResume' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -115,7 +115,7 @@ function Admin(props) {
                     <text transform="matrix(1 0 0 1 226.0918 440.9448)" fill="#161317" fontFamily="'Roboto'" fontSize="14">Período - {user.courseEndYear}</text>
                     <text transform="matrix(1 0 0 1 41.8999 499.832)"><tspan x="0" y="0" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">{user.courseName} </tspan><tspan x="0" y="14.399" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">{user.courseSchool}</tspan><tspan x="0" y="28.799" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Periodo {user.courseEndYear}</tspan></text>
                     {/* <text transform="matrix(1 0 0 1 41.8999 556.8125)"><tspan x="0" y="0" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Curso </tspan><tspan x="0" y="14.4" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Nome da Instituição</tspan><tspan x="0" y="28.801" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Periodo ( início e fim)</tspan></text> */}
-                    <text transform="matrix(1 0 0 1 226.0918 476.9443)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses} </text>
+                    <text transform="matrix(1 0 0 1 226.0918 476.9443)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses:<></>} </text>
                     <text transform="matrix(1 0 0 1 226.0918 582.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyOccupation} / {user.companyName}</text>
                     <text transform="matrix(1 0 0 1 226.0918 610.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">Período {user.companyStartEnd}</text>
                     <text transform="matrix(1 0 0 1 226.0918 630.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription}</text>

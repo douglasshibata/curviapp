@@ -7,6 +7,7 @@ import logo from '../../assets/bot.jpg';
 //import BasicResume from '../BasicResume';
 import AdmBasic from '../AdmResumes/AdmBasic';
 import Admin from '../AdmResumes/Adm';
+import EngResume from '../EngResume/EngResume';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
@@ -53,7 +54,9 @@ function GenerateResume() {
            {/* <BasicResume user={user} /> */}
            {user.area === 'Administração'?
            <AdmBasic user={user}/>:
-           <Admin user={user} />}
+           <Admin user={user} />
+          //  <EngResume user={user}/>
+           }
            </>
           }
           <Form>

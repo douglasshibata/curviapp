@@ -7,14 +7,14 @@ function AdmBasic(props) {
         backgroundColor: 'white',
       }
         function downloadResume(){
-            saveSvgAsPng.saveSvgAsPng(document.getElementById('admBasicResume'),`${user.name}.png`,imageOptions)
+            saveSvgAsPng.saveSvgAsPng(document.getElementById('resumeBackground'),`${user.name}.png`,imageOptions)
         }
     return (
-        <div className="admBasicResume">
+        <div className="resumeBackground">
             <button onClick={downloadResume}>Baixar Currículo</button>
             <div className="resumeReady">
 
-            <svg version="1.1" id="admBasicResume" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" id="resumeBackground" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                widths="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enableBackground="new 0 0 595.28 841.89" xmlSpace="preserve">
                 <text transform="matrix(1 0 0 1 28.2832 87.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="40">{user.name.toUpperCase()}</text>
                 <text transform="matrix(1 0 0 1 229.0063 114.7466)" fill="#58595B" fontFamily="'MyriadPro-Regular'" fontSize="18">{user.area}</text>

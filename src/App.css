@@ -8,10 +8,10 @@
   margin-top: -10%;
   pointer-events: none;
 }
-.admBasicResume{
+.resumeBackground{
   height: 100%;
   width: 100%;
-  background-color:rgba(255, 255, 255, 0.87);
+  background-color: #FFF;
 }
 .resumeReady{
   display: none;  
@@ -27,13 +27,13 @@
   color: white;
 }
 button {
-  color: #3aa39f;
+  color: #FFF;
   font-size: 23px;
-  background: #000;
+  background: #239342;
   height: 56px;
   border: 0;
   border-radius: 5px;
-  width: 100%;
+  width: 50%;
 }
 .rw-conversation-container .rw-header{
   background-color: #000;
