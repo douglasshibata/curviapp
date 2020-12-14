@@ -18,8 +18,9 @@ function AdmBasic(props) {
                widths="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enableBackground="new 0 0 595.28 841.89" xmlSpace="preserve">
                 <text transform="matrix(1 0 0 1 28.2832 87.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="40">{user.name.toUpperCase()}</text>
                 <text transform="matrix(1 0 0 1 229.0063 114.7466)" fill="#58595B" fontFamily="'MyriadPro-Regular'" fontSize="18">{user.area}</text>
-                <text transform="matrix(1 0 0 1 199.2959 279.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName}</text>
-                <text transform="matrix(1 0 0 1 90.6631 279.1904)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyOccupation}</tspan><tspan x="-42.899" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período - {user.companyStartEnd}</tspan></text>
+                <text transform="matrix(1 0 0 1 199.2959 279.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,52)}</text>
+                <text transform="matrix(1 0 0 1 199.2959 299.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(53,user.companyName.length)}</text>
+                <text transform="matrix(1 0 0 1 90.6631 279.1904)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>}</tspan><tspan x="-42.899" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12"> {user.companyStartEnd  !== "NOT_PRINT"?  `\nPeríodo: ${user.companyStartEnd}` :<></>}</tspan></text>
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="383.709" y1="110.563" x2="566.867" y2="110.563" />
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="28.284" y1="110.563" x2="209.444" y2="110.563" />
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="240.686" y1="242.896" x2="528.269" y2="242.896" />
@@ -30,7 +31,7 @@ function AdmBasic(props) {
                 <rect x="28.711" y="422.368" fill="#DCDDDE" width="174.433" height="24" />
                 <rect x="28.284" y="615.701" fill="#DCDDDE" width="197.194" height="24" />
                 <rect x="179.225" y="288.552" fill="none" width="387.641" height="26.561" />
-                <text transform="matrix(1 0 0 1 200.2251 297.0723)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyDescription}</text>
+                <text transform="matrix(1 0 0 1 200.2251 297.0723)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades: ${user.companyDescription}`:<></>}</text>
                 <text transform="matrix(1 0 0 1 88.9209 479.8867)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.courseName}</tspan><tspan x="-46.571" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período - {user.courseEndYear}</tspan></text>
                 <text transform="matrix(1 0 0 1 189.2959 479.8887)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.courseSchool}</text>
                 <rect x="180.521" y="489.25" fill="none" width="386.346" height="24.898" />
@@ -185,8 +186,9 @@ function AdmBasic(props) {
                 {/* <text transform="matrix(1 0 0 1 128.9209 667.625)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.courses}</tspan><tspan x="-76.571" y="14.399" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período ( inicio e fim)</tspan></text>
                 <text transform="matrix(1 0 0 1 179.2959 667.625)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">Instituição de ensino</text> */}
                 <rect x="180.521" y="676.987" fill="none" width="386.346" height="24.898" />
-                <text transform="matrix(1 0 0 1 180.5215 685.5078)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.courses}.</text>
-                {/* <text transform="matrix(1 0 0 1 128.9209 726.6973)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.linkedln_link}</tspan><tspan x="-76.571" y="14.399" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período {user.city}</tspan></text>
+                <text transform="matrix(1 0 0 1 180.5215 685.5078)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12"> {(user.courses !== 'NOT_PRINT' )? user.courses:<></>}</text>
+                <text transform="matrix(1 0 0 1 229.2959 826.6973)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="24">Currículo feito pela Curvi</text>
+                {/* <text transform="matrix(1 0 0 1 128.9209 726.6973)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{(user.linkedln_link !== 'NOT_PRINT') ? `Linkedln: ${user.linkedln_link}` : ''}</tspan><tspan x="-76.571" y="14.399" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período {user.city}</tspan></text>
                 <text transform="matrix(1 0 0 1 179.2959 726.6973)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.state}</text>
                 <rect x="180.521" y="736.06" fill="none" width="386.346" height="24.898" />
                 <text transform="matrix(1 0 0 1 180.5215 744.5801)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address}</text> */}

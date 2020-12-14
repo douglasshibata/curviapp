@@ -116,13 +116,15 @@ function Admin(props) {
                     <text transform="matrix(1 0 0 1 41.8999 499.832)"><tspan x="0" y="0" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">{user.courseName} </tspan><tspan x="0" y="14.399" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">{user.courseSchool}</tspan><tspan x="0" y="28.799" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Periodo {user.courseEndYear}</tspan></text>
                     {/* <text transform="matrix(1 0 0 1 41.8999 556.8125)"><tspan x="0" y="0" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Curso </tspan><tspan x="0" y="14.4" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Nome da Instituição</tspan><tspan x="0" y="28.801" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Periodo ( início e fim)</tspan></text> */}
                     <text transform="matrix(1 0 0 1 226.0918 476.9443)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses:<></>} </text>
-                    <text transform="matrix(1 0 0 1 226.0918 582.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyOccupation} / {user.companyName}</text>
-                    <text transform="matrix(1 0 0 1 226.0918 610.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">Período {user.companyStartEnd}</text>
-                    <text transform="matrix(1 0 0 1 226.0918 630.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 582.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation} /` :<></>} {user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,52)}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 602.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(53,user.companyName.length)}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 610.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14"> {user.companyStartEnd  !== "NOT_PRINT"?  `Período: ${user.companyStartEnd}` :<></>}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 630.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades: ${user.companyDescription}`:<></>}</text>
                     {/* <text transform="matrix(1 0 0 1 226.0918 654.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">Cargo / Nome da Compainha</text>
                     <text transform="matrix(1 0 0 1 226.0918 729.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">Cargo / Nome da Compainha</text> */}
                     <text transform="matrix(1 0 0 1 191.8022 112.3276)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="40">{user.name}</text>
                     <text transform="matrix(1 0 0 1 272.791 156.7739)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="22">{user.area} - {user.area_level}</text>
+                    <text transform="matrix(1 0 0 1 229.2959 826.6973)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="24">Currículo feito pela Curvi</text>
                 </g>
             </svg>
             </div>
