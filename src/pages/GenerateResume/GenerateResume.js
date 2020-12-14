@@ -9,6 +9,7 @@ import AdmBasic from '../AdmResumes/AdmBasic';
 import Admin from '../AdmResumes/Adm';
 import EngResume from '../EngResume/EngResume';
 import ProdResume from '../EngResume/ProdResume';
+import SaudeResume from '../SaudeResume/SaudeResume';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
@@ -59,14 +60,22 @@ function GenerateResume() {
                 </>
                 :
                 user.area === 'Engenharia' ?
-                  <>
+                <>
                     <EngResume user={user} />
-                    <ProdResume user={user}/>
+                    <ProdResume user={user} />
                   </>
                   :
+                  user.area === 'Saúde' ?
                   <>
-                    <ProdResume user={user}/>
-                  </>
+                      <SaudeResume user={user} />
+                    </>
+                    :
+                    <>
+                    <Admin user={user} />
+                    <AdmBasic user={user} />
+                      <ProdResume user={user} />
+                      <SaudeResume user={user} />
+                    </>
               }
             </>
           }
