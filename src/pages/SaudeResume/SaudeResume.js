@@ -47,12 +47,19 @@ function SaudeResume(props) {
 		C570.9,578.9,578,586,578,594.8L578,594.8z"/>
                         <circle fill="#84CFEC" cx="262.6" cy="594.8" r="15.7" />
                         <text transform="matrix(1 0 0 1 296.3423 601.6948)" fill="#D1D4D6" fontFamily="MyriadPro-Semibold" fontSize="20px">CURSOS</text>
-                        <text transform="matrix(1 0 0 1 247.2563 439.9448)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text>
-                        <text transform="matrix(1 0 0 1 246.6245 517.9888)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text>
-                        <text transform="matrix(0.9856 0 0 1 247.2417 203.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text>
-                        <text transform="matrix(0.9856 0 0 1 246.5835 317.8145)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text>
-                        <text transform="matrix(1 0 0 1 247.0435 636.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text>
-                        <text transform="matrix(1 0 0 1 246.4116 695.4033)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text>
+                        <text transform="matrix(1 0 0 1 247.2563 439.9448)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courseName} / {user.courseSchool}</text>
+                        <text transform="matrix(1 0 0 1 247.2563 459.9448)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Previsão de Término - {user.courseEndYear}</text>
+                        {/* <text transform="matrix(1 0 0 1 246.6245 517.9888)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text> */}
+                        <text transform="matrix(0.9856 0 0 1 247.2417 203.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>}</text>
+                        <text transform="matrix(0.9856 0 0 1 247.2417 223.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(0,38)}</text>
+                        <text transform="matrix(0.9856 0 0 1 247.2417 243.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(38,76)}</text>
+                        <text transform="matrix(0.9856 0 0 1 247.2417 263.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(76,user.companyName.length)}</text>
+                        <text transform="matrix(0.9856 0 0 1 247.2417 223.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyStartEnd  !== "NOT_PRINT"?  `Período: ${user.companyStartEnd}` :<></>}</text>
+                        <text transform="matrix(0.9856 0 0 1 247.2417 243.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades: ${user.companyDescription.substring(0,25)} `:<></>}</text>
+                        <text transform="matrix(0.9856 0 0 1 247.2417 263.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(25,user.companyDescription.length)} `:<></>}</text>
+                        {/* <text transform="matrix(0.9856 0 0 1 246.5835 317.8145)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text> */}
+                        <text transform="matrix(1 0 0 1 247.0435 636.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{(user.courses !== 'NOT_PRINT' )? user.courses:<></>}</text>
+                        {/* <text transform="matrix(1 0 0 1 246.4116 695.4033)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text> */}
                         <path fill="#FFFFFF" d="M178.2,282.1c0,6.4-5.2,11.6-11.6,11.6H49.4c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h117.2
 		C173,270.5,178.2,275.7,178.2,282.1L178.2,282.1z"/>
                         <circle fill="#25201D" cx="49" cy="282.1" r="11.1" />
@@ -70,6 +77,11 @@ function SaudeResume(props) {
 		C171.2,457.6,176.3,462.8,176.3,469.2L176.3,469.2z"/>
                         <circle fill="#25201D" cx="47.1" cy="469.2" r="11.1" />
                         <text transform="matrix(1 0 0 1 76.6108 474.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="15px">CONTATO</text>
+                        <text transform="matrix(1 0 0 1 66.6108 509.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="14px">{user.address.substring(0,28)}</text>
+                        <text transform="matrix(1 0 0 1 66.6108 524.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="14px">{user.address.substring(28,user.address.length)}</text>
+                        <text transform="matrix(1 0 0 1 66.6108 550.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="14px">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
+                        <text transform="matrix(1 0 0 1 66.6108 590.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="14px">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
+                        <text transform="matrix(1 0 0 1 62.6108 625.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="12px">{user.email}</text>
                         <g>
                             <path fill="#25201D" d="M47.9,526.5c6.9,0,12.6-5.8,12.6-12.8c0-7.1-5.6-12.8-12.6-12.8c-6.9,0-12.6,5.8-12.6,12.8
 			C35.3,520.8,40.9,526.5,47.9,526.5z M53.9,521.4c0,0.2-0.1,0.4-0.2,0.6c-1.3,0-2.6,0-4,0c0-1.1,0-2.2,0-3.3c0-0.3-0.2-0.5-0.5-0.5
