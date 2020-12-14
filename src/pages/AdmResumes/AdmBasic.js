@@ -20,7 +20,7 @@ function AdmBasic(props) {
                 <text transform="matrix(1 0 0 1 229.0063 114.7466)" fill="#58595B" fontFamily="'MyriadPro-Regular'" fontSize="18">{user.area}</text>
                 <text transform="matrix(1 0 0 1 199.2959 279.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,52)}</text>
                 <text transform="matrix(1 0 0 1 199.2959 299.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(53,user.companyName.length)}</text>
-                <text transform="matrix(1 0 0 1 90.6631 279.1904)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>}</tspan><tspan x="-42.899" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12"> {user.companyStartEnd  !== "NOT_PRINT"?  `\nPeríodo: ${user.companyStartEnd}` :<></>}</tspan></text>
+                <text transform="matrix(1 0 0 1 70.6631 279.1904)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>}</tspan><tspan x="-42.899" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12"> {user.companyStartEnd  !== "NOT_PRINT"?  `\nPeríodo: ${user.companyStartEnd}` :<></>}</tspan></text>
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="383.709" y1="110.563" x2="566.867" y2="110.563" />
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="28.284" y1="110.563" x2="209.444" y2="110.563" />
                 <line fill="none" stroke="#58595B" strokeMiterlimit="10" x1="240.686" y1="242.896" x2="528.269" y2="242.896" />
@@ -35,7 +35,7 @@ function AdmBasic(props) {
                 <text transform="matrix(1 0 0 1 88.9209 479.8867)"><tspan x="0" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.courseName}</tspan><tspan x="-46.571" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">Período - {user.courseEndYear}</tspan></text>
                 <text transform="matrix(1 0 0 1 189.2959 479.8887)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.courseSchool}</text>
                 <rect x="180.521" y="489.25" fill="none" width="386.346" height="24.898" />
-                <text transform="matrix(1 0 0 1 190.5215 497.7695)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">breve descrção do curso: carga horária, componentes etc.</text>
+                {/* <text transform="matrix(1 0 0 1 190.5215 497.7695)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">breve descrção do curso: carga horária, componentes etc.</text> */}
                 <path fillRule="evenodd" clipRule="evenodd" fill="#414042" d="M387.261,200.272c0-3.19,0-6.378,0-9.568
       c0.036-0.107,0.062-0.22,0.098-0.33c0.279-0.821,1.031-1.344,1.984-1.347c4.283-0.005,8.562-0.005,12.845,0
       c0.712,0,1.318,0.256,1.723,0.853c0.169,0.246,0.243,0.548,0.358,0.824c0,3.19,0,6.378,0,9.568c-0.03,0.107-0.062,0.223-0.094,0.33

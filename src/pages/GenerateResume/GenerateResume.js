@@ -46,7 +46,7 @@ function GenerateResume() {
             <p><label>Digite o Email que foi colocado na nossa conversa.</label></p>
             <input type="email" placeholder='Digite o seu email' name="email" onChange={e => setEmail(e.target.value)} id="email" autoFocus required />
             <p>E aguarde o botão aparecer</p>
-            {error && email !== '' ? <p className='error'>Email Não encontrado, Digite novamente</p> : <></>}
+            {error && email !== '' ? <p className='error'>Email Não encontrado, digite novamente</p> : <></>}
           </div>
         </Form>
         {loading ? <>
@@ -60,19 +60,20 @@ function GenerateResume() {
                 </>
                 :
                 user.area === 'Engenharia' ?
-                <>
+                  <>
                     <EngResume user={user} />
                     <ProdResume user={user} />
                   </>
                   :
                   user.area === 'Saúde' ?
-                  <>
+                    <>
                       <SaudeResume user={user} />
                     </>
                     :
                     <>
-                    <Admin user={user} />
-                    <AdmBasic user={user} />
+                      <Admin user={user} />
+                      <AdmBasic user={user} />
+                      <EngResume user={user} />
                       <ProdResume user={user} />
                       <SaudeResume user={user} />
                     </>

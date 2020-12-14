@@ -15,11 +15,11 @@ function EngResume(props) {
             <div className="resumeReady">
                 <svg version="1.1" id='engResume' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 595.3 841.9"  xmlSpace="preserve">
-                    <g id="GUIAS" class="st0" display='none' >
+                    <g id="GUIAS" display='none' >
                     </g>
                     <g id="Layer_1">
-                        <rect class="st1"  width="261" height="841.9" fill='#1B1E1F' />
-                        <circle class="st2" cx="130.5" cy="141.1" r="75.5" fill='#FFFFFF' stroke='#341716' strokeWidth={7} strokeMiterlimit='10' />
+                        <rect width="261" height="841.9" fill='#1B1E1F' />
+                        <circle  cx="130.5" cy="141.1" r="75.5" fill='#FFFFFF' stroke='#341716' strokeWidth={7} strokeMiterlimit='10' />
                         <g>
                             <path fill='#FFFFFF' d="M49.7,313c4.6,0.2,8.3-3.4,8.4-7.8c0.1-4.7-3.5-8.3-8-8.4c-4.5-0.1-8.1,3.6-8.2,8
 			C41.8,309.1,45.2,312.8,49.7,313z"/>
@@ -167,16 +167,18 @@ function EngResume(props) {
                         <text transform="matrix(1 0 0 1 280.6318 167.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>Período - {user.courseEndYear}</text>
                         {/* <text transform="matrix(1 0 0 1 280.6318 737.6553)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'></text> */}
                         <text transform="matrix(1 0 0 1 280.6318 652.7178)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{(user.courses !== 'NOT_PRINT' )? user.courses:<></> }</text>
-                        <text transform="matrix(1 0 0 1 280 395.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation} /` :<></>} {user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,38)}</text>
+                        <text transform="matrix(1 0 0 1 280 395.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>} </text>
+                        <text transform="matrix(1 0 0 1 280 415.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,38)}</text>
                         <text transform="matrix(1 0 0 1 280 415.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(38,75)}</text>
                         <text transform="matrix(1 0 0 1 280 435.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(75,user.companyName.length)}</text>
-                        <text transform="matrix(1 0 0 1 279.6836 415.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyStartEnd  !== "NOT_PRINT"?  `Período: ${user.companyStartEnd}` :<></>}</text>
-                        <text transform="matrix(1 0 0 1 279.6836 435.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades: ${user.companyDescription}`:<></>}</text>
+                        <text transform="matrix(1 0 0 1 279.6836 435.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyStartEnd  !== "NOT_PRINT"?  `Período: ${user.companyStartEnd}` :<></>}</text>
+                        <text transform="matrix(1 0 0 1 279.6836 455.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades:`:<></>}</text>
+                        <text transform="matrix(1 0 0 1 279.6836 475.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription}`:<></>}</text>
                         <text transform="matrix(1 0 0 1 104.5471 158.209)" fill='#341716' fontFamily='MyriadPro-Bold'fontSize='58.4611px'>{user.name.charAt(0).toUpperCase()}</text>
                         <rect x="260.9" y="790" fill='#2DBEB7' width="100%" height="20" />
                         <text transform="matrix(1 0 0 1 298.4359 806.5256)" fill='#FFF' fontFamily='MyriadPro-Regular' fontSize='17.2529px '>Currículo Gerado pela Curvi</text>
                         {/* <g>
-                            <rect x="274.9" y="790" class="st1" width="20.6" height="20.6" />
+                            <rect x="274.9" y="790" width="20.6" height="20.6" />
                             <rect x="381.2" y="790" fill='#341716' width="20.6" height="20.6" />
                             <rect x="487.4" y="790" fill='#200F0F' width="20.6" height="20.6" />
                             <text transform="matrix(1 0 0 1 298.4359 806.5256)" fontFamily='MyriadPro-Regular' fontSize='17.2529px '>1B1E1F</text>
