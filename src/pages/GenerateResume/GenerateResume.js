@@ -14,7 +14,7 @@ function GenerateResume() {
   const [show, setHide] = useState(false);
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error,setError] = useState(false)
+  const [error, setError] = useState(false)
   useEffect(() => {
     async function getUser() {
       try {
@@ -30,34 +30,45 @@ function GenerateResume() {
     };
     getUser();
   }, [email])
-  
   return (
     <div className="App">
       <header className="App-header">
-        {loading ===false?
-        <>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Bem-vindo ao Curvi</p>
-        </>
-        :<></>}
+        {loading === false ?
+          <>
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>Bem-vindo ao Curvi</p>
+          </>
+          : <></>}
         <Form>
           <div className="content">
             <p><label>Digite o Email que foi colocado na nossa conversa.</label></p>
             <input type="email" placeholder='Digite o seu email' name="email" onChange={e => setEmail(e.target.value)} id="email" autoFocus required />
             <p>E aguarde o botão aparecer</p>
-            {error?<p className='error'>Email Não encontrado, Digite novamente</p>:<></>}
+            {error && email !== '' ? <p className='error'>Email Não encontrado, Digite novamente</p> : <></>}
           </div>
         </Form>
         {loading ? <>
           {show &&
-          <>
-           {/* <BasicResume user={user} /> */}
-           {user.area === 'Administração'?
-           <AdmBasic user={user}/>:
-           <Admin user={user} />
-          //  <EngResume user={user}/>
-           }
-           </>
+            <>
+              {/* <BasicResume user={user} /> */}
+              {user.area === 'Administração' ?
+                <>
+                  <Admin user={user} />
+                  <AdmBasic user={user} />
+                </>
+                :
+                user.area === 'Engenharia' ?
+                  <>
+                    <EngResume user={user} />
+
+                  </>
+                  :
+                  <>
+                    <Admin user={user} />
+                    <EngResume user={user} />
+                  </>
+              }
+            </>
           }
           <Form>
             <div className="content">
@@ -73,13 +84,13 @@ function GenerateResume() {
               <h2>Objetivo</h2>
               <p> {user.goal} </p>
             </div>
-              <div className="content">
-                <h2>Experiencia</h2>
-                {user.companyOccupation !== 'NOT_PRINT' ? <p> Cargo: {user.companyOccupation} </p> : <></>}
-                {user.companyStartEnd !== 'NOT_PRINT' ? <p> Período: {user.companyStartEnd} </p> : <></>}
-                <p>{user.companyName}</p>
-                {user.companyDescription !== 'NOT_PRINT' ? <p>{user.companyDescription}</p> : <></>}
-              </div> 
+            <div className="content">
+              <h2>Experiencia</h2>
+              {user.companyOccupation !== 'NOT_PRINT' ? <p> Cargo: {user.companyOccupation} </p> : <></>}
+              {user.companyStartEnd !== 'NOT_PRINT' ? <p> Período: {user.companyStartEnd} </p> : <></>}
+              <p>{user.companyName}</p>
+              {user.companyDescription !== 'NOT_PRINT' ? <p>{user.companyDescription}</p> : <></>}
+            </div>
             <div className="content">
               <h2>Curso</h2>
               <p>{user.courseName}</p>
