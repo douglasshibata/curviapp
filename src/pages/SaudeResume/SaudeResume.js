@@ -13,134 +13,155 @@ function SaudeResume(props) {
         <div className="resumeBackground">
             <button onClick={downloadResume}>Baixar Currículo</button>
             <div className="resumeReady">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id='saudeResume' xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" id='saudeResume' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 595.3 841.9" xmlSpace="preserve">
-          
-                    <g id="Guias" display='none'>
-                    </g>
                     <g id="Layer_1">
-                        <path fill="#D1D4D6" d="M55.2,131.3l-1.9,537.6c60.9,28.4,97.4,20,143.5,25.6L238.2,102C155.5,115.9,85.1,144.6,55.2,131.3z" />
-                        <path fill="#25201D" d="M38.9,111.5l-3,647c61.9,26.3,111.1,30,157.4,34l26.2-694.5C137.4,114.9,69.4,123.8,38.9,111.5z" />
-                        <path fill="#84CFEC" d="M438,0c-32,3.8-47.4,6.7-86.3,22.2l0,0c0,0,143.9-3.2,243.6,61.8V0H438z" />
-                        <path fill="#25201D" d="M245.1,841.9h350.2v-44.1c0,0-120-41.3-249-2.1c-48.1,14.6-79.6,24.2-102.7,30.7
-		c-38.9,10.9-54.3,12.9-86.3,15.6H245.1z"/>
-                        <path fill="#84CFEC" d="M16,81.6v695.2c62.6,24.5,137.7,32.6,184,35.3V94.2C118.4,113.4,46.8,93,16,81.6z" />
-                        <path fill="#25201D" d="M350.2,0H0v63c0,0,5.7,2.8,16,6.6C46.8,81,118.4,101.4,200,82.2c16-3.8,32.4-9,49-16.2
-		c48.1-20.9,79.6-34.5,102.7-43.8C390.6,6.7,406,3.8,438,0H350.2z"/>
-                        <path fill="#D1D4D6" d="M200,825.1c-46.3-2.6-121.4-10.7-184-35.3c-5.4-2.1-10.8-4.4-16-6.8v58.8h157.3c32-2.6,47.4-4.7,86.3-15.6
-		C243.6,826.3,226.5,826.6,200,825.1z"/>
+                        <text transform="matrix(1 0 0 1 14.4267 255.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(0,18)}</text>
+                        <text transform="matrix(1 0 0 1 14.4267 279.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(18,user.name.length)}</text>
+                    </g>
+                    <g id="Layer_2">
+                        <polygon fill="#25BCB6" points="595.3,0 595.3,85.2 481.2,53.3" />
                         <g>
-                            <text transform="matrix(1 0 0 1 48.1782 155.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(0,8)}</text>
-                            <text transform="matrix(1 0 0 1 48.1782 185.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(8,18)}</text>
-                            <text transform="matrix(1 0 0 1 48.1782 215.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(18,user.name.length)}</text>
-                            <text transform="matrix(1 0 0 1 51.4585 234.3408)" fill="#25201D" fontFamily="MyriadPro-Regular" fontSize="12.9183px">{user.area} - {user.area_level}</text>
+                            <polygon fill="#13AA9E" points="512,0 430.8,77.6 481.2,53.3 595.3,0	" />
+                            <polygon fill="#13AA9E" points="63.6,0 430.8,77.6 181.1,0	" />
+                            <polygon fill="#25BCB6" points="181.1,0 430.8,77.6 512,0	" />
                         </g>
-                        <path fill="#25201D" d="M577.7,156.8c0,8.8-7.1,15.9-15.9,15.9H262.4c-8.8,0-15.9-7.1-15.9-15.9l0,0c0-8.8,7.1-15.9,15.9-15.9h299.4
-		C570.6,140.9,577.7,148,577.7,156.8L577.7,156.8z"/>
-                        <circle fill="#84CFEC" cx="262.3" cy="156.8" r="15.7" />
-                        <text transform="matrix(1 0 0 1 296.0269 163.7061)" fill="#D1D4D6" fontFamily="MyriadPro-Semibold" fontSize="20px">EXPERIÊNCIA</text>
-                        <path fill="#25201D" d="M577.7,395.4c0,8.8-7.1,15.9-15.9,15.9H262.4c-8.8,0-15.9-7.1-15.9-15.9l0,0c0-8.8,7.1-15.9,15.9-15.9h299.4
-		C570.6,379.6,577.7,386.7,577.7,395.4L577.7,395.4z"/>
-                        <circle fill="#84CFEC" cx="262.3" cy="395.4" r="15.7" />
-                        <text transform="matrix(1 0 0 1 296.0269 402.3804)" fill="#D1D4D6" fontFamily="MyriadPro-Semibold" fontSize="20px">FORMAÇÃO</text>
-                        <path fill="#25201D" d="M578,594.8c0,8.8-7.1,15.9-15.9,15.9H262.8c-8.8,0-15.9-7.1-15.9-15.9l0,0c0-8.8,7.1-15.9,15.9-15.9h299.4
-		C570.9,578.9,578,586,578,594.8L578,594.8z"/>
-                        <circle fill="#84CFEC" cx="262.6" cy="594.8" r="15.7" />
-                        <text transform="matrix(1 0 0 1 296.3423 601.6948)" fill="#D1D4D6" fontFamily="MyriadPro-Semibold" fontSize="20px">CURSOS</text>
-                        <text transform="matrix(1 0 0 1 247.2563 439.9448)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courseName} / {user.courseSchool}</text>
-                        <text transform="matrix(1 0 0 1 247.2563 459.9448)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Previsão de Término - {user.courseEndYear}</text>
-                        {/* <text transform="matrix(1 0 0 1 246.6245 517.9888)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text> */}
-                        <text transform="matrix(0.9856 0 0 1 247.2417 203.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>}</text>
-                        <text transform="matrix(0.9856 0 0 1 247.2417 223.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,38)}</text>
-                        <text transform="matrix(0.9856 0 0 1 247.2417 243.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(38,76)}</text>
-                        <text transform="matrix(0.9856 0 0 1 247.2417 263.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(76,user.companyName.length)}</text>
-                        <text transform="matrix(0.9856 0 0 1 247.2417 243.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyStartEnd  !== "NOT_PRINT"?  `Período: ${user.companyStartEnd}` :<></>}</text>
-                        <text transform="matrix(0.9856 0 0 1 247.2417 263.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades: ${user.companyDescription.substring(0,25)} `:<></>}</text>
-                        <text transform="matrix(0.9856 0 0 1 247.2417 283.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(25,user.companyDescription.length)} `:<></>}</text>
-                        {/* <text transform="matrix(0.9856 0 0 1 246.5835 317.8145)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text> */}
-                        <text transform="matrix(1 0 0 1 247.0435 636.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{(user.courses !== 'NOT_PRINT' )? user.courses:<></>}</text>
-                        {/* <text transform="matrix(1 0 0 1 246.4116 695.4033)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text> */}
-                        <path fill="#FFFFFF" d="M178.2,282.1c0,6.4-5.2,11.6-11.6,11.6H49.4c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h117.2
-		C173,270.5,178.2,275.7,178.2,282.1L178.2,282.1z"/>
-                        <circle fill="#25201D" cx="49" cy="282.1" r="11.1" />
-                        <text transform="matrix(1 0 0 1 87.4585 287.6353)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="15px">PERFIL</text>
-                        <text transform="matrix(1 0 0 1 42.4585 310.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(0,27)}</text>
-                        <text transform="matrix(1 0 0 1 42.4585 325.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(27,54)}</text>
-                        <text transform="matrix(1 0 0 1 42.4585 340.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(54,81)}</text>
-                        <text transform="matrix(1 0 0 1 42.4585 355.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(81,107)}</text>
-                        <text transform="matrix(1 0 0 1 42.4585 370.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(107,134)}</text>
-                        <text transform="matrix(1 0 0 1 42.4585 385.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(134,161)}</text>
-                        <text transform="matrix(1 0 0 1 42.4585 400.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(161,188)}</text>
-                        <text transform="matrix(1 0 0 1 42.4585 415.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(215,242)}</text>
-                        <text transform="matrix(1 0 0 1 42.4585 430.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(242,user.goal.length)}</text>
-                        <path fill="#FFFFFF" d="M176.3,469.2c0,6.4-5.2,11.6-11.6,11.6H47.6c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h117.2
-		C171.2,457.6,176.3,462.8,176.3,469.2L176.3,469.2z"/>
-                        <circle fill="#25201D" cx="47.1" cy="469.2" r="11.1" />
-                        <text transform="matrix(1 0 0 1 76.6108 474.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="15px">CONTATO</text>
-                        <text transform="matrix(1 0 0 1 66.6108 509.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="14px">{user.address.substring(0,28)}</text>
-                        <text transform="matrix(1 0 0 1 66.6108 524.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="14px">{user.address.substring(28,user.address.length)}</text>
-                        <text transform="matrix(1 0 0 1 66.6108 550.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="14px">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
-                        <text transform="matrix(1 0 0 1 66.6108 590.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="14px">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
-                        <text transform="matrix(1 0 0 1 62.6108 625.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold"fontSize="12px">{user.email}</text>
+                        <polygon fill="#13AA9E" points="0.5,841.9 0.5,739.7 114.6,777.9" />
+                        <polygon fill="#25BCB6" points="114.6,777.9 0.5,841.9 83.8,841.9 165,748.7" />
+                        <polygon fill="#25BCB6" points="221.1,841.9 532.2,841.9 165,748.7 414.7,841.9" />
+                        <polygon fill="#13AA9E" points="221.1,841.9 83.8,841.9 83.8,841.9" />
+                        <polygon fill="#13AA9E" points="414.7,841.9 165,748.7 83.8,841.9 221.1,841.9" />
+                        <polygon fill="#13AA9E" points="371.6,801.1 595.8,726.5 595.8,841.9 532.2,841.9" />
+                        <path fill="#25BCB6" d="M136.5,25.3c21.1,0,40.8,6.3,57.3,17.1l30.4-8.4L63.6,0H0v96.1l42.2-11.7C59.2,49.4,95.1,25.3,136.5,25.3z" />
+                        <path fill="#13AA9E" d="M193.8,42.4c-16.5-10.8-36.2-17.1-57.3-17.1c-41.4,0-77.3,24.2-94.3,59.1c-6.7,13.8-10.5,29.3-10.5,45.6
+		c0,57.8,47,104.8,104.8,104.8s104.8-47,104.8-104.8C241.3,93.4,222.4,61.1,193.8,42.4z M136.5,224.8c-52.3,0-94.8-42.5-94.8-94.8
+		c0-18.1,5.1-35,13.9-49.3c16.7-27.2,46.7-45.4,80.9-45.4c15.8,0,30.8,3.9,43.9,10.8c30.2,15.9,50.8,47.5,50.8,84
+		C231.3,182.3,188.8,224.8,136.5,224.8z"/>
+                        <path fill="#25BCB6" d="M538.1,111.2h-67.1H331.8c-18.6,0-33.7,15.1-33.7,33.7c0,1,0.1,2,0.1,3h67.1h139.1c18.6,0,33.7-15.1,33.7-33.7
+		C538.2,113.2,538.2,112.2,538.1,111.2z"/>
+                        <path fill="#25BCB6" d="M538.1,365.3h-67.1H331.8c-18.6,0-33.7,15.1-33.7,33.7c0,1,0.1,2,0.1,3h67.1h139.1c18.6,0,33.7-15.1,33.7-33.7
+		C538.2,367.3,538.2,366.3,538.1,365.3z"/>
+                        <path fill="#25BCB6" d="M538.1,618.4h-67.1H331.8c-18.6,0-33.7,15.1-33.7,33.7c0,1,0.1,2,0.1,3h67.1h139.1c18.6,0,33.7-15.1,33.7-33.7
+		C538.2,620.4,538.2,619.4,538.1,618.4z"/>
                         <g>
-                            <path fill="#25201D" d="M47.9,526.5c6.9,0,12.6-5.8,12.6-12.8c0-7.1-5.6-12.8-12.6-12.8c-6.9,0-12.6,5.8-12.6,12.8
-			C35.3,520.8,40.9,526.5,47.9,526.5z M53.9,521.4c0,0.2-0.1,0.4-0.2,0.6c-1.3,0-2.6,0-4,0c0-1.1,0-2.2,0-3.3c0-0.3-0.2-0.5-0.5-0.5
-			c-1,0-1.9,0-2.9,0c-0.3,0-0.5,0.1-0.5,0.5c0,1.1,0,2.2,0,3.3c-1.3,0-2.6,0-4,0c-0.1-0.2-0.2-0.4-0.2-0.6c0-2.4,0-4.8,0-7.2
-			c0-0.3,0.1-0.4,0.3-0.6c0.8-0.7,1.7-1.5,2.5-2.2c1.1-1,2.2-2,3.3-3c0,0,0.1,0,0.1,0c1.9,1.7,3.9,3.5,5.8,5.2
-			c0.1,0.1,0.2,0.3,0.2,0.4C53.9,516.5,53.9,519,53.9,521.4z M41.9,506.5c0.7,0,1.4,0,2.1,0c0,0.4,0,0.8,0,1.1c0,0.1,0,0.2-0.1,0.2
-			c-0.6,0.6-1.3,1.2-2,1.9C41.9,508.6,41.9,507.6,41.9,506.5z M39.3,513.1c0.2-0.2,0.5-0.4,0.7-0.6c2.6-2.4,5.3-4.7,7.9-7.1
-			c0,0,0,0,0.1,0c2.8,2.5,5.6,5,8.3,7.5c0.1,0.1,0.2,0.1,0.2,0.2c0,0,0,0.1,0,0.1c-0.3,0.3-0.6,0.6-0.9,1c-2.6-2.3-5.1-4.6-7.7-7
-			c-2.6,2.3-5.1,4.6-7.7,7C39.9,513.8,39.6,513.5,39.3,513.1C39.3,513.1,39.3,513.1,39.3,513.1z"/>
+                            <path fill="#25BCB6" d="M45.3,489.1h11.3c11.3-2.6,19.8-12.7,19.8-24.8c0-0.7,0-1.3-0.1-2c0.1,0.1,0-8.7,0-8.7h-2.3H57.2
+			c-14,0-25.4,11.4-25.4,25.4v1.9v8.2h2.1H45.3z M43,465c0-0.1,0.1-0.3,0.1-0.4c0.4-1.1,1.4-1.8,2.6-1.8c5.7,0,11.4,0,17.1,0
+			c0.9,0,1.8,0.3,2.3,1.1c0.2,0.3,0.3,0.7,0.5,1.1c0,4.3,0,8.5,0,12.8c0,0.1-0.1,0.3-0.1,0.4c-0.4,1.1-1.4,1.8-2.6,1.8
+			c-5.7,0-11.4,0-17.1,0c-0.9,0-1.8-0.3-2.3-1.1c-0.2-0.3-0.3-0.7-0.5-1.1C43,473.5,43,469.2,43,465z"/>
+                            <path fill="#25BCB6" d="M45.8,477.7c5.7,0,11.4,0,17.1,0c0.4,0,0.5-0.1,0.5-0.5c0-3.3,0-6.6,0-10c0-0.1,0-0.1,0-0.3
+			c-0.1,0.1-0.2,0.1-0.3,0.2c-2.5,2.1-5,4.2-7.5,6.3c-0.2,0.2-0.5,0.3-0.8,0.3c-0.4,0-0.7,0-1.1,0c-0.3,0-0.6-0.1-0.8-0.3
+			c-2.5-2.1-5-4.2-7.5-6.3c-0.1-0.1-0.1-0.1-0.2-0.2c0,0.1,0,0.2,0,0.3c0,3.3,0,6.6,0,9.9C45.3,477.5,45.4,477.7,45.8,477.7z"/>
+                            <path fill="#25BCB6" d="M62,465.1c-5.1,0-10.1,0-15.2,0c2.5,2.2,5.1,4.3,7.6,6.4C56.9,469.3,59.4,467.2,62,465.1z" />
+                            <path fill="#25BCB6" d="M59.6,504.1c-0.2-0.5-0.6-1-1-1.5c-0.4-0.4-0.8-0.8-1.2-1.1c-0.6-0.4-1.3-0.7-2.1-0.9
+			c-0.6-0.1-1.3-0.2-1.9-0.1c-0.6,0.1-1.2,0.2-1.8,0.5c-0.7,0.3-1.3,0.7-1.8,1.2c-0.6,0.6-1.1,1.4-1.4,2.2c-0.2,0.6-0.4,1.3-0.4,2
+			c0,0.8,0.2,1.6,0.5,2.4c0.2,0.4,0.4,0.8,0.7,1.2c0.4,0.6,0.9,1.1,1.6,1.5c0.1,0.1,0.9,0.5,1,0.5c0.8,0.3,1.5,0.5,2.4,0.5
+			c0.2,0,0.3,0,0.5,0c0.7-0.1,1.5-0.3,2.1-0.6c0.3-0.2,0.7-0.4,1-0.6c0.5-0.3,0.9-0.8,1.2-1.2c0.3-0.4,0.6-0.9,0.8-1.4
+			c0.2-0.5,0.3-1,0.4-1.5c0.1-0.5,0.1-1.1,0-1.6C60,505.1,59.8,504.6,59.6,504.1z"/>
+                            <path fill="#25BCB6" d="M76.3,492h-2.3H57.2c-14,0-25.4,11.4-25.4,25.4v1.9v8.2h2.1h11.5h11.3c11.3-2.6,19.8-12.7,19.8-24.8
+			c0-0.7,0-1.3-0.1-2C76.4,500.8,76.3,492,76.3,492z M61.8,508.6c-0.2,0.8-0.4,1.5-0.6,2.2c-0.2,0.5-0.4,1-0.6,1.4
+			c-0.4,0.8-0.8,1.6-1.3,2.4c-0.4,0.6-0.8,1.3-1.3,1.9c-0.7,1-1.5,2-2.4,3c-0.5,0.5-0.9,1-1.4,1.5c-0.2,0.2-0.2,0.2-0.4,0
+			c-0.4-0.4-0.9-0.9-1.3-1.3c-0.4-0.4-0.8-0.9-1.2-1.4c-0.5-0.6-1-1.3-1.5-2c-0.4-0.6-0.8-1.2-1.2-1.8c0,0-0.3-0.5-0.3-0.6
+			c-1.1-1.8-1.9-3.8-2.2-6c0-0.1,0-0.3,0-0.4c-0.5-3.3,1.3-7.2,5.3-8.6c4.7-1.6,8.7,1.3,9.9,4.3c0,0.1,0.1,0.1,0.1,0.2
+			c0.1,0.4,0.3,0.9,0.4,1.3c0.1,0.6,0.2,1.1,0.2,1.7C62,507.2,62,507.9,61.8,508.6z"/>
+                            <path fill="#25BCB6" d="M76.3,530.4h-2.3H57.2c-14,0-25.4,11.4-25.4,25.4v1.9v8.2h2.1h11.5h11.3c11.3-2.6,19.8-12.7,19.8-24.8
+			c0-0.7,0-1.3-0.1-2C76.4,539.2,76.3,530.4,76.3,530.4z M45.4,537.7c0.5-0.5,1-1,1.5-1.5c0.2-0.2,0.4-0.3,0.6-0.4
+			c0.1,0,0.3,0,0.4,0c0.2,0.2,0.4,0.3,0.6,0.5c1.2,1.2,2.5,2.5,3.7,3.7c0.5,0.5,0.5,0.9,0,1.4c-0.6,0.6-1.3,1.2-1.9,1.8
+			c-1.7-1.7-3.4-3.4-5.2-5.2C45.1,537.9,45.3,537.8,45.4,537.7z M61.1,558.4c-0.2,0.1-0.5,0.1-0.7,0.1c-0.4,0-0.8,0-1.2,0
+			c-0.1,0-0.1,0-0.2,0c-0.4-0.1-0.7-0.1-1.1-0.2c-1.6-0.3-3.1-1.1-4.5-2c-2-1.4-3.9-3-5.5-4.8c-1.4-1.5-2.6-3.2-3.5-5
+			c-0.5-0.9-0.8-1.9-1-3c-0.1-0.4-0.1-0.8-0.2-1.1c0-0.4,0-0.7,0-1.1c0.1-0.4,0.2-0.8,0.3-1.2c0.1-0.4,0.3-0.7,0.6-1
+			c0.1,0.1,0.1,0.1,0.2,0.2c1.7,1.7,3.4,3.4,5.1,5.1c0.1,0.1,0.1,0.2,0.1,0.4c-0.2,0.9-0.1,1.7,0.5,2.4c1.4,1.7,3,3.2,4.7,4.7
+			c0.7,0.6,1.5,0.8,2.4,0.5c0.1,0,0.2-0.1,0.3,0.1c1.7,1.7,3.4,3.4,5.1,5.1c0,0,0.1,0.1,0.1,0.1C62.1,558,61.6,558.2,61.1,558.4z
+			 M65.8,554.2c-0.2,0.2-0.3,0.5-0.5,0.6c-0.5,0.5-1.1,1.1-1.6,1.6c-0.1,0.1-0.1,0.1-0.2,0.2c-1.7-1.7-3.5-3.5-5.2-5.2
+			c0.1-0.1,0.3-0.2,0.4-0.4c0.5-0.5,1-1,1.5-1.5c0.4-0.4,0.9-0.4,1.3,0c1.3,1.3,2.6,2.6,3.9,3.9c0.1,0.1,0.2,0.3,0.3,0.4
+			C65.8,553.9,65.8,554.1,65.8,554.2z"/>
+                            <path fill="#25BCB6" d="M52.6,577.1c-6.6,1.2-9.9,8.6-6.1,14.3c0.2,0.2,0.2,0.4,0.1,0.7c-0.3,1-0.7,2-1,3.1c0.2,0,0.3-0.1,0.4-0.1
+			c1-0.3,2-0.6,3-0.9c0.1,0,0.3,0,0.4,0.1c2.2,1.3,4.6,1.7,7.2,1.1c4.9-1.1,8.1-6.2,6.9-11.2C62.2,579.3,57.6,576.3,52.6,577.1z
+			 M58,591.4c-0.6,0.1-1.2,0.1-1.8-0.1c-2.6-0.7-4.6-2.3-6.1-4.5c-0.5-0.7-1-1.5-1.1-2.3c0-0.2-0.1-0.4-0.1-0.7
+			c0-0.8,0.3-1.5,0.8-2.1c0.4-0.5,1-0.5,1.5-0.5c0.1,0,0.3,0.2,0.4,0.3c0.3,0.7,0.7,1.5,1,2.3c0.1,0.3-0.1,0.5-0.2,0.8
+			c-0.1,0.2-0.3,0.4-0.5,0.6c-0.2,0.2-0.2,0.4-0.1,0.6c0.9,1.5,2.1,2.6,3.8,3.2c0.2,0.1,0.4,0,0.5-0.1c0.3-0.3,0.6-0.6,0.8-1
+			c0.2-0.3,0.4-0.3,0.7-0.2c0.7,0.3,1.5,0.7,2.2,1.1c0.1,0.1,0.2,0.3,0.2,0.4C59.9,590.2,59.1,591.1,58,591.4z"/>
+                            <path fill="#25BCB6" d="M76.3,568.8h-2.3H57.2c-14,0-25.4,11.4-25.4,25.4v1.9v8.2h2.1h11.5h11.3c11.3-2.6,19.8-12.7,19.8-24.8
+			c0-0.7,0-1.3-0.1-2C76.4,577.6,76.3,568.8,76.3,568.8z M56.6,597.1c-2.6,0.5-5.1,0.2-7.5-1c-0.1-0.1-0.3-0.1-0.5,0
+			c-1.9,0.6-3.9,1.2-5.9,1.9c0.4-1.3,0.8-2.4,1.2-3.6c0.2-0.7,0.4-1.3,0.7-2c0.1-0.2,0.1-0.3,0-0.5c-1.2-2-1.7-4.2-1.4-6.6
+			c0.4-3.8,2.3-6.7,5.7-8.5c6.6-3.6,14.7,0.1,16.3,7.4C66.4,589.9,62.5,595.9,56.6,597.1z"/>
                         </g>
                         <g>
-                            <path fill="#25201D" d="M47.9,538.5c-6.9,0-12.6,5.8-12.6,12.8c0,7.1,5.6,12.8,12.6,12.8c6.9,0,12.6-5.8,12.6-12.8
-			C60.5,544.3,54.8,538.5,47.9,538.5z M41,544c0.4-0.4,0.7-0.8,1.1-1.1c0.1-0.1,0.3-0.2,0.4-0.3c0.1,0,0.2,0,0.3,0
-			c0.2,0.1,0.3,0.2,0.5,0.4c0.9,1,1.9,1.9,2.8,2.9c0.4,0.4,0.4,0.7,0,1.1c-0.5,0.5-1,0.9-1.5,1.4c-1.3-1.3-2.6-2.6-3.9-4
-			C40.8,544.2,40.9,544.1,41,544z M52.9,560.1c-0.2,0-0.4,0.1-0.5,0.1c-0.3,0-0.6,0-0.9,0c0,0-0.1,0-0.1,0c-0.3,0-0.5-0.1-0.8-0.1
-			c-1.3-0.3-2.4-0.8-3.4-1.5c-1.6-1.1-2.9-2.3-4.2-3.7c-1-1.2-2-2.5-2.7-3.9c-0.4-0.7-0.6-1.5-0.8-2.3c-0.1-0.3-0.1-0.6-0.1-0.9
-			c0-0.3,0-0.6,0-0.9c0.1-0.3,0.1-0.6,0.2-0.9c0.1-0.3,0.2-0.5,0.4-0.8c0,0,0.1,0.1,0.1,0.1c1.3,1.3,2.6,2.6,3.8,3.9
-			c0.1,0.1,0.1,0.2,0.1,0.3c-0.2,0.7-0.1,1.3,0.4,1.9c1.1,1.3,2.3,2.5,3.5,3.6c0.5,0.5,1.2,0.6,1.9,0.4c0.1,0,0.2,0,0.3,0
-			c1.3,1.3,2.6,2.7,3.9,4c0,0,0.1,0.1,0.1,0.1C53.7,559.8,53.3,560,52.9,560.1z M56.5,556.9c-0.1,0.2-0.2,0.4-0.4,0.5
-			c-0.4,0.4-0.8,0.8-1.2,1.2c0,0-0.1,0.1-0.1,0.1c-1.3-1.4-2.6-2.7-4-4.1c0.1-0.1,0.2-0.2,0.3-0.3c0.4-0.4,0.8-0.8,1.2-1.2
-			c0.3-0.3,0.7-0.3,1,0c1,1,2,2,3,3c0.1,0.1,0.2,0.2,0.2,0.3C56.5,556.6,56.5,556.8,56.5,556.9z"/>
+                            <text transform="matrix(1 0 0 1 11.3408 298.7739)" fill="#1E1E1E" fontFamily="'MyriadPro-Regular'" fontSize="20px">{user.area} - {user.area_level}</text>
                         </g>
                         <g>
-                            <path fill="#25201D" d="M46.8,580.5c-5,0.9-7.5,6.7-4.7,11.1c0.1,0.2,0.1,0.3,0.1,0.6c-0.3,0.8-0.5,1.5-0.8,2.4
-			c0.1,0,0.2-0.1,0.3-0.1c0.8-0.2,1.5-0.5,2.3-0.7c0.1,0,0.2,0,0.3,0c1.7,1,3.5,1.3,5.5,0.9c3.8-0.9,6.2-4.8,5.2-8.7
-			C54.1,582.2,50.6,579.8,46.8,580.5z M50.9,591.5c-0.5,0.1-0.9,0-1.4-0.1c-2-0.5-3.5-1.8-4.7-3.5c-0.4-0.6-0.7-1.1-0.9-1.8
-			c0-0.2,0-0.3-0.1-0.5c0-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.4,1.2-0.4c0.1,0,0.2,0.1,0.3,0.3c0.3,0.6,0.5,1.2,0.7,1.8
-			c0.1,0.2,0,0.4-0.2,0.6c-0.1,0.2-0.2,0.3-0.4,0.4c-0.1,0.1-0.2,0.3-0.1,0.5c0.7,1.2,1.6,2,2.9,2.5c0.2,0.1,0.3,0,0.4-0.1
-			c0.2-0.3,0.4-0.5,0.6-0.8c0.1-0.2,0.3-0.3,0.5-0.2c0.6,0.3,1.1,0.5,1.7,0.8c0.1,0,0.2,0.2,0.2,0.3
-			C52.3,590.7,51.7,591.4,50.9,591.5z"/>
-                            <path fill="#25201D" d="M47.9,574.9c-6.9,0-12.6,5.8-12.6,12.8c0,7.1,5.6,12.8,12.6,12.8c6.9,0,12.6-5.8,12.6-12.8
-			C60.5,580.7,54.8,574.9,47.9,574.9z M49.8,596c-2,0.4-3.9,0.1-5.7-0.8c-0.1-0.1-0.2-0.1-0.4,0c-1.5,0.5-3,1-4.5,1.5
-			c0.3-1,0.6-1.9,0.9-2.8c0.2-0.5,0.3-1,0.5-1.6c0.1-0.2,0-0.3,0-0.4c-0.9-1.6-1.3-3.3-1.1-5.1c0.3-3,1.8-5.2,4.3-6.6
-			c5-2.8,11.2,0.1,12.4,5.8C57.3,590.4,54.3,595.1,49.8,596z"/>
+                            <text transform="matrix(1 0 0 1 82.5806 433.1367)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">CONTATO</text>
+                            <text transform="matrix(1 0 0 1 82.5806 464.1367)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="14px">{user.email}</text>
+                            <text transform="matrix(1 0 0 1 82.5806 499.1367)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="14px">{user.address.substring(0,28)}</text>
+                            <text transform="matrix(1 0 0 1 82.5806 520.1367)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="14px">{user.address.substring(28,user.address.length)}</text>
+                            <text transform="matrix(1 0 0 1 82.5806 550.1367)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="14px">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
+                            <text transform="matrix(1 0 0 1 82.5806 590.1367)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="14px">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
                         </g>
-                        <g>
-                            <path fill="#25201D" d="M53.7,619.9c-3.9,0-7.7,0-11.5,0c1.9,1.7,3.9,3.3,5.8,5C49.8,623.2,51.7,621.6,53.7,619.9z" />
-                            <path fill="#25201D" d="M47.9,612c-6.9,0-12.6,5.8-12.6,12.8c0,7.1,5.6,12.8,12.6,12.8c6.9,0,12.6-5.8,12.6-12.8
-			C60.5,617.7,54.8,612,47.9,612z M56.5,629.8c0,0.1-0.1,0.2-0.1,0.3c-0.3,0.9-1,1.4-2,1.4c-4.3,0-8.7,0-13,0
-			c-0.7,0-1.3-0.3-1.7-0.9c-0.2-0.3-0.2-0.6-0.4-0.9c0-3.3,0-6.6,0-9.9c0-0.1,0.1-0.2,0.1-0.3c0.3-0.9,1-1.4,2-1.4c4.3,0,8.7,0,13,0
-			c0.7,0,1.3,0.3,1.7,0.9c0.2,0.3,0.2,0.6,0.4,0.9C56.5,623.1,56.5,626.5,56.5,629.8z"/>
-                            <path fill="#25201D" d="M54.8,621.4c-0.1,0.1-0.1,0.1-0.2,0.2c-1.9,1.6-3.8,3.3-5.7,4.9c-0.2,0.1-0.4,0.2-0.6,0.2c-0.3,0-0.5,0-0.8,0
-			c-0.2,0-0.4-0.1-0.6-0.2c-1.9-1.6-3.8-3.3-5.7-4.9c0,0-0.1-0.1-0.2-0.1c0,0.1,0,0.2,0,0.2c0,2.6,0,5.2,0,7.7
-			c0,0.3,0.1,0.4,0.4,0.4c4.3,0,8.7,0,13,0c0.3,0,0.4-0.1,0.4-0.4c0-2.6,0-5.2,0-7.7C54.8,621.5,54.8,621.5,54.8,621.4z"/>
-                        </g>
-                        <rect x="210.1" y="732.8" fill="#25201D" width="100%" height="30.4" />
-                        <text transform="matrix(1 0 0 1 308.8086 751.5225)" fill='#FFF' fontFamily="MyriadPro-Regular" fontSize="11.3951px">Currículo Gerado pela Curvi</text>
-                       {/* 
-                        <rect x="272.1" y="732.8" fill="#84CFEC" width="30.4" height="30.4" />
-                        <rect x="378.6" y="732.8" fill="#25201D" width="30.4" height="30.4" />
-                        <rect x="485.1" y="732.8" fill="#D1D4D6" width="30.4" height="30.4" />
-                        <text transform="matrix(1 0 0 1 308.8086 751.5225)" fontFamily="MyriadPro-Regular" fontSize="11.3951px">84CFEC</text>
-                        <text transform="matrix(1 0 0 1 416.5309 751.5225)" fontFamily="MyriadPro-Regular" fontSize="11.3951px">25201D</text>
-                        <text transform="matrix(1 0 0 1 524.2552 751.5225)" fontFamily="MyriadPro-Regular" fontSize="11.3951px">D1D4D6</text> */}
                     </g>
                     <g id="Layer_3">
+                        <g>
+                            <rect x="340.6" y="159.6" fill="none" width="110.4" height="12.8" />
+                            <text transform="matrix(1 0 0 1 340.5938 168.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courseName} </text>
+                            <text transform="matrix(1 0 0 1 340.5938 185.2275)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courseSchool} </text>
+                        </g>
+                         <g>
+                            <rect x="340.6" y="216.7" fill="none" width="110.4" height="12.8" />
+                            <text transform="matrix(1 0 0 1 340.5938 225.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{(user.courses !== 'NOT_PRINT' )? user.courses:<></> } </text>
+                            {/* <text transform="matrix(1 0 0 1 340.5938 245.2275)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courseSchool} </text>  */}
+                        </g>
+                        {/*
+                        <g>
+                            <rect x="340.6" y="275.6" fill="none" width="110.4" height="12.8" />
+                            <text transform="matrix(1 0 0 1 340.5938 284.0801)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">Lorem ipsum dolor </text>
+                        </g> */}
+                        <g>
+                            <text transform="matrix(1 0 0 1 365.0542 136.311)" fontFamily="'MyriadPro-Semibold'" fontSize="26px" fill="#FFFFFF">Formação</text>
+                        </g>
+                        <g>
+                            <text transform="matrix(1 0 0 1 348.5942 392.1362)" fontFamily="'MyriadPro-Semibold'" fontSize="26px" fill="#FFFFFF">Experiencias</text>
+                        </g>
+                        <g>
+                            <text transform="matrix(1 0 0 1 340.5942 645.6411)" fontFamily="'MyriadPro-Semibold'" fontSize="26px" fill="#FFFFFF">HABILIDADES</text>
+                        </g>
+                        <path fill="#1E1E1E" d="M296.4,223c0-1.5-1-2.7-2.3-3.2v-53.6c1.3-0.5,2.3-1.7,2.3-3.2c0-1.9-1.5-3.4-3.4-3.4c-1.9,0-3.4,1.5-3.4,3.4
+		c0,1.5,1,2.7,2.3,3.2v53.6c-1.3,0.5-2.3,1.7-2.3,3.2s1,2.7,2.3,3.2v53.6c-1.3,0.5-2.3,1.7-2.3,3.2s1,2.7,2.3,3.2V345h2.3v-58.8
+		c1.3-0.5,2.3-1.7,2.3-3.2s-1-2.7-2.3-3.2v-53.6C295.5,225.7,296.4,224.5,296.4,223z"/>
+                        <path fill="#1E1E1E" d="M296.4,486.9c0-1.5-1-2.7-2.3-3.2v-53.6c1.3-0.5,2.3-1.7,2.3-3.2c0-1.9-1.5-3.4-3.4-3.4
+		c-1.9,0-3.4,1.5-3.4,3.4c0,1.5,1,2.7,2.3,3.2v53.6c-1.3,0.5-2.3,1.7-2.3,3.2s1,2.7,2.3,3.2v53.6c-1.3,0.5-2.3,1.7-2.3,3.2
+		s1,2.7,2.3,3.2v58.8h2.3v-58.8c1.3-0.5,2.3-1.7,2.3-3.2s-1-2.7-2.3-3.2v-53.6C295.5,489.7,296.4,488.4,296.4,486.9z"/>
+                        <text transform="matrix(1 0 0 1 304.9082 166.0044)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.courseEndYear.substring(4,user.courseEndYear.length)}</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.courseEndYear.substring(0,4)}</tspan></text>
+                        {/* <text transform="matrix(1 0 0 1 304.9082 219.8857)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.courseEndYear.substring(0,4)}</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">2001</tspan></text> */}
+                        {/* <text transform="matrix(1 0 0 1 304.9082 273.7671)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">2000</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">2001</tspan></text> */}
+                        <g>
+                            <rect x="338.6" y="425.9" fill="none" width="110.4" height="12.8" />
+                            <text transform="matrix(1 0 0 1 338.6328 434.46)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>}</text>
+                            <text transform="matrix(1 0 0 1 338.6328 449.46)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,38)}</text>
+                            <text transform="matrix(1 0 0 1 338.6328 469.46)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(38,75)}</text>
+                            <text transform="matrix(1 0 0 1 338.6328 489.46)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(75,user.companyName.length)}</text>
+                        </g>
+                        {/* <g>
+                            <rect x="338.6" y="483.1" fill="none" width="110.4" height="12.8" />
+                            <text transform="matrix(1 0 0 1 338.6328 491.5752)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">Lorem ipsum dolor </text>
+                        </g>
+                        <g>
+                            <rect x="338.6" y="541.9" fill="none" width="110.4" height="12.8" />
+                            <text transform="matrix(1 0 0 1 338.6328 550.4277)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">Lorem ipsum dolor </text>
+                        </g> */}
+                        <text transform="matrix(1 0 0 1 302.9473 432.3521)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.companyStartEnd  !== "NOT_PRINT"?  `${user.companyStartEnd.substring(6,user.companyStartEnd.length)}` :<></>}</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.companyStartEnd  !== "NOT_PRINT"?  `${user.companyStartEnd.substring(0,4)}` :<></>}</tspan></text>
+                        {/* <text transform="matrix(1 0 0 1 302.9473 486.2334)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">2000</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">2001</tspan></text>
+                        <text transform="matrix(1 0 0 1 302.9473 540.1147)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">2000</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">2001</tspan></text> */}
+                        <text transform="matrix(1 0 0 1 95.583 157.5503)" fill="#25BCB6" fontFamily="'MyriadPro-Regular'" fontSize="93.7393px">{user.name.charAt(0)}</text>
+                        <rect x="14.6" y="694.6" fill="#25BCB6" width="250" height="35" />
+                        <text transform="matrix(1 0 0 1 14.9992 718.9017)" fill='#FFF' fontFamily="'MyriadPro-Regular'" fontSize="19.7517px">Currículo gerado pela Curvi</text>
+                       {/*  <g>
+                            <rect x="204.6" y="694.6" fill="#25BCB6" width="35" height="35" />
+                            <rect x="325.9" y="694.6" fill="#13AA9E" width="35" height="35" />
+                            <rect x="447.2" y="694.6" fill="#1E1E1E" width="35" height="35" />
+                            <text transform="matrix(1 0 0 1 246.9992 718.9017)" fontFamily="'MyriadPro-Regular'" fontSize="19.7517px">25BCB6</text>
+                            <text transform="matrix(1 0 0 1 369.8059 718.9017)" fontFamily="'MyriadPro-Regular'" fontSize="19.7517px">13AA9E</text>
+                            <text transform="matrix(1 0 0 1 492.6125 718.9017)" fontFamily="'MyriadPro-Regular'" fontSize="19.7517px">1E1E1E</text>
+                        </g> */}
                     </g>
                 </svg>
-
             </div>
         </div>
     )

@@ -115,9 +115,9 @@ function ProdResume(props) {
                         <text transform="matrix(1 0 0 1 45.3115 350.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
                         <text transform="matrix(1 0 0 1 45.3110 385.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>{user.email}</text>
                         <text transform="matrix(1 0 0 1 15.3115 477.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(0,26)}</text>
-                        <text transform="matrix(1 0 0 1 15.3115 497.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(26,50)}</text>
-                        <text transform="matrix(1 0 0 1 15.3115 517.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(50,75)}</text>
-                        <text transform="matrix(1 0 0 1 15.3115 537.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(75,100)}</text>
+                        <text transform="matrix(1 0 0 1 15.3115 497.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(26,51)}</text>
+                        <text transform="matrix(1 0 0 1 15.3115 517.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(51,76)}</text>
+                        <text transform="matrix(1 0 0 1 15.3115 537.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(76,100)}</text>
                         <text transform="matrix(1 0 0 1 15.3115 553.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(100,125)}</text>
                         <text transform="matrix(1 0 0 1 15.3115 573.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(125,150)}</text>
                         <text transform="matrix(1 0 0 1 15.3115 593.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(150,user.goal.length)}</text>
