@@ -153,12 +153,28 @@ function EngResume(props) {
 		c0.2,0.3,0.4,0.6,0.6,0.9c0.1,0.3,0.2,0.6,0.3,0.9C37.9,498.9,37.9,499.2,37.9,499.5z"/>
                     </g>
                     <g id="textos">
-                        <text transform="matrix(1 0 0 1 280.6318 147.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>Curso / Nome da Instituição</text>
+                        <text transform="matrix(1 0 0 1 50.6318 357.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(0,26)}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 377.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(26,50)}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 397.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(50,75)}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 417.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(75,100)}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 433.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.goal.substring(100,user.goal.length)}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 493.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.address.substring(0,28)}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 509.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.address.substring(28,user.address.length)}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 529.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 559.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.email}</text>
+                        <text transform="matrix(1 0 0 1 50.6318 589.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
+                        <text transform="matrix(1 0 0 1 280.6318 147.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.courseName} / {user.courseSchool}</text>
+                        <text transform="matrix(1 0 0 1 280.6318 167.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>Período - {user.courseEndYear}</text>
                         {/* <text transform="matrix(1 0 0 1 280.6318 737.6553)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'></text> */}
                         <text transform="matrix(1 0 0 1 280.6318 652.7178)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{(user.courses !== 'NOT_PRINT' )? user.courses:<></> }</text>
-                        <text transform="matrix(1 0 0 1 280 395.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>Cargo / Nome da Compainha</text>
-                        <text transform="matrix(1 0 0 1 279.6836 489.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>Cargo / Nome da Compainha</text>
-                        <text transform="matrix(1 0 0 1 94.5471 158.209)" fill='#341716' fontFamily='MyriadPro-Bold'fontSize='58.4611px'>{user.name.charAt(0).toUpperCase()}</text>
+                        <text transform="matrix(1 0 0 1 280 395.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation} /` :<></>} {user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,38)}</text>
+                        <text transform="matrix(1 0 0 1 280 415.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(38,75)}</text>
+                        <text transform="matrix(1 0 0 1 280 435.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(75,user.companyName.length)}</text>
+                        <text transform="matrix(1 0 0 1 279.6836 415.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyStartEnd  !== "NOT_PRINT"?  `Período: ${user.companyStartEnd}` :<></>}</text>
+                        <text transform="matrix(1 0 0 1 279.6836 435.4585)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades: ${user.companyDescription}`:<></>}</text>
+                        <text transform="matrix(1 0 0 1 104.5471 158.209)" fill='#341716' fontFamily='MyriadPro-Bold'fontSize='58.4611px'>{user.name.charAt(0).toUpperCase()}</text>
+                        <rect x="260.9" y="790" fill='#2DBEB7' width="100%" height="20" />
+                        <text transform="matrix(1 0 0 1 298.4359 806.5256)" fill='#FFF' fontFamily='MyriadPro-Regular' fontSize='17.2529px '>Currículo Gerado pela Curvi</text>
                         {/* <g>
                             <rect x="274.9" y="790" class="st1" width="20.6" height="20.6" />
                             <rect x="381.2" y="790" fill='#341716' width="20.6" height="20.6" />
