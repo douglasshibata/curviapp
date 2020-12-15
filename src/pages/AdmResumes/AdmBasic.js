@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form } from '../style';
 const saveSvgAsPng = require('save-svg-as-png');
 
 function AdmBasic(props) {
@@ -10,8 +11,11 @@ function AdmBasic(props) {
             saveSvgAsPng.saveSvgAsPng(document.getElementById('resumeBackground'),`${user.name}.png`,imageOptions)
         }
     return (
-        <div className="resumeBackground">
+        <>
+        <Form>
             <button onClick={downloadResume}>Baixar Currículo</button>
+        </Form>
+        <div className="resumeBackground">
             <div className="resumeReady">
 
             <svg version="1.1" id="resumeBackground" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -195,6 +199,7 @@ function AdmBasic(props) {
             </svg>
             </div>
         </div>
+        </>
     )
 }
 export default AdmBasic;

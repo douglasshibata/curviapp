@@ -37,7 +37,7 @@ export const Form = styled.form`
     }
   }
   button {
-    color: #3aa39f;
+    color: #FFF;
     font-size: 23px;
     background: #000;
     height: 56px;

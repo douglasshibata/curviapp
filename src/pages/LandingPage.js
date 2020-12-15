@@ -8,7 +8,6 @@ function LandingPage() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Bem-vindo ao Curvi</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Você demora muito fazendo seu currículo ou não sabe como faze-lo?</h2>
         <p>

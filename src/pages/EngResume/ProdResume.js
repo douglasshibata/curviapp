@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form } from '../style';
 const saveSvgAsPng = require('save-svg-as-png');
 
 function ProdResume(props) {
@@ -10,8 +11,11 @@ function ProdResume(props) {
         saveSvgAsPng.saveSvgAsPng(document.getElementById('prodResume'), `${user.name}.png`, imageOptions)
     }
     return (
-        <div className="resumeBackground">
+        <>
+        <Form>
             <button onClick={downloadResume}>Baixar Currículo</button>
+        </Form>
+        <div className="resumeBackground">
             <div className="resumeReady">
                 <svg version="1.1" id='prodResume' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 595.3 841.9" xmlSpace="preserve">
@@ -140,6 +144,7 @@ function ProdResume(props) {
 
             </div>
         </div>
+        </>
     )
 }
 export default ProdResume;
