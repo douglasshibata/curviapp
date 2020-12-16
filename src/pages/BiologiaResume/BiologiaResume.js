@@ -72,16 +72,23 @@ function BiologiaResume(props) {
                             <text transform="matrix(0.9856 0 0 1 247.2417 263.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `Principais Atividades: ${user.companyDescription.substring(0, 25)} ` : <></>}</text>
                             <text transform="matrix(0.9856 0 0 1 247.2417 283.1533)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `${user.companyDescription.substring(25, user.companyDescription.length)} ` : <></>}</text>
                             {/* <text transform="matrix(0.9856 0 0 1 246.5835 317.8145)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text> */}
-                            <text transform="matrix(1 0 0 1 247.0435 636.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{(user.courses !== 'NOT_PRINT') ? user.courses : <></>}</text>
+                            <text transform="matrix(1 0 0 1 247.0435 636.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(0,50):<></>} </text>
+                            <text transform="matrix(1 0 0 1 247.0435 656.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(50,100):<></>} </text>
+                            <text transform="matrix(1 0 0 1 247.0435 676.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(100,150):<></>} </text>
+                            <text transform="matrix(1 0 0 1 247.0435 696.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(150,200):<></>} </text>
+                            <text transform="matrix(1 0 0 1 247.0435 716.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(80,100):<></>} </text>
+                            <text transform="matrix(1 0 0 1 247.0435 736.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(120,140):<></>} </text>
+                            <text transform="matrix(1 0 0 1 247.0435 756.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(140,160):<></>} </text>
+                            <text transform="matrix(1 0 0 1 247.0435 776.3594)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(160,user.courses.length):<></>} </text>
                             {/* <text transform="matrix(1 0 0 1 246.4116 695.4033)" fontFamily="MyriadPro-Semibold" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text> */}
                             <path fill="#FFFFFF" d="M178.2,282.1c0,6.4-5.2,11.6-11.6,11.6H49.4c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h117.2
 		C173,270.5,178.2,275.7,178.2,282.1L178.2,282.1z"/>
                             <circle fill="#25201D" cx="49" cy="282.1" r="11.1" />
                             <text transform="matrix(1 0 0 1 87.4585 287.6353)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="15px">PERFIL</text>
-                            <text transform="matrix(1 0 0 1 42.4585 310.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(0, 26)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 325.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(26, 54)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 340.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(54, 81)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 355.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(81, 107)}</text>
+                            <text transform="matrix(1 0 0 1 42.4585 310.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(0, 27)}</text>
+                            <text transform="matrix(1 0 0 1 42.4585 325.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(27, 55)}</text>
+                            <text transform="matrix(1 0 0 1 40.4585 340.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(55, 83)}</text>
+                            <text transform="matrix(1 0 0 1 41.4585 355.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(83, 107)}</text>
                             <text transform="matrix(1 0 0 1 42.4585 370.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(107, 134)}</text>
                             <text transform="matrix(1 0 0 1 42.4585 385.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(134, 161)}</text>
                             <text transform="matrix(1 0 0 1 42.4585 400.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(161, 188)}</text>
@@ -142,8 +149,8 @@ function BiologiaResume(props) {
 			c-0.2,0-0.4-0.1-0.6-0.2c-1.9-1.6-3.8-3.3-5.7-4.9c0,0-0.1-0.1-0.2-0.1c0,0.1,0,0.2,0,0.2c0,2.6,0,5.2,0,7.7
 			c0,0.3,0.1,0.4,0.4,0.4c4.3,0,8.7,0,13,0c0.3,0,0.4-0.1,0.4-0.4c0-2.6,0-5.2,0-7.7C54.8,621.5,54.8,621.5,54.8,621.4z"/>
                             </g>
-                            <rect x="210.1" y="732.8" fill="#25201D" width="100%" height="30.4" />
-                            <text transform="matrix(1 0 0 1 308.8086 751.5225)" fill='#FFF' fontFamily="MyriadPro-Regular" fontSize="11.3951px">Currículo Gerado pela Curvi</text>
+                            <rect x="18.1" y="732.8" fill="#25201D" width="30%" height="30.4" />
+                            <text transform="matrix(1 0 0 1 38.8086 751.5225)" fill='#FFF' fontFamily="MyriadPro-Regular" fontSize="11.3951px">Currículo Gerado pela Curvi</text>
                             {/* 
                         <rect x="272.1" y="732.8" fill="#84CFEC" width="30.4" height="30.4" />
                         <rect x="378.6" y="732.8" fill="#25201D" width="30.4" height="30.4" />

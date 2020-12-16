@@ -20,8 +20,9 @@ function SaudeResume(props) {
                 <svg version="1.1" id='saudeResume' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 595.3 841.9" xmlSpace="preserve">
                     <g id="Layer_1">
-                        <text transform="matrix(1 0 0 1 14.4267 255.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(0,18)}</text>
-                        <text transform="matrix(1 0 0 1 14.4267 279.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(18,user.name.length)}</text>
+                        <text transform="matrix(1 0 0 1 14.4267 255.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(0,17)}</text>
+                        <text transform="matrix(1 0 0 1 14.4267 279.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(17,34)}</text>
+                        <text transform="matrix(1 0 0 1 14.4267 299.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(34,user.name.length)}</text>
                     </g>
                     <g id="Layer_2">
                         <polygon fill="#25BCB6" points="595.3,0 595.3,85.2 481.2,53.3" />
@@ -90,7 +91,7 @@ function SaudeResume(props) {
 			c0.4-3.8,2.3-6.7,5.7-8.5c6.6-3.6,14.7,0.1,16.3,7.4C66.4,589.9,62.5,595.9,56.6,597.1z"/>
                         </g>
                         <g>
-                            <text transform="matrix(1 0 0 1 11.3408 298.7739)" fill="#1E1E1E" fontFamily="'MyriadPro-Regular'" fontSize="20px">{user.area} - {user.area_level}</text>
+                            <text transform="matrix(1 0 0 1 11.3408 328.7739)" fill="#1E1E1E" fontFamily="'MyriadPro-Regular'" fontSize="20px">{user.area} - {user.area_level}</text>
                         </g>
                         <g>
                             <text transform="matrix(1 0 0 1 82.5806 433.1367)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">CONTATO</text>
@@ -109,7 +110,14 @@ function SaudeResume(props) {
                         </g>
                          <g>
                             <rect x="340.6" y="216.7" fill="none" width="110.4" height="12.8" />
-                            <text transform="matrix(1 0 0 1 340.5938 225.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{(user.courses !== 'NOT_PRINT' )? user.courses:<></> } </text>
+                    
+                            <text transform="matrix(1 0 0 1 340.5938 225.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courses!== 'NOT_PRINT'?user.courses.substring(0,40):<></>} </text>
+                            <text transform="matrix(1 0 0 1 340.5938 245.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courses!== 'NOT_PRINT'?user.courses.substring(40,80):<></>} </text>
+                            <text transform="matrix(1 0 0 1 340.5938 265.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courses!== 'NOT_PRINT'?user.courses.substring(80,100):<></>} </text>
+                            <text transform="matrix(1 0 0 1 340.5938 285.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courses!== 'NOT_PRINT'?user.courses.substring(100,120):<></>} </text>
+                            <text transform="matrix(1 0 0 1 340.5938 305.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courses!== 'NOT_PRINT'?user.courses.substring(120,140):<></>} </text>
+                            <text transform="matrix(1 0 0 1 340.5938 325.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courses!== 'NOT_PRINT'?user.courses.substring(140,160):<></>} </text>
+                            <text transform="matrix(1 0 0 1 340.5938 345.1123)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courses!== 'NOT_PRINT'?user.courses.substring(160,user.courses.length):<></>} </text>
                             {/* <text transform="matrix(1 0 0 1 340.5938 245.2275)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">{user.courseSchool} </text>  */}
                         </g>
                         {/*

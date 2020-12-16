@@ -69,13 +69,16 @@ function GenerateResume() {
                   user.area === 'Saúde' ?
                     <>
                       <SaudeResume user={user} />
+                      <BiologiaResume user={user} />
                     </>
                     :
                     <>
+                    {/* <p>Foram Construidas estas Opções de Currículos para você</p>
+                    <p>{user.name}</p> */}
                       <Admin user={user} />
-                      <AdmBasic user={user} />
+                      {/* <AdmBasic user={user} />
                       <BiologiaResume user={user} />
-                      <EngResume user={user} />
+                      <EngResume user={user} /> */}
                       <ProdResume user={user} />
                       <SaudeResume user={user} />
                     </>
@@ -107,7 +110,7 @@ function GenerateResume() {
               <h2>Curso</h2>
               <p>{user.courseName}</p>
               <p>{user.courseSchool}</p>
-              <p>{user.courseEndYear}</p>
+              <p>Previsão de Conclusão: {user.courseEndYear}</p>
             </div>
             {(user.courses !== 'NOT_PRINT') ?
               <div className="content">
@@ -118,6 +121,11 @@ function GenerateResume() {
               <div className="content">
                 <h2>Midias Sociais</h2>
                 <p> <a href={user.linkedln_link} target='_blank' rel="noreferrer" >{user.linkedln_link}</a></p>
+              </div> : <></>}
+            {(user.cientificResearch !== 'NOT_PRINT') ?
+              <div className="content">
+                <h2>Pesquisa Científica</h2>
+                <p> {user.cientificResearch}</p>
               </div> : <></>}
             <div className="content">
               <h2>Feedback</h2>
