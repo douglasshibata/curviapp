@@ -67,14 +67,13 @@ export const Form = styled.form`
 `;
 
 export const Box = styled.div`
-  button {
+  p {
     margin-top:20px;
-    color: #3aa39f;
+    margin-bottom:10px;
+    text-align:center;
+    color: #FFF;
     font-size: 23px;
-    background: #fff;
-    height: 56px;
-    border: 0;
-    border-radius: 5px;
+    height: 100%;
     width: 100%;
   }
   hr {

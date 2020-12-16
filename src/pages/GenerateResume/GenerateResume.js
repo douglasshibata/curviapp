@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import api from '../../services/api';
-import { Form } from '../style';
+import { Box, Form } from '../style';
 import ReactLoading from 'react-loading';
 import logo from '../../assets/bot.jpg';
 //import BasicResume from '../BasicResume';
@@ -33,6 +33,15 @@ function GenerateResume() {
     };
     getUser();
   }, [email])
+  function mensagemAnimadora(){
+    return(
+      <Box>
+      <p><b>{user.name.toUpperCase()}</b>,</p>
+      <p>gerei esses modelos para você! </p>
+      <p>Tenho certeza que com qualquer um deles você irá se destacar!</p>
+      </Box>
+    )
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -56,26 +65,28 @@ function GenerateResume() {
               {/* <BasicResume user={user} /> */}
               {user.area === 'Administraçãao' ?
                 <>
+                   {mensagemAnimadora()}
                   <Admin user={user} />
                   <AdmBasic user={user} />
                 </>
                 :
                 user.area === 'Engenharia' ?
                   <>
+                     {mensagemAnimadora()}
                     <EngResume user={user} />
                     <ProdResume user={user} />
                   </>
                   :
                   user.area === 'Saúde' ?
                     <>
+                      {mensagemAnimadora()}
                       <SaudeResume user={user} />
                       <BiologiaResume user={user} />
                     </>
                     :
                     <>
-                    {/* <p>Foram Construidas estas Opções de Currículos para você</p>
-                    <p>{user.name}</p> */}
-                      <Admin user={user} />
+                     {mensagemAnimadora()}
+                    <Admin user={user} />
                       {/* <AdmBasic user={user} />
                       <BiologiaResume user={user} />
                       <EngResume user={user} /> */}
@@ -88,7 +99,7 @@ function GenerateResume() {
           <Form>
             <div className="content">
               <h1>Dados Pessoais</h1>
-              <p>{user.name}, {user.age}</p>
+              <p>{user.name.toUpperCase()}, {user.age}</p>
               <p>{user.area} - {user.area_level}</p>
               <p>{user.email}</p>
               <p>Celular: {user.cellphone}</p>
