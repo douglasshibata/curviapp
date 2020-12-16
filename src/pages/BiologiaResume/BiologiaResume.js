@@ -10,6 +10,14 @@ function BiologiaResume(props) {
     function downloadResume() {
         saveSvgAsPng.saveSvgAsPng(document.getElementById('biologiaResume'), `${user.name}.png`, imageOptions)
     }
+    const email = user.email.indexOf('@');
+    function emailLenght(){
+        if(email>=16){
+            return user.email.substring(0,16)
+        }else{
+            return user.email.substring(0,email)
+        }
+    }
     return (
         <>
             <Form>
@@ -34,9 +42,11 @@ function BiologiaResume(props) {
                             <path fill="#D1D4D6" d="M200,825.1c-46.3-2.6-121.4-10.7-184-35.3c-5.4-2.1-10.8-4.4-16-6.8v58.8h157.3c32-2.6,47.4-4.7,86.3-15.6
 		C243.6,826.3,226.5,826.6,200,825.1z"/>
                             <g>
-                                <text transform="matrix(1 0 0 1 48.1782 155.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(0, 8)}</text>
-                                <text transform="matrix(1 0 0 1 48.1782 185.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(8, 18)}</text>
-                                <text transform="matrix(1 0 0 1 48.1782 215.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(18, user.name.length)}</text>
+                                <text transform="matrix(1 0 0 1 30.1782 130.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(0, 9)}</text>
+                                <text transform="matrix(1 0 0 1 35.1782 152.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(9, 17)}</text>
+                                <text transform="matrix(1 0 0 1 36.1782 174.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(17, 25)}</text>
+                                <text transform="matrix(1 0 0 1 37.1782 196.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(25, 34)}</text>
+                                <text transform="matrix(1 0 0 1 38.1782 218.771)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="26.3245px">{user.name.toUpperCase().substring(34, user.name.length)}</text>
                                 <text transform="matrix(1 0 0 1 30.4585 234.3408)" fill="#25201D" fontFamily="MyriadPro-Regular" fontSize="12.9183px">{user.area} - {user.area_level}</text>
                             </g>
                             <path fill="#25201D" d="M577.7,156.8c0,8.8-7.1,15.9-15.9,15.9H262.4c-8.8,0-15.9-7.1-15.9-15.9l0,0c0-8.8,7.1-15.9,15.9-15.9h299.4
@@ -85,7 +95,8 @@ function BiologiaResume(props) {
                             <text transform="matrix(1 0 0 1 66.6108 524.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="14px">{user.address.substring(28, user.address.length)}</text>
                             <text transform="matrix(1 0 0 1 66.6108 550.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="14px">({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
                             <text transform="matrix(1 0 0 1 66.6108 590.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="14px">({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
-                            <text transform="matrix(1 0 0 1 62.6108 625.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.email}</text>
+                            <text transform="matrix(1 0 0 1 62.6108 625.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="12px">{emailLenght()}</text>
+                            <text transform="matrix(1 0 0 1 62.6108 635.7788)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.email.substring(email,user.email.length)}</text>
                             <g>
                                 <path fill="#25201D" d="M47.9,526.5c6.9,0,12.6-5.8,12.6-12.8c0-7.1-5.6-12.8-12.6-12.8c-6.9,0-12.6,5.8-12.6,12.8
 			C35.3,520.8,40.9,526.5,47.9,526.5z M53.9,521.4c0,0.2-0.1,0.4-0.2,0.6c-1.3,0-2.6,0-4,0c0-1.1,0-2.2,0-3.3c0-0.3-0.2-0.5-0.5-0.5
