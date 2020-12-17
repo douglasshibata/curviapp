@@ -150,7 +150,7 @@ function ProdResume(props) {
                             {/* <text transform="matrix(0.9856 0 0 1 249.2612 341.938)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text>
                         <text transform="matrix(0.9856 0 0 1 248.9321 399.7686)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text> */}
                             <text transform="matrix(1 0 0 1 249.8784 506.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courseName} / {user.courseSchool}</text>
-                            <text transform="matrix(1 0 0 1 249.8784 526.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">Período - {user.courseEndYear}</text>
+                            <text transform="matrix(1 0 0 1 249.8784 526.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">  {user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</text>
                             {/* <text transform="matrix(1 0 0 1 249.2466 584.5894)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text> */}
 
                             <text transform="matrix(1 0 0 1 250.1948 696.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(0, 50) : <></>} </text>

@@ -11,6 +11,7 @@ import EngResume from '../EngResume/EngResume';
 import ProdResume from '../EngResume/ProdResume';
 import SaudeResume from '../SaudeResume/SaudeResume';
 import BiologiaResume from '../BiologiaResume/BiologiaResume';
+//import ResumeCurvi from '../ResumeCurvi/ResumeCurvi';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
@@ -92,6 +93,7 @@ function GenerateResume() {
                       <EngResume user={user} /> */}
                       <ProdResume user={user} />
                       <SaudeResume user={user} />
+                      {/* <ResumeCurvi user={user} /> */}
                     </>
               }
             </>
@@ -121,7 +123,7 @@ function GenerateResume() {
               <h2>Curso</h2>
               <p>{user.courseName}</p>
               <p>{user.courseSchool}</p>
-              <p>Previsão de Conclusão: {user.courseEndYear}</p>
+              <p>{user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</p>
             </div>
             {(user.courses !== 'NOT_PRINT') ?
               <div className="content">

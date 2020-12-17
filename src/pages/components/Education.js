@@ -32,7 +32,7 @@ function Education(props) {
             <Text style={styles.title}></Text>
             <Text style={styles.school}>Instituição: {user.courseSchool}</Text>
             <Text style={styles.degree}>Curso: {user.courseName}</Text>
-            <Text style={styles.year}>Conclusão em: {user.courseEndYear}</Text>
+            <Text style={styles.year}>Conclusão em: {user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</Text>
         </View>
     )
 }

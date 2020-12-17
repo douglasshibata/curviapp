@@ -170,7 +170,7 @@ function EngResume(props) {
                         <text transform="matrix(1 0 0 1 50.6318 559.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>{user.email}</text>
                         <text transform="matrix(1 0 0 1 50.6318 589.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='14px'>({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
                         <text transform="matrix(1 0 0 1 280.6318 147.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.courseName} / {user.courseSchool}</text>
-                        <text transform="matrix(1 0 0 1 280.6318 167.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>Período - {user.courseEndYear}</text>
+                        <text transform="matrix(1 0 0 1 280.6318 167.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>  {user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</text>
                         {/* <text transform="matrix(1 0 0 1 280.6318 737.6553)" fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'></text> */}
                         <text transform="matrix(1 0 0 1 280.6318 652.7178)"  fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.courses!== 'NOT_PRINT'?user.courses.substring(0,50):<></>} </text>
                         <text transform="matrix(1 0 0 1 280.6318 672.7178)"  fontFamily='MyriadPro-Semibold' fill='#1B1E1F' fontSize='14px'>{user.courses!== 'NOT_PRINT'?user.courses.substring(50,100):<></>} </text>
