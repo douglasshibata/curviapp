@@ -11,7 +11,8 @@ import EngResume from '../EngResume/EngResume';
 import ProdResume from '../EngResume/ProdResume';
 import SaudeResume from '../SaudeResume/SaudeResume';
 import BiologiaResume from '../BiologiaResume/BiologiaResume';
-//import ResumeCurvi from '../ResumeCurvi/ResumeCurvi';
+import ResumeCurvi from '../ResumeCurvi/ResumeCurvi';
+import ResumeCurvi2 from '../ResumeCurvi/ResumeCurvi2';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
@@ -69,6 +70,7 @@ function GenerateResume() {
                    {mensagemAnimadora()}
                   <Admin user={user} />
                   <AdmBasic user={user} />
+                  <ResumeCurvi user={user} />
                 </>
                 :
                 user.area === 'Engenharia' ?
@@ -76,6 +78,7 @@ function GenerateResume() {
                      {mensagemAnimadora()}
                     <EngResume user={user} />
                     <ProdResume user={user} />
+                    <ResumeCurvi user={user} />
                   </>
                   :
                   user.area === 'Saúde' ?
@@ -83,6 +86,7 @@ function GenerateResume() {
                       {mensagemAnimadora()}
                       <SaudeResume user={user} />
                       <BiologiaResume user={user} />
+                      <ResumeCurvi user={user} />
                     </>
                     :
                     <>
@@ -90,10 +94,11 @@ function GenerateResume() {
                     <Admin user={user} />
                       {/* <AdmBasic user={user} />
                       <BiologiaResume user={user} />
-                      <EngResume user={user} /> */}
-                      <ProdResume user={user} />
                       <SaudeResume user={user} />
-                      {/* <ResumeCurvi user={user} /> */}
+                    <EngResume user={user} /> */}
+                    <ResumeCurvi user={user} />
+                      <ProdResume user={user} />
+                      {/* <ResumeCurvi2 user={user}/> */}
                     </>
               }
             </>
