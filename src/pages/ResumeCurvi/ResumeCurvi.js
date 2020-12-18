@@ -68,7 +68,6 @@ function ResumeCurvi(props) {
                                     <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 145.86688)" fontSize="65.59" fontFamily="Roboto">{user.name.toUpperCase().substring(34,user.name.length)} </text></>
                                     :
                                     <>
-                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 30.24556 86.86688)" fontSize="65.59" fontFamily="Roboto">{user.name.toUpperCase().substring(0,17)}</text>
                                     <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 30.24556 126.86688)" fontSize="65.59" fontFamily="Roboto">{user.name.toUpperCase().substring(0,user.length)}</text>
                                     </>}
                                     <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 181.2702 187.9409)" fontSize="30.49" fontFamily="Roboto">{user.area} - {user.area_level}</text>

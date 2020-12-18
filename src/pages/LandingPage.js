@@ -9,7 +9,7 @@ function LandingPage() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>Você demora muito fazendo seu currículo ou não sabe como faze-lo?</h2>
+        <h2>Você demora muito fazendo seu currículo ou não sabe como fazê-lo?</h2>
         <p>
         Converse comigo clicando no canto inferior da sua tela e faça seu currículo de forma rápida e fácil!</p>
         <ChatBot />
