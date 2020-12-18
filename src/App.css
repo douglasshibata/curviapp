@@ -14,7 +14,7 @@
   background-color: #FFF;
 }
 .resumeReady{
-  display: block;  
+  display: none;  
 }
 .App-header {
   background-color:#2DBEB7;

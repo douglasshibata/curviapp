@@ -12,7 +12,7 @@ import ProdResume from '../EngResume/ProdResume';
 import SaudeResume from '../SaudeResume/SaudeResume';
 import BiologiaResume from '../BiologiaResume/BiologiaResume';
 import ResumeCurvi from '../ResumeCurvi/ResumeCurvi';
-import ResumeCurvi2 from '../ResumeCurvi/ResumeCurvi2';
+//import ResumeCurvi2 from '../ResumeCurvi/ResumeCurvi2';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
