@@ -10,7 +10,7 @@ export default function ChatBot() {
             selector={"#webchat"}
             interval={1000}
             customData={{ "language": "pt-BR" }}
-            socketUrl={"https://c2142697ffda.ngrok.io"}
+            socketUrl={"https://2341d7cc806e.ngrok.io"}
             socketPath={"/socket.io/"}
             title={"Curvi"}
             subtitle={"Digite Oi para começarmos seu currículo"}
