@@ -18,6 +18,25 @@ function Admin(props) {
             return user.email.substring(0,email)
         }
     }
+    var regexp = /\s/g;
+    var name, fullname = [];
+    var goal, fullgoal = [];
+    var courses, extraCourses = [];
+    var companyDescription, companyDescriptionArr = [];
+
+    while ((name = regexp.exec(user.name)) != null) {
+        fullname.push(name.index);
+    }
+    while ((goal = regexp.exec(user.goal)) != null) {
+        fullgoal.push(goal.index);
+    }
+    while ((courses = regexp.exec(user.courses)) != null) {
+        extraCourses.push(courses.index);
+    }
+    while ((companyDescription = regexp.exec(user.companyDescription)) != null) {
+        companyDescriptionArr.push(companyDescription.index);
+    }
+    console.log(companyDescriptionArr);
     return (
         <>
         <Form>
@@ -45,12 +64,12 @@ function Admin(props) {
                         <text transform="matrix(1 0 0 1 224.8696 550.4414)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="18">Experiencias Profissionais</text>
                     </g>
                     <text transform="matrix(1 0 0 1 224.8696 250.3696)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="18">Perfil Profissional</text>
-                    <text transform="matrix(1 0 0 1 224.8696 270.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(0,55)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 290.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(55,107)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 310.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(107,159)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 330.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(159,209)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 350.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(209,260)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 365.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(260,user.goal.length)}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 270.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(0,fullgoal[7])}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 290.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[7],fullgoal[14])}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 310.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[14],fullgoal[21])}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 330.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[21],fullgoal.length>21?fullgoal[28]:<></>)}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 350.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[28],fullgoal.length>28?fullgoal[35]:<></>)}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 365.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[35],fullgoal.length>35?fullgoal[42]:<></>)}</text>
                     <text transform="matrix(1 0 0 1 41.105 250.1367)" fill="#2C242D" fontFamily="'Roboto'" fontSize="18">Contato</text>
                     <line fill="none" stroke="#161317" strokeMiterlimit="10" x1="40.311" y1="470.455" x2="171.039" y2="470.455" />
                     <text transform="matrix(1 0 0 1 41.8999 465.4268)" fill="#2C242D" fontFamily="'Roboto'" fontSize="18">Cursos</text>
@@ -129,36 +148,37 @@ function Admin(props) {
                     <text transform="matrix(1 0 0 1 69.35 430.9141)" fill="#161317" fontFamily="'Roboto'" fontSize="12">{user.email.substring(email,user.email.length)}</text>
                 </g>
                 <g id="textos">
-                    <text transform="matrix(1 0 0 1 226.0918 420.9448)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courseName} / {user.courseSchool}</text>
-                    <text transform="matrix(1 0 0 1 226.0918 440.9448)" fill="#161317" fontFamily="'Roboto'" fontSize="14">   {user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 420.9448)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courseName}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 440.9448)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courseSchool}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 460.9448)" fill="#161317" fontFamily="'Roboto'" fontSize="14">   {user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</text>
                     {/* <text transform="matrix(1 0 0 1 41.8999 499.832)"><tspan x="0" y="0" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">{user.courseName} </tspan><tspan x="0" y="14.399" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">{user.courseSchool}</tspan><tspan x="0" y="28.799" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Periodo {user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</tspan></text> */}
                     {/* <text transform="matrix(1 0 0 1 41.8999 556.8125)"><tspan x="0" y="0" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Curso </tspan><tspan x="0" y="14.4" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Nome da Instituição</tspan><tspan x="0" y="28.801" fill="#2C242D" fontFamily="'Roboto'" fontSize="12">Periodo ( início e fim)</tspan></text> */}
-                    <text transform="matrix(1 0 0 1 41.8999 499.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(0,20):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 519.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(20,40):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 539.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(40,60):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 559.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(60,80):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 579.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(80,100):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 599.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(100,120):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 619.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(120,140):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 639.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(140,160):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 659.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(160,180):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 679.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(180,200):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 699.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(200,220):<></>} </text>
-                    <text transform="matrix(1 0 0 1 41.8999 719.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(220,240):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 499.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(0,extraCourses[1]):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 519.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[1],extraCourses[4]):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 539.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[4],extraCourses[7]):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 559.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[7],extraCourses[10]):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 579.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[10],extraCourses.length>10?extraCourses[13]:<></>):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 599.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[13],extraCourses.length>13?extraCourses[16]:<></>):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 619.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[16],extraCourses.length>16?extraCourses[19]:<></>):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 639.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[19],extraCourses.length>19?extraCourses[22]:<></>):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 659.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[22],extraCourses.length>22?extraCourses[25]:<></>):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 679.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[25],extraCourses.length>25?extraCourses[28]:<></>):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 699.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[28],extraCourses.length>28?extraCourses[31]:<></>):<></>} </text>
+                    <text transform="matrix(1 0 0 1 41.8999 719.832)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[31],extraCourses.length>31?extraCourses[33]:<></>):<></>} </text>
                     <text transform="matrix(1 0 0 1 226.0918 582.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyOccupation !== "NOT_PRINT"? `Cargo: ${user.companyOccupation}` :<></>}</text>
                     <text transform="matrix(1 0 0 1 226.0918 596.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,52)}</text>
                     <text transform="matrix(1 0 0 1 226.0918 612.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(53,user.companyName.length)}</text>
                     <text transform="matrix(1 0 0 1 226.0918 612.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14"> {user.companyStartEnd  !== "NOT_PRINT"?  `Período: ${user.companyStartEnd}` :<></>}</text>
                     <text transform="matrix(1 0 0 1 226.0918 630.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`Principais Atividades:`:<></>}</text>
-                    <text transform="matrix(1 0 0 1 226.0918 647.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(0,53)}`:<></>}</text>
-                    <text transform="matrix(1 0 0 1 226.0918 667.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(53,106)}`:<></>}</text>
-                    <text transform="matrix(1 0 0 1 226.0918 687.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(106,159)}`:<></>}</text>
-                    <text transform="matrix(1 0 0 1 226.0918 707.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(159,212)}`:<></>}</text>
-                    <text transform="matrix(1 0 0 1 226.0918 727.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(212,user.companyDescription.length)}`:<></>}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 647.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(0,companyDescriptionArr[5])}`:<></>}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 667.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?`${user.companyDescription.substring(companyDescriptionArr[5],companyDescriptionArr[10])}`:<></>}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 687.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?user.companyDescription.substring(companyDescriptionArr[10],companyDescriptionArr.length>10?companyDescriptionArr[15]:<></>):<></>}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 707.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?user.companyDescription.substring(companyDescriptionArr[15],companyDescriptionArr.length>15?companyDescriptionArr[20]:<></>):<></>}</text>
+                    <text transform="matrix(1 0 0 1 226.0918 727.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">{user.companyDescription !== "NOT_PRINT" ?user.companyDescription.substring(companyDescriptionArr[20],companyDescriptionArr.length>20?companyDescriptionArr[25]:<></>):<></>}</text>
                     {/* <text transform="matrix(1 0 0 1 226.0918 654.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">Cargo / Nome da Compainha</text>
                     <text transform="matrix(1 0 0 1 226.0918 729.9111)" fill="#161317" fontFamily="'Roboto'" fontSize="14">Cargo / Nome da Compainha</text> */}
-                    <text transform="matrix(1 0 0 1 191.8022 94.3276)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="28">{user.name.indexOf(" ")>=25?user.name.substring(0,user.name.length).toUpperCase():user.name.substring(0,25).toUpperCase()}</text>
-                    <text transform="matrix(1 0 0 1 191.8022 132.3276)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="28">{user.name.indexOf(" ")>=25?user.name.substring(25,user.name.length).toUpperCase():user.name.substring(25,user.name.length).toUpperCase()}</text>
+                    <text transform="matrix(1 0 0 1 191.8022 94.3276)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="28">{user.name.substring(0,fullname[2])}</text>
+                    <text transform="matrix(1 0 0 1 191.8022 132.3276)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="28">{user.name.substring(fullname[2],fullname[5])}</text>
                     <text transform="matrix(1 0 0 1 272.791 156.7739)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="22">{user.area} - {user.area_level}</text>
                     <text transform="matrix(1 0 0 1 229.2959 826.6973)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="24">Currículo feito pela Curvi</text>
                 </g>

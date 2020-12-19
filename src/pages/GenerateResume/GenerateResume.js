@@ -35,12 +35,12 @@ function GenerateResume() {
     };
     getUser();
   }, [email])
-  function mensagemAnimadora(){
-    return(
+  function mensagemAnimadora() {
+    return (
       <Box>
-      <p><b>{user.name.toUpperCase()}</b>,</p>
-      <p>gerei esses modelos para você! </p>
-      <p>Tenho certeza que com qualquer um deles você irá se destacar!</p>
+        <p><b>{user.name.toUpperCase()}</b>,</p>
+        <p>gerei esses modelos para você! </p>
+        <p>Tenho certeza que com qualquer um deles você irá se destacar!</p>
       </Box>
     )
   }
@@ -67,7 +67,7 @@ function GenerateResume() {
               {/* <BasicResume user={user} /> */}
               {user.area === 'Administraçãao' ?
                 <>
-                   {mensagemAnimadora()}
+                  {mensagemAnimadora()}
                   <Admin user={user} />
                   <AdmBasic user={user} />
                   <ResumeCurvi user={user} />
@@ -75,7 +75,7 @@ function GenerateResume() {
                 :
                 user.area === 'Engenharia' ?
                   <>
-                     {mensagemAnimadora()}
+                    {mensagemAnimadora()}
                     <EngResume user={user} />
                     <ProdResume user={user} />
                     <ResumeCurvi user={user} />
@@ -90,15 +90,15 @@ function GenerateResume() {
                     </>
                     :
                     <>
-                     {mensagemAnimadora()}
-                    <Admin user={user} />
-                      {/* <AdmBasic user={user} />
+                      {mensagemAnimadora()}
+                      <Admin user={user} />
+                      <AdmBasic user={user} />
                       <BiologiaResume user={user} />
                       <SaudeResume user={user} />
-                    <EngResume user={user} /> */}
-                    <ResumeCurvi user={user} />
+                      <EngResume user={user} />
+                      <ResumeCurvi user={user} />
                       <ProdResume user={user} />
-                     {/*  <ResumeCurvi2 user={user}/> */}
+                      {/*  <ResumeCurvi2 user={user}/> */}
                     </>
               }
             </>
@@ -128,7 +128,7 @@ function GenerateResume() {
               <h2>Curso</h2>
               <p>{user.courseName}</p>
               <p>{user.courseSchool}</p>
-              <p>{user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</p>
+              <p>{user.courseEndYear === 'Completo' ? user.courseEndYear : `Previsão de Conclusão: ${user.courseEndYear}`}</p>
             </div>
             {(user.courses !== 'NOT_PRINT') ?
               <div className="content">
