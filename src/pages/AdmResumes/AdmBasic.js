@@ -10,6 +10,32 @@ function AdmBasic(props) {
         function downloadResume(){
             saveSvgAsPng.saveSvgAsPng(document.getElementById('resumeBackground'),`${user.name}.png`,imageOptions)
         }
+        var regexp = /\s/g;
+        var name, fullname = [];
+        var goal, fullgoal = [];
+        var courses, extraCourses = [];
+        var companyDescription, companyDescriptionArr = [];
+        var cientificResearch, cientificResearchArr = [];
+        var address, fulladdress = [];
+    
+        while ((name = regexp.exec(user.name)) != null) {
+            fullname.push(name.index);
+        }
+        while ((goal = regexp.exec(user.goal)) != null) {
+            fullgoal.push(goal.index);
+        }
+        while ((courses = regexp.exec(user.courses)) != null) {
+            extraCourses.push(courses.index);
+        }
+        while ((companyDescription = regexp.exec(user.companyDescription)) != null) {
+            companyDescriptionArr.push(companyDescription.index);
+        }
+        while ((cientificResearch = regexp.exec(user.cientificResearch)) != null) {
+            cientificResearchArr.push(cientificResearch.index);
+        }
+        while ((address = regexp.exec(user.address)) != null) {
+            fulladdress.push(address.index);
+        }
     return (
         <>
         <Form>
@@ -20,10 +46,8 @@ function AdmBasic(props) {
 
             <svg version="1.1" id="resumeBackground" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                widths="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enableBackground="new 0 0 595.28 841.89" xmlSpace="preserve">
-                   {user.name.length>=34?<> 
-                <text transform="matrix(1 0 0 1 23.2832 57.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="30">{user.name.substring(0,34).toUpperCase()}</text>
-                <text transform="matrix(1 0 0 1 28.2832 87.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="30">{user.name.substring(34,user.name.length).toUpperCase()}</text>
-                </>:<text transform="matrix(1 0 0 1 28.2832 80.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="35">{user.name.substring(0,34).toUpperCase()}</text>}
+                <text transform="matrix(1 0 0 1 23.2832 57.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="30">{user.name.substring(0,fullname[3])}</text>
+                <text transform="matrix(1 0 0 1 28.2832 87.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="30">{user.name.substring(fullname[3],fullname.length>3?fullname[6]:<></>)}</text>
                 <text transform="matrix(1 0 0 1 220.0063 114.7466)" fill="#58595B" fontFamily="'MyriadPro-Regular'" fontSize="16">{user.area}-{user.area_level}</text>
                 <text transform="matrix(1 0 0 1 199.2959 279.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?`Empresa: ${user.companyName}`:user.companyName.substring(0,52)}</text>
                 <text transform="matrix(1 0 0 1 199.2959 299.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'?``:user.companyName.substring(53,user.companyName.length)}</text>
@@ -77,9 +101,9 @@ function AdmBasic(props) {
               c-0.37-0.545-0.729-1.091-0.858-1.75C253.591,192.662,253.58,192.497,253.559,192.332z"/>
                     </g>
                 </g>
-                <text transform="matrix(1 0 0 1 31.2837 246.7466)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="18">Experiências Profissionais</text>
-                <text transform="matrix(1 0 0 1 30.2837 440.0439)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="18">Formação Acadêmica</text>
-                <text transform="matrix(1 0 0 1 30.2842 633.377)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="18">Cursos Complementares</text>
+                <text transform="matrix(1 0 0 1 30.2837 246.7466)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="17">Experiências Profissionais</text>
+                <text transform="matrix(1 0 0 1 30.2837 440.0439)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="17">Formação Acadêmica</text>
+                <text transform="matrix(1 0 0 1 30.2842 633.377)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="17">Cursos Complementares</text>
                 <path fill="#414042" d="M564.031,231.407h-7.668v-1.069c0-1.565-1.271-2.835-2.836-2.835h-7.336c-1.566,0-2.836,1.27-2.836,2.835
       v1.069h-7.668c-1.566,0-2.836,1.27-2.836,2.836v16.763c0,1.566,1.27,2.836,2.836,2.836h28.344c1.566,0,2.836-1.27,2.836-2.836
       v-16.763C566.867,232.677,565.598,231.407,564.031,231.407z M544.666,231.142c0-1.148,0.932-2.079,2.08-2.079h6.226

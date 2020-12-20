@@ -18,6 +18,32 @@ function ProdResume(props) {
             return user.email.substring(0, email)
         }
     }
+    var regexp = /\s/g;
+    var name, fullname = [];
+    var goal, fullgoal = [];
+    var courses, extraCourses = [];
+    var companyDescription, companyDescriptionArr = [];
+    var cientificResearch, cientificResearchArr = [];
+    var address, fulladdress = [];
+
+    while ((name = regexp.exec(user.name)) != null) {
+        fullname.push(name.index);
+    }
+    while ((goal = regexp.exec(user.goal)) != null) {
+        fullgoal.push(goal.index);
+    }
+    while ((courses = regexp.exec(user.courses)) != null) {
+        extraCourses.push(courses.index);
+    }
+    while ((companyDescription = regexp.exec(user.companyDescription)) != null) {
+        companyDescriptionArr.push(companyDescription.index);
+    }
+    while ((cientificResearch = regexp.exec(user.cientificResearch)) != null) {
+        cientificResearchArr.push(cientificResearch.index);
+    }
+    while ((address = regexp.exec(user.address)) != null) {
+        fulladdress.push(address.index);
+    }
     return (
         <>
             <Form>
@@ -119,46 +145,46 @@ function ProdResume(props) {
 	</g> */}
                         </g>
                         <g id="TEXTOS">
-                            <text transform="matrix(1 0 0 1 249.2476 80.0293)" fill="#070909" fontFamily="'MyriadPro-Semibold'" fontSize="27.833px">{user.name.toUpperCase().substring(0, 17)}</text>
-                            <text transform="matrix(1 0 0 1 249.2476 109.0293)" fill="#070909" fontFamily="'MyriadPro-Semibold'" fontSize="27.833px">{user.name.toUpperCase().substring(17, 34)}</text>
-                            <text transform="matrix(1 0 0 1 249.2476 132.0293)" fill="#070909" fontFamily="'MyriadPro-Semibold'" fontSize="27.833px">{user.name.toUpperCase().substring(34, user.name.length)}</text>
+                            <text transform="matrix(1 0 0 1 249.2476 80.0293)" fill="#070909" fontFamily="'MyriadPro-Semibold'" fontSize="27.833px">{user.name.substring(0, fullname[2])}</text>
+                            <text transform="matrix(1 0 0 1 249.2476 109.0293)" fill="#070909" fontFamily="'MyriadPro-Semibold'" fontSize="27.833px">{fullname.length > 2 ? user.name.substring(fullname[2], fullname[4]) : <></>}</text>
+                            <text transform="matrix(1 0 0 1 249.2476 132.0293)" fill="#070909" fontFamily="'MyriadPro-Semibold'" fontSize="27.833px">{fullname.length > 4 ? user.name.substring(fullname[4], fullname[8]) : <></>}</text>
                             <text transform="matrix(1 0 0 1 249.2471 156.21)" fill="#070909" fontFamily="'MyriadPro-Regular'" fontSize="21.3416px">{user.area} - {user.area_level}</text>
-                            <text transform="matrix(1 0 0 1 45.3115 268.9541)" fill="#FFFFFF" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address.substring(0, 19)}</text>
-                            <text transform="matrix(1 0 0 1 50.3115 283.9541)" fill="#FFFFFF" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address.substring(20, user.address.length)}</text>
+                            <text transform="matrix(1 0 0 1 45.3115 268.9541)" fill="#FFFFFF" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address.substring(0, fulladdress.length > 3 ? fulladdress[3] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 50.3115 283.9541)" fill="#FFFFFF" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address.substring(fulladdress[3], fulladdress.length > 3 ? fulladdress[10] : <></>)}</text>
                             <text transform="matrix(1 0 0 1 45.3115 313.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
                             <text transform="matrix(1 0 0 1 45.3115 350.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
                             <text transform="matrix(1 0 0 1 45.3110 385.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>{emailLenght()}</text>
                             <text transform="matrix(1 0 0 1 45.3110 405.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>{user.email.substring(email, user.email.length)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 477.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(0, 27)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 497.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(27, 55)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 517.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(55, 79)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 537.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(79, 102)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 553.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(102, 127)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 573.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(127, 152)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 593.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(152, user.goal.length)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 477.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(0, fullgoal.length > 3 ? fullgoal[3] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 497.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[3], fullgoal.length > 3 ? fullgoal[6] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 517.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[6], fullgoal.length > 6 ? fullgoal[9] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 537.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[9], fullgoal.length > 9 ? fullgoal[12] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 553.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[12], fullgoal.length > 12 ? fullgoal[15] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 573.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[15], fullgoal.length > 15 ? fullgoal[18] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 593.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[18], fullgoal.length > 18 ? fullgoal[21] : <></>)}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 285.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyOccupation !== "NOT_PRINT" ? `Cargo: ${user.companyOccupation}` : <></>}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 305.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' ? `Empresa: ${user.companyName}` : user.companyName.substring(0, 38)}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 320.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' ? `` : user.companyName.substring(38, 75)}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 335.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' ? `` : user.companyName.substring(75, user.companyName.length)}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 325.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyStartEnd !== "NOT_PRINT" ? `Período: ${user.companyStartEnd}` : <></>}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 345.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `Principais Atividades:` : <></>}</text>
-                            <text transform="matrix(0.9856 0 0 1 249.5903 360.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `${user.companyDescription.substring(0, 47)}` : <></>}</text>
-                            <text transform="matrix(0.9856 0 0 1 249.5903 380.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `${user.companyDescription.substring(47, 94)}` : <></>}</text>
-                            <text transform="matrix(0.9856 0 0 1 249.5903 400.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `${user.companyDescription.substring(94, 188)}` : <></>}</text>
-                            <text transform="matrix(0.9856 0 0 1 249.5903 400.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `${user.companyDescription.substring(188, 282)}` : <></>}</text>
-                            <text transform="matrix(0.9856 0 0 1 249.5903 420.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `${user.companyDescription.substring(202, user.companyDescription.length)}` : <></>}</text>
+                            <text transform="matrix(0.9856 0 0 1 249.5903 360.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(0,companyDescriptionArr.length > 3 ? companyDescriptionArr[4] : <></>) : <></>}</text>
+                            <text transform="matrix(0.9856 0 0 1 249.5903 380.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[4],companyDescriptionArr.length > 4 ? companyDescriptionArr[8] : <></>) : <></>}</text>
+                            <text transform="matrix(0.9856 0 0 1 249.5903 400.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[8],companyDescriptionArr.length > 8 ? companyDescriptionArr[12] : <></>) : <></>}</text>
+                            <text transform="matrix(0.9856 0 0 1 249.5903 400.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[12],companyDescriptionArr.length > 12 ? companyDescriptionArr[16] : <></>) : <></>}</text>
+                            <text transform="matrix(0.9856 0 0 1 249.5903 420.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[16],companyDescriptionArr.length > 16 ? companyDescriptionArr[20] : <></>) : <></>}</text>
                             {/* <text transform="matrix(0.9856 0 0 1 249.2612 341.938)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text>
                         <text transform="matrix(0.9856 0 0 1 248.9321 399.7686)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">Cargo / Nome da Compainha</text> */}
                             <text transform="matrix(1 0 0 1 249.8784 506.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courseName} / {user.courseSchool}</text>
                             <text transform="matrix(1 0 0 1 249.8784 526.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">  {user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</text>
                             {/* <text transform="matrix(1 0 0 1 249.2466 584.5894)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text> */}
 
-                            <text transform="matrix(1 0 0 1 250.1948 696.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(0, 50) : <></>} </text>
-                            <text transform="matrix(1 0 0 1 250.1948 716.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(50, 100) : <></>} </text>
-                            <text transform="matrix(1 0 0 1 250.1948 736.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(100, 155) : <></>} </text>
-                            <text transform="matrix(1 0 0 1 250.1948 756.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(155, 200) : <></>} </text>
-                            <text transform="matrix(1 0 0 1 250.1948 776.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(200, 250) : <></>} </text>
-                            <text transform="matrix(1 0 0 1 250.1948 796.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(250, user.courses.length) : <></>} </text>
+                            <text transform="matrix(1 0 0 1 250.1948 696.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(0,extraCourses.length > 3 ? extraCourses[4] : <></>):<></>} </text>
+                            <text transform="matrix(1 0 0 1 250.1948 716.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[4],extraCourses.length > 4 ? extraCourses[8] : <></>):<></>} </text>
+                            <text transform="matrix(1 0 0 1 250.1948 736.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[8],extraCourses.length > 8 ? extraCourses[12] : <></>):<></>} </text>
+                            <text transform="matrix(1 0 0 1 250.1948 756.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[12],extraCourses.length > 12 ? extraCourses[16] : <></>):<></>} </text>
+                            <text transform="matrix(1 0 0 1 250.1948 776.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[16],extraCourses.length > 16 ? extraCourses[20] : <></>):<></>} </text>
+                            <text transform="matrix(1 0 0 1 250.1948 796.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[20],extraCourses.length > 20 ? extraCourses[24] : <></>):<></>} </text>
                             {/* <text transform="matrix(1 0 0 1 249.563 755.8696)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">Curso / Nome da Instituição</text> */}
                         </g>
                     </svg>

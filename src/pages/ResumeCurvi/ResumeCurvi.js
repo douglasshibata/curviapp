@@ -16,6 +16,7 @@ function ResumeCurvi(props) {
     var goal, fullgoal = [];
     var courses, extraCourses = [];
     var companyDescription, companyDescriptionArr = [];
+    var cientificResearch, cientificResearchArr = [];
 
     while ((name = regexp.exec(user.name)) != null) {
         fullname.push(name.index);
@@ -28,6 +29,9 @@ function ResumeCurvi(props) {
     }
     while ((companyDescription = regexp.exec(user.companyDescription)) != null) {
         companyDescriptionArr.push(companyDescription.index);
+    }
+    while ((cientificResearch = regexp.exec(user.cientificResearch)) != null) {
+        cientificResearchArr.push(cientificResearch.index);
     }
     return (
         <>
@@ -82,17 +86,17 @@ function ResumeCurvi(props) {
                                 </clipPath>
                                 <g clipPath="url(#cp6)">
 
-                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.24556 66.86688)" fontSize="65.59" fontFamily="Roboto">{user.name.substring(0,fullname[1])}</text>
-                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 106.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length>1?user.name.substring(fullname[1],fullname[3]):<></>} </text>
-                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 145.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length>3?user.name.substring(fullname[3],fullname[4]):<></>} </text>
-                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 165.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length>4?user.name.substring(fullname[4],fullname[5]):<></>} </text>
+                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.24556 66.86688)" fontSize="65.59" fontFamily="Roboto">{user.name.substring(0, fullname[1])}</text>
+                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 106.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length > 1 ? user.name.substring(fullname[1], fullname[3]) : <></>} </text>
+                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 145.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length > 3 ? user.name.substring(fullname[3], fullname[4]) : <></>} </text>
+                                    <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 165.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length > 4 ? user.name.substring(fullname[4], fullname[5]) : <></>} </text>
                                     <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 181.2702 187.9409)" fontSize="30.49" fontFamily="Roboto">{user.area} - {user.area_level}</text>
                                     <text fill="#444b67" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.98469 252.83774)" fontSize="21.86" fontWeight="bold" fontFamily="Roboto">EXPERIÊNCIA PROFISSIONAL</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 273.35026)" fontSize="15" fontFamily="Roboto" fontWeight="bold">{user.companyOccupation !== "NOT_PRINT" ? `${user.companyOccupation}` : <></>}</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 291.14939)" fontSize="12.98" fontFamily="Roboto" fontWeight="bold">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' && user.companyStartEnd !== "NOT_PRINT" ? `${user.companyName} | ${user.companyStartEnd}` : user.companyName.substring(0, 50)}</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 311.14939)" fontSize="12.98" fontFamily="Roboto" fontWeight="bold">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' && user.companyStartEnd !== "NOT_PRINT" ? `` : user.companyName.substring(50, user.companyName.length)}</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.8889 310.9569)" fontSize="12.26" fontFamily="Roboto">{user.companyDescription !== "NOT_PRINT" ? `${user.companyDescription.substring(0, companyDescriptionArr[7])} ` : <></>}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.8889 330.9569)" fontSize="12.26" fontFamily="Roboto">{user.companyDescription !== "NOT_PRINT" ? `${user.companyDescription.substring(companyDescriptionArr[7],companyDescriptionArr[14])} ` : <></>}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.8889 330.9569)" fontSize="12.26" fontFamily="Roboto">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[7],companyDescriptionArr.length > 7 ? companyDescriptionArr[14] : <></>) : <></>}</text>
                                     {/* <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 365.33168)" fontSize="13.66" fontFamily="Roboto" fontWeight="bold">{user.area}</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 384.7899)" fontSize="12.98" fontFamily="Roboto" fontWeight="bold">{user.area}</text> 
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 406.2227)" fontSize="10.26" fontFamily="Roboto">{user.area}</text>*/}
@@ -102,11 +106,12 @@ function ResumeCurvi(props) {
                                     {/* <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.8889 567.84909)" fontSize="12.26" fontFamily="Roboto">{user.area}</text> */}
                                     {(user.cientificResearch !== 'NOT_PRINT') ? <>
                                         <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 628.0648)" fill="#444b67" fontSize="21.86" fontFamily="Roboto" fontWeight="bold">PESQUISA CIENTÍFICA</text>
-                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 647.523)" fontSize="12.98" fontFamily="Roboto">{user.cientificResearch.substring(0, 58)}</text>
-                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 668.8099)" fontSize="12.26" fontFamily="Roboto">{user.cientificResearch.substring(58, 116)}</text>
-                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 688.8099)" fontSize="12.26" fontFamily="Roboto">{user.cientificResearch.substring(116, 174)}</text>
-                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 708.8099)" fontSize="12.26" fontFamily="Roboto">{user.cientificResearch.substring(174,)}</text>
-
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 647.523)" fontSize="12.98" fontFamily="Roboto">{user.cientificResearch.substring(0, cientificResearchArr[7])}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 668.8099)" fontSize="12.26" fontFamily="Roboto">{user.cientificResearch.substring(cientificResearchArr[7], cientificResearchArr.length > 7 ? cientificResearchArr[12] : <></>)}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 688.8099)" fontSize="12.26" fontFamily="Roboto">{cientificResearchArr.length > 12 ? user.cientificResearch.substring(cientificResearchArr[12], cientificResearchArr[17]) : <></>}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 708.8099)" fontSize="12.26" fontFamily="Roboto">{cientificResearchArr.length > 17 ? user.cientificResearch.substring(cientificResearchArr[17], cientificResearchArr[22]) : <></>}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 728.8099)" fontSize="12.26" fontFamily="Roboto">{cientificResearchArr.length > 22 ? user.cientificResearch.substring(cientificResearchArr[22], cientificResearchArr[27]) : <></>}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 286.88877 748.8099)" fontSize="12.26" fontFamily="Roboto">{cientificResearchArr.length > 27 ? user.cientificResearch.substring(cientificResearchArr[27], cientificResearchArr[32]) : <></>}</text>
                                     </> : <></>}
                                     <text fill="#444b67" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.617556 502.5837)" fontSize="21.86" fontWeight="bold" fontFamily="Roboto">CONTATOS</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.568884 520.8099)" fontSize="12.26" fontFamily="Roboto">Celular: ({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
@@ -116,19 +121,19 @@ function ResumeCurvi(props) {
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.568884 600.8099)" fontSize="12.26" fontFamily="Roboto">{user.linkedln_link !== 'NOT_PRINT' ? `Linkedln:${user.linkedln_link}` : <></>}</text>
                                     <text fill="#444b67" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.909598 636.7804)" fontSize="21.86" fontFamily="Roboto" fontWeight="bold">CURSOS COMPLEMENTARES</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 656.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(0, extraCourses[8])}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 676.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[8],extraCourses[16])}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 696.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[16],extraCourses.length>16?extraCourses[24]:<></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 716.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[24],extraCourses.length>24?extraCourses[32]:<></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 736.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[32],extraCourses.length>32?extraCourses[40]:<></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 756.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[40],extraCourses.length>40?extraCourses[48]:<></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 676.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[8],extraCourses.length > 8 ? extraCourses[16] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 696.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[16], extraCourses.length > 16 ? extraCourses[24] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 716.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[24], extraCourses.length > 24 ? extraCourses[32] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 736.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[32], extraCourses.length > 32 ? extraCourses[40] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 756.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[40], extraCourses.length > 40 ? extraCourses[48] : <></>)}</text>
                                     <text fill="#444b67" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.909598 242.83774)" fontSize="21.86" fontFamily="Roboto" fontWeight="bold">OBJETIVO PROFISSIONAL</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 274.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(0,fullgoal[7])}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 294.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[7],fullgoal[13])}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 314.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[13], fullgoal[18])}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 334.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[18],fullgoal.length>18?fullgoal[22]:<></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 354.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[22],fullgoal.length>22?fullgoal[25]:<></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 374.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[25],fullgoal.length>25?fullgoal[28]:<></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 394.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[25],fullgoal.length>25?fullgoal[30]:<></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 274.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(0, fullgoal[7])}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 294.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[7], fullgoal.length > 7 ? fullgoal[13] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 314.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[13], fullgoal.length > 13 ? fullgoal[18] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 334.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[18], fullgoal.length > 18 ? fullgoal[22] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 354.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[22], fullgoal.length > 22 ? fullgoal[25] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 374.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[25], fullgoal.length > 25 ? fullgoal[28] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 394.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[25], fullgoal.length > 25 ? fullgoal[30] : <></>)}</text>
                                 </g >
                             </g >
                         </g >
