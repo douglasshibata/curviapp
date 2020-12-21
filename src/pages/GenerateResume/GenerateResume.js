@@ -91,11 +91,11 @@ function GenerateResume() {
                     :
                     <>
                       {mensagemAnimadora()}
+                      <SaudeResume user={user} />
+                      <BiologiaResume user={user} />
+                      <ProdResume user={user} />
                       <AdmBasic user={user} />
                       <Admin user={user} />
-                      <BiologiaResume user={user} />
-                      <SaudeResume user={user} />
-                      <ProdResume user={user} />
                       <EngResume user={user} />
                       <ResumeCurvi user={user} />
                       {/*  <ResumeCurvi2 user={user}/> */}

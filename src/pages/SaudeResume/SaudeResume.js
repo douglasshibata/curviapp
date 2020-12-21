@@ -10,6 +10,32 @@ function SaudeResume(props) {
     function downloadResume() {
         saveSvgAsPng.saveSvgAsPng(document.getElementById('saudeResume'), `${user.name}.png`, imageOptions)
     }
+    var regexp = /\s/g;
+    var name, fullname = [];
+    var goal, fullgoal = [];
+    var courses, extraCourses = [];
+    var companyDescription, companyDescriptionArr = [];
+    var cientificResearch, cientificResearchArr = [];
+    var address, fulladdress = [];
+
+    while ((name = regexp.exec(user.name)) != null) {
+        fullname.push(name.index);
+    }
+    while ((goal = regexp.exec(user.goal)) != null) {
+        fullgoal.push(goal.index);
+    }
+    while ((courses = regexp.exec(user.courses)) != null) {
+        extraCourses.push(courses.index);
+    }
+    while ((companyDescription = regexp.exec(user.companyDescription)) != null) {
+        companyDescriptionArr.push(companyDescription.index);
+    }
+    while ((cientificResearch = regexp.exec(user.cientificResearch)) != null) {
+        cientificResearchArr.push(cientificResearch.index);
+    }
+    while ((address = regexp.exec(user.address)) != null) {
+        fulladdress.push(address.index);
+    }
     return (
         <>
         <Form>
@@ -20,9 +46,9 @@ function SaudeResume(props) {
                 <svg version="1.1" id='saudeResume' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 595.3 841.9" xmlSpace="preserve">
                     <g id="Layer_1">
-                        <text transform="matrix(1 0 0 1 14.4267 255.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(0,17)}</text>
-                        <text transform="matrix(1 0 0 1 14.4267 279.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(17,34)}</text>
-                        <text transform="matrix(1 0 0 1 14.4267 299.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.toUpperCase().substring(34,user.name.length)}</text>
+                        <text transform="matrix(1 0 0 1 14.4267 255.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.substring(0,fullname[1])}</text>
+                        <text transform="matrix(1 0 0 1 14.4267 279.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.substring(fullname[1],fullname.length>2?fullname[3]:<></>)}</text>
+                        <text transform="matrix(1 0 0 1 14.4267 299.7041)" fill="#1E1E1E" fontFamily="'MyriadPro-Semibold'" fontSize="26px">{user.name.substring(fullname[3],fullname.length>3?fullname[5]:<></>)}</text>
                     </g>
                     <g id="Layer_2">
                         <polygon fill="#25BCB6" points="595.3,0 595.3,85.2 481.2,53.3" />
