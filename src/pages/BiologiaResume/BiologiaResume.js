@@ -115,16 +115,16 @@ function BiologiaResume(props) {
 		C173,270.5,178.2,275.7,178.2,282.1L178.2,282.1z"/>
                             <circle fill="#25201D" cx="49" cy="282.1" r="11.1" />
                             <text transform="matrix(1 0 0 1 87.4585 287.6353)" fill="#25201D" fontFamily="MyriadPro-Semibold" fontSize="15px">PERFIL</text>
-                            <text transform="matrix(1 0 0 1 42.4585 310.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(0, fullgoal[2])}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 325.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[2], fullgoal.length > 2 ? fullgoal[5] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 40.4585 340.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[5], fullgoal.length > 5 ? fullgoal[7] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 41.4585 355.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[7], fullgoal.length > 7 ? fullgoal[9] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 370.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[9], fullgoal.length > 9 ? fullgoal[11] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 385.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[11], fullgoal.length > 11 ? fullgoal[13] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 400.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[13], fullgoal.length > 13 ? fullgoal[15] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 415.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[15], fullgoal.length > 15 ? fullgoal[17] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 430.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[17], fullgoal.length > 17 ? fullgoal[19] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 42.4585 445.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[19], fullgoal.length > 19 ? fullgoal[21] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 310.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(0, fullgoal[2])}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 325.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[2], fullgoal.length > 2 ? fullgoal[5] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 340.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[5], fullgoal.length > 5 ? fullgoal[7] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 355.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[7], fullgoal.length > 7 ? fullgoal[9] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 370.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[9], fullgoal.length > 9 ? fullgoal[11] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 385.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[11], fullgoal.length > 11 ? fullgoal[13] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 400.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[13], fullgoal.length > 13 ? fullgoal[15] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 415.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[15], fullgoal.length > 15 ? fullgoal[17] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 430.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[17], fullgoal.length > 17 ? fullgoal[19] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 35.4585 445.6353)" fill="#2C242D" fontFamily="MyriadPro-Semibold" fontSize="12px">{user.goal.substring(fullgoal[19], fullgoal.length > 19 ? fullgoal[21] : <></>)}</text>
                             <path fill="#FFFFFF" d="M176.3,469.2c0,6.4-5.2,11.6-11.6,11.6H47.6c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h117.2
 		C171.2,457.6,176.3,462.8,176.3,469.2L176.3,469.2z"/>
                             <circle fill="#25201D" cx="47.1" cy="469.2" r="11.1" />

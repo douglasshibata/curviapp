@@ -7,8 +7,9 @@ function SaudeResume(props) {
     const imageOptions = {
         backgroundColor: 'white',
     }
-    function downloadResume() {
-        saveSvgAsPng.saveSvgAsPng(document.getElementById('saudeResume'), `${user.name}.png`, imageOptions)
+   async function downloadResume() {
+        saveSvgAsPng.saveSvgAsPng(document.getElementById('saudeResume'), `/tmp/${user.name}.png`, imageOptions)
+
     }
     var regexp = /\s/g;
     var name, fullname = [];
@@ -184,7 +185,7 @@ function SaudeResume(props) {
                             <rect x="338.6" y="541.9" fill="none" width="110.4" height="12.8" />
                             <text transform="matrix(1 0 0 1 338.6328 550.4277)" fill="#1E1E1E" fontFamily="'MyriadPro-Bold'" fontSize="12px">Lorem ipsum dolor </text>
                         </g> */}
-                        <text transform="matrix(1 0 0 1 302.9473 432.3521)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.companyStartEnd  !== "NOT_PRINT"?  `${user.companyStartEnd.substring(6,user.companyStartEnd.length)}` :<></>}</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.companyStartEnd  !== "NOT_PRINT"?  `${user.companyStartEnd.substring(0,4)}` :<></>}</tspan></text>
+                        <text transform="matrix(1 0 0 1 302.9473 422.3521)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.companyStartEnd  !== "NOT_PRINT"?  `${user.companyStartEnd.substring(5,user.companyStartEnd.length)}` :<></>}</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">{user.companyStartEnd  !== "NOT_PRINT"?  `${user.companyStartEnd.substring(0,4)}` :<></>}</tspan></text>
                         {/* <text transform="matrix(1 0 0 1 302.9473 486.2334)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">2000</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">2001</tspan></text>
                         <text transform="matrix(1 0 0 1 302.9473 540.1147)"><tspan x="0" y="0" fontFamily="'MyriadPro-Regular'" fontSize="10px">2000</tspan><tspan x="0" y="12" fontFamily="'MyriadPro-Regular'" fontSize="10px">2001</tspan></text> */}
                         <text transform="matrix(1 0 0 1 95.583 157.5503)" fill="#25BCB6" fontFamily="'MyriadPro-Regular'" fontSize="93.7393px">{user.name.charAt(0)}</text>

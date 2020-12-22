@@ -11,7 +11,7 @@ function ProdResume(props) {
         saveSvgAsPng.saveSvgAsPng(document.getElementById('prodResume'), `${user.name}.png`, imageOptions)
     }
     const email = user.email.indexOf('@');
-    function emailLenght() {
+    function emailLength() {
         if (email >= 16) {
             return user.email.substring(0, 16)
         } else {
@@ -149,19 +149,19 @@ function ProdResume(props) {
                             <text transform="matrix(1 0 0 1 249.2476 109.0293)" fill="#070909" fontFamily="'MyriadPro-Semibold'" fontSize="27.833px">{fullname.length > 2 ? user.name.substring(fullname[2], fullname[4]) : <></>}</text>
                             <text transform="matrix(1 0 0 1 249.2476 132.0293)" fill="#070909" fontFamily="'MyriadPro-Semibold'" fontSize="27.833px">{fullname.length > 4 ? user.name.substring(fullname[4], fullname[8]) : <></>}</text>
                             <text transform="matrix(1 0 0 1 249.2471 156.21)" fill="#070909" fontFamily="'MyriadPro-Regular'" fontSize="21.3416px">{user.area} - {user.area_level}</text>
-                            <text transform="matrix(1 0 0 1 45.3115 268.9541)" fill="#FFFFFF" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address.substring(0, fulladdress.length > 3 ? fulladdress[3] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 50.3115 283.9541)" fill="#FFFFFF" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address.substring(fulladdress[3], fulladdress.length > 3 ? fulladdress[10] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 45.3115 268.9541)" fill="#FFFFFF" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address.substring(0, fulladdress.length > 1 ? fulladdress[2] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 50.3115 283.9541)" fill="#FFFFFF" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.address.substring(fulladdress[2], fulladdress.length > 2 ? fulladdress[10] : <></>)}</text>
                             <text transform="matrix(1 0 0 1 45.3115 313.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
                             <text transform="matrix(1 0 0 1 45.3115 350.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
-                            <text transform="matrix(1 0 0 1 45.3110 385.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>{emailLenght()}</text>
+                            <text transform="matrix(1 0 0 1 45.3110 385.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>{emailLength()}</text>
                             <text transform="matrix(1 0 0 1 45.3110 405.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12'>{user.email.substring(email, user.email.length)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 477.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(0, fullgoal.length > 3 ? fullgoal[3] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 497.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[3], fullgoal.length > 3 ? fullgoal[6] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 517.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[6], fullgoal.length > 6 ? fullgoal[9] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 537.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[9], fullgoal.length > 9 ? fullgoal[12] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 553.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[12], fullgoal.length > 12 ? fullgoal[15] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 573.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[15], fullgoal.length > 15 ? fullgoal[18] : <></>)}</text>
-                            <text transform="matrix(1 0 0 1 15.3115 593.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[18], fullgoal.length > 18 ? fullgoal[21] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 477.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(0, fullgoal.length > 2 ? fullgoal[2] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 497.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[2], fullgoal.length > 2 ? fullgoal[5] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 517.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[5], fullgoal.length > 5 ? fullgoal[8] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 537.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[8], fullgoal.length > 8 ? fullgoal[11] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 553.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[11], fullgoal.length > 11 ? fullgoal[14] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 573.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[14], fullgoal.length > 14 ? fullgoal[17] : <></>)}</text>
+                            <text transform="matrix(1 0 0 1 15.3115 593.9448)" fontFamily='MyriadPro-Semibold' fill='#FFFFFF' fontSize='12px'>{user.goal.substring(fullgoal[17], fullgoal.length > 17 ? fullgoal[21] : <></>)}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 285.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyOccupation !== "NOT_PRINT" ? `Cargo: ${user.companyOccupation}` : <></>}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 305.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' ? `Empresa: ${user.companyName}` : user.companyName.substring(0, 38)}</text>
                             <text transform="matrix(0.9856 0 0 1 249.5903 320.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' ? `` : user.companyName.substring(38, 75)}</text>

@@ -149,11 +149,11 @@ function AdmBasic(props) {
                 <g>
                     <rect x="28.711" y="132.636" fill="none" width="538.156" height="45.483" />
                     <text transform="matrix(1 0 0 1 28.8696 131.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(0,fullgoal[12])}</text>
-                    <text transform="matrix(1 0 0 1 28.8696 141.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[12], fullgoal.length > 12 ? fullgoal[19] : <></>)}</text>
-                    <text transform="matrix(1 0 0 1 28.8696 151.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[19], fullgoal.length > 19 ? fullgoal[24] : <></>)}</text>
-                    <text transform="matrix(1 0 0 1 28.8696 161.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[24], fullgoal.length > 24 ? fullgoal[29] : <></>)}</text>
-                    <text transform="matrix(1 0 0 1 28.8696 171.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[29], fullgoal.length > 29 ? fullgoal[34] : <></>)}</text>
-                    <text transform="matrix(1 0 0 1 28.8696 181.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[34], fullgoal.length > 34 ? fullgoal[39] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 28.8696 141.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[12], fullgoal.length > 12 ? fullgoal[24] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 28.8696 151.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[24], fullgoal.length > 24 ? fullgoal[36] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 28.8696 161.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[36], fullgoal.length > 36 ? fullgoal[48] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 28.8696 171.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[48], fullgoal.length > 48 ? fullgoal[60] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 28.8696 181.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(fullgoal[60], fullgoal.length > 60 ? fullgoal[72] : <></>)}</text>
                 </g>
                 <g>
                     <path fillRule="evenodd" clipRule="evenodd" fill="#414042" d="M37.749,185.205c0.338,0.147,0.449,0.407,0.444,0.77

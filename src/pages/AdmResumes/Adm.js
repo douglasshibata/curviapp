@@ -71,12 +71,12 @@ function Admin(props) {
                         <text transform="matrix(1 0 0 1 224.8696 550.4414)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="18">Experiencias Profissionais</text>
                     </g>
                     <text transform="matrix(1 0 0 1 224.8696 250.3696)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="18">Perfil Profissional</text>
-                    <text transform="matrix(1 0 0 1 224.8696 270.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(0,fullgoal[7])}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 290.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[7], fullgoal.length > 7 ? fullgoal[14] : <></>)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 310.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[14], fullgoal.length > 14 ? fullgoal[21] : <></>)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 330.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[21],fullgoal.length>21?fullgoal[28]:<></>)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 350.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[28],fullgoal.length>28?fullgoal[35]:<></>)}</text>
-                    <text transform="matrix(1 0 0 1 224.8696 365.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[35],fullgoal.length>35?fullgoal[42]:<></>)}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 270.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(0,fullgoal[4])}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 290.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[4], fullgoal.length > 4 ? fullgoal[11] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 310.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[11], fullgoal.length > 11 ? fullgoal[18] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 330.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[18],fullgoal.length>18?fullgoal[25]:<></>)}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 350.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[25],fullgoal.length>25?fullgoal[32]:<></>)}</text>
+                    <text transform="matrix(1 0 0 1 224.8696 365.3696)" fill="#000" fontFamily="'Roboto'" fontSize="14">{user.goal.substring(fullgoal[32],fullgoal.length>32?fullgoal[42]:<></>)}</text>
                     <text transform="matrix(1 0 0 1 41.105 250.1367)" fill="#2C242D" fontFamily="'Roboto'" fontSize="18">Contato</text>
                     <line fill="none" stroke="#161317" strokeMiterlimit="10" x1="40.311" y1="470.455" x2="171.039" y2="470.455" />
                     <text transform="matrix(1 0 0 1 41.8999 465.4268)" fill="#2C242D" fontFamily="'Roboto'" fontSize="18">Cursos</text>
@@ -147,8 +147,8 @@ function Admin(props) {
                     </g>
                     <text transform="matrix(1 0 0 1 75.3115 150.9541)" fill="#FFFFFF" fontFamily="'Roboto'" fontSize="90.7198">{user.name.charAt(0)}</text>
 
-                    <text transform="matrix(1 0 0 1 70.3115 275.9541)" fill="#161317" fontFamily="'Roboto'" fontSize="12">{user.address.substring(0, fulladdress.length > 3 ? fulladdress[3] : <></>)}</text>
-                    <text transform="matrix(1 0 0 1 75.3115 290.9541)" fill="#161317" fontFamily="'Roboto'" fontSize="12">{user.address.substring(fulladdress[3], fulladdress.length > 3 ? fulladdress[9] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 65.3115 275.9541)" fill="#161317" fontFamily="'Roboto'" fontSize="12">{user.address.substring(0, fulladdress.length > 1 ? fulladdress[2] : <></>)}</text>
+                    <text transform="matrix(1 0 0 1 75.3115 290.9541)" fill="#161317" fontFamily="'Roboto'" fontSize="12">{user.address.substring(fulladdress[2], fulladdress.length > 3 ? fulladdress[9] : <></>)}</text>
                     <text transform="matrix(1 0 0 1 70.3115 375.9541)" fill="#161317" fontFamily="'Roboto'" fontSize="12">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
                     <text transform="matrix(1 0 0 1 70.3115 330.9541)" fill="#161317" fontFamily="'Roboto'" fontSize="12">({user.cellphone.substring(0,2)}) {user.cellphone.substring(2,user.cellphone.length)}</text>
                     <text transform="matrix(1 0 0 1 69.35 410.9141)" fill="#161317" fontFamily="'Roboto'" fontSize="12">{emailLenght()}</text>

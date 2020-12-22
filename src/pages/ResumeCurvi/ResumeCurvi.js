@@ -1,16 +1,21 @@
 import React from 'react';
 import { Form } from '../style';
 const saveSvgAsPng = require('save-svg-as-png');
+// const svgToPDF = require('svg-to-pdfkit');
+//let doc = new PDFDocument({compress: false}); // It's easier to find bugs with uncompressed files
 
 function ResumeCurvi(props) {
     const user = props.user;
     const imageOptions = {
         backgroundColor: 'white',
     }
-    function downloadResume() {
+    function downloadResume(e) {
+        e.preventDefault()
         saveSvgAsPng.saveSvgAsPng(document.getElementById('resumeCurvi'), `${user.name}.png`, imageOptions)
+        //svgToPDF(`${user.name}.pdf`, document.getElementById('resumeCurvi') ,0, 0, {useCSS:true});
+        // console.log(document.getElementById('resumeCurvi').firstChild);
+        // console.log(svgToPDF);
     }
-
     var regexp = /\s/g;
     var name, fullname = [];
     var goal, fullgoal = [];
@@ -119,21 +124,27 @@ function ResumeCurvi(props) {
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.568884 560.8099)" fontSize="12.26" fontFamily="Roboto">Endereço: {user.address.substring(0, 40)}</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.568884 580.8099)" fontSize="12.26" fontFamily="Roboto">{user.address.substring(40, user.address.length)}</text>
                                     <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.568884 600.8099)" fontSize="12.26" fontFamily="Roboto">{user.linkedln_link !== 'NOT_PRINT' ? `Linkedln:${user.linkedln_link}` : <></>}</text>
-                                    <text fill="#444b67" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.909598 636.7804)" fontSize="21.86" fontFamily="Roboto" fontWeight="bold">CURSOS COMPLEMENTARES</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 656.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(0, extraCourses[8])}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 676.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[8],extraCourses.length > 8 ? extraCourses[16] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 696.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[16], extraCourses.length > 16 ? extraCourses[24] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 716.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[24], extraCourses.length > 24 ? extraCourses[32] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 736.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[32], extraCourses.length > 32 ? extraCourses[40] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 756.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[40], extraCourses.length > 40 ? extraCourses[48] : <></>)}</text>
+                                    {user.courses !== "NOT_PRINT"?
+                                    <>
+                                        <text fill="#444b67" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.909598 636.7804)" fontSize="21.86" fontFamily="Roboto" fontWeight="bold">CURSOS COMPLEMENTARES</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 656.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(0, extraCourses[8])}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 676.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[8],extraCourses.length > 8 ? extraCourses[16] : <></>)}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 696.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[16], extraCourses.length > 16 ? extraCourses[24] : <></>)}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 716.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[24], extraCourses.length > 24 ? extraCourses[32] : <></>)}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 736.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[32], extraCourses.length > 32 ? extraCourses[40] : <></>)}</text>
+                                        <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 18.250319 756.6131)" fontSize="12.26" fontFamily="Roboto">{user.courses.substring(extraCourses[40], extraCourses.length > 40 ? extraCourses[48] : <></>)}</text>
+                                    </>
+                                    :
+                                    <></>
+                                    }
                                     <text fill="#444b67" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 17.909598 242.83774)" fontSize="21.86" fontFamily="Roboto" fontWeight="bold">OBJETIVO PROFISSIONAL</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 274.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(0, fullgoal[7])}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 294.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[7], fullgoal.length > 7 ? fullgoal[13] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 314.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[13], fullgoal.length > 13 ? fullgoal[18] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 334.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[18], fullgoal.length > 18 ? fullgoal[22] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 354.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[22], fullgoal.length > 22 ? fullgoal[25] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 374.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[25], fullgoal.length > 25 ? fullgoal[28] : <></>)}</text>
-                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 394.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[25], fullgoal.length > 25 ? fullgoal[30] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 274.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(0, fullgoal[5])}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 294.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[5], fullgoal.length > 5 ? fullgoal[11] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 314.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[11], fullgoal.length > 11 ? fullgoal[16] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 334.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[16], fullgoal.length > 16 ? fullgoal[20] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 354.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[20], fullgoal.length > 20 ? fullgoal[23] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 374.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[23], fullgoal.length > 23 ? fullgoal[26] : <></>)}</text>
+                                    <text xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 13.568884 394.9402)" fontSize="12.26" fontFamily="Roboto">{user.goal.substring(fullgoal[26], fullgoal.length > 26 ? fullgoal[30] : <></>)}</text>
                                 </g >
                             </g >
                         </g >
