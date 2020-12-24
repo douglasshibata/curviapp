@@ -12,6 +12,7 @@ import ProdResume from '../EngResume/ProdResume';
 import SaudeResume from '../SaudeResume/SaudeResume';
 import BiologiaResume from '../BiologiaResume/BiologiaResume';
 import ResumeCurvi from '../ResumeCurvi/ResumeCurvi';
+import Curvi1 from '../Resumes/Curvi1';
 // import ResumeCurvi2 from '../ResumeCurvi/ResumeCurvi2';
 
 function GenerateResume() {
@@ -91,14 +92,15 @@ function GenerateResume() {
                     :
                     <>
                       {mensagemAnimadora()}
-                      <AdmBasic user={user} />
+                      <Curvi1 user={user}/>
+                      {/* <AdmBasic user={user} />
                       <Admin user={user} />
                       <SaudeResume user={user} />
                       <BiologiaResume user={user} />
                       <ProdResume user={user} />
                       <EngResume user={user} />
                       <ResumeCurvi user={user} />
-                      {/*  <ResumeCurvi2 user={user}/> */}
+                       <ResumeCurvi2 user={user}/> */}
                     </>
               }
             </>
