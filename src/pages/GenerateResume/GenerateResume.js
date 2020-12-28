@@ -18,6 +18,7 @@ import ResumeCurvi3 from '../ResumeCurvi/ResumeCurvi3';
 import Curvi4 from '../Resumes/Curvi4';
 import Curvi5 from '../Resumes/Curvi5';
 import Curvi6 from '../Resumes/Curvi6';
+import Curvi7 from '../Resumes/Curvi7';
 // import ResumeCurvi2 from '../ResumeCurvi/ResumeCurvi2';
 
 function GenerateResume() {
@@ -98,6 +99,7 @@ function GenerateResume() {
                     :
                     <>
                       {mensagemAnimadora()}
+                      <Curvi7 user={user}/>
                       <Curvi1 user={user} />
                       <Curvi2 user={user} />
                       <ResumeCurvi3 user={user}/>
