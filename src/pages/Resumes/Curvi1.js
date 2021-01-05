@@ -45,11 +45,11 @@ function Curvi1(props) {
                 <div className="resumeReady">
                     <svg id="curvi1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89">
                         <rect fill="none" width="595.28" height="841.89" />
-                        <text transform="matrix(1 0 0 1 23.2832 57.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="30">{user.name.substring(0, fullname[3])}</text>
                         <line stroke="#1a191a" fill="#1a1a1a" strokeMiterlimit='10' x1="200.75" y1="110.88" x2="10.33" y2="110.88" />
-                        <line stroke="#1a191a" fill="#1a1a1a" strokeMiterlimit='10' x1="380.75" y1="110.88" x2="580.33" y2="110.88" />
+                        <line stroke="#1a191a" fill="#1a1a1a" strokeMiterlimit='10' x1="450.75" y1="110.88" x2="590.33" y2="110.88" />
+                        <text transform="matrix(1 0 0 1 23.2832 57.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="30">{user.name.substring(0, fullname[3])}</text>
                         <text transform="matrix(1 0 0 1 28.2832 87.4688)" fill="#414042" fontFamily="'MyriadPro-Semibold'" fontSize="30">{user.name.substring(fullname[3], fullname.length > 3 ? fullname[6] : <></>)}</text>
-                        <text transform="matrix(1 0 0 1 220.0063 114.7466)" fill="#58595B" fontFamily="'MyriadPro-Regular'" fontSize="16">{user.area}-{user.area_level}</text>
+                        <text transform="matrix(1 0 0 1 210.0063 114.7466)" fill="#58595B" fontFamily="'MyriadPro-Regular'" fontSize="16">{user.area}-{user.area_level}</text>
                         <g>
                             <rect x="28.711" y="132.636" fill="none" width="538.156" height="45.483" />
                             <text transform="matrix(1 0 0 1 28.8696 131.1563)" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.goal.substring(0, fullgoal[12])}</text>

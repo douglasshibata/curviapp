@@ -12,6 +12,8 @@ import Curvi5 from '../Resumes/Curvi5';
 import Curvi6 from '../Resumes/Curvi6';
 import Curvi7 from '../Resumes/Curvi7';
 import Curvi8 from '../Resumes/Curvi8';
+import Curvi9 from '../Resumes/Curvi9';
+import Curvi10 from '../Resumes/Curvi10';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
@@ -63,7 +65,7 @@ function GenerateResume() {
         {loading ? <>
           {show &&
             <>
-              {user.area === 'Administraçãao' ?
+              {user.area === 'Administração' ?
                 <>
                   {mensagemAnimadora()}
                   <Curvi5 user={user}/>
@@ -72,7 +74,7 @@ function GenerateResume() {
                 </>
                 :
                 user.area === 'Engenharia' ?
-                  <>
+                <>
                     {mensagemAnimadora()}
                     
                     <ResumeCurvi3 user={user}/>
@@ -90,14 +92,16 @@ function GenerateResume() {
                     :
                     <>
                       {mensagemAnimadora()}
-                      <Curvi8 user={user} />
+                      <Curvi10 user={user}/>
+                      <Curvi9 user={user}/>
+                      <Curvi5 user={user}/>
                       <Curvi1 user={user} />
                       <Curvi2 user={user} />
                       <ResumeCurvi3 user={user}/>
                       <Curvi4 user={user}/>
-                      <Curvi5 user={user}/>
                       <Curvi6 user={user}/> 
                       <Curvi7 user={user}/>
+                      <Curvi8 user={user} />
                     </>
               }
             </>
