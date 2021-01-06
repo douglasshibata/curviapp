@@ -51,31 +51,21 @@ function Curvi12(props) {
             </Form>
             <div className="resumeBackground">
                 <div className="resumeReady">
-               <svg id='curvi12' data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89">
-                   {/* <defs>
-                   <style>.cls-1,.cls-13,.cls-14{fill="none" }
-                   .cls-2,.cls-3{fill="#596071" }
-                   .cls-3{fontSize="16px" fontFamily="MyriadPro-Semibold, Myriad Pro" fontWeight="700" }
-                   .cls-13{stroke="#fff" }
-                   .cls-13,.cls-14{strokeMiterlimit="10" }
-                   .cls-14{stroke="#596071" }
-                   </style>
-               </defs>
-               <title>Curvi 12</title> */}
-               <rect class="cls-1" width="595.28" height="841.89"/>
-               <rect class="cls-2" width="595.28" height="166.1"/>
-               <text class="cls-3" transform="translate(64.35 241.33)">OBJETIVO</text>
-               <text class="cls-3" transform="translate(64.35 369.49)">CONTATO</text>
-               <text class="cls-3" transform="translate(64.35 558.38)">CURSOS</text>
-               <text class="cls-3" transform="translate(303 470.49)">EXPERIÊNCIA</text>
-               <text class="cls-3" transform="translate(303 241.33)">FORMAÇÃO</text>
-               <line class="cls-13" x1="53.43" y1="92.52" x2="541.85" y2="92.52"/>
-               <line class="cls-14" x1="53.43" y1="256.11" x2="223" y2="256.11"/>
-               <line class="cls-14" x1="53.43" y1="381.4" x2="223" y2="381.4"/>
-               <line class="cls-14" x1="53.43" y1="567.45" x2="223" y2="567.45"/>
-               <line class="cls-14" x1="288" y1="256.11" x2="541.85" y2="256.11"/>
-               <line class="cls-14" x1="288" y1="482.4" x2="541.85" y2="482.4"/>
-               </svg>
+                    <svg id='curvi12' data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89">
+                        <rect fill="none" width="595.28" height="841.89" />
+                        <rect fill="#596071" width="595.28" height="166.1" />
+                        <text fill="#596071" fontSize="16px" fontFamily="MyriadPro-Semibold, Myriad Pro" fontWeight="700" transform="translate(64.35 241.33)">OBJETIVO</text>
+                        <text fill="#596071" fontSize="16px" fontFamily="MyriadPro-Semibold, Myriad Pro" fontWeight="700" transform="translate(64.35 369.49)">CONTATO</text>
+                        <text fill="#596071" fontSize="16px" fontFamily="MyriadPro-Semibold, Myriad Pro" fontWeight="700" transform="translate(64.35 558.38)">CURSOS</text>
+                        <text fill="#596071" fontSize="16px" fontFamily="MyriadPro-Semibold, Myriad Pro" fontWeight="700" transform="translate(303 470.49)">EXPERIÊNCIA</text>
+                        <text fill="#596071" fontSize="16px" fontFamily="MyriadPro-Semibold, Myriad Pro" fontWeight="700" transform="translate(303 241.33)">FORMAÇÃO</text>
+                        <line stroke="#fff" fill="none" strokeMiterlimit="10" x1="53.43" y1="92.52" x2="541.85" y2="92.52" />
+                        <line stroke="#596071" fill="none" strokeMiterlimit="10" x1="53.43" y1="256.11" x2="223" y2="256.11" />
+                        <line stroke="#596071" fill="none" strokeMiterlimit="10" x1="53.43" y1="381.4" x2="223" y2="381.4" />
+                        <line stroke="#596071" fill="none" strokeMiterlimit="10" x1="53.43" y1="567.45" x2="223" y2="567.45" />
+                        <line stroke="#596071" fill="none" strokeMiterlimit="10" x1="288" y1="256.11" x2="541.85" y2="256.11" />
+                        <line stroke="#596071" fill="none" strokeMiterlimit="10" x1="288" y1="482.4" x2="541.85" y2="482.4" />
+                    </svg>
                 </div>
             </div>
         </>

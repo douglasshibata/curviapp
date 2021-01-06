@@ -14,6 +14,9 @@ import Curvi7 from '../Resumes/Curvi7';
 import Curvi8 from '../Resumes/Curvi8';
 import Curvi9 from '../Resumes/Curvi9';
 import Curvi10 from '../Resumes/Curvi10';
+import Curvi11 from '../Resumes/Curvi11';
+import Curvi12 from '../Resumes/Curvi12';
+import Curvi13 from '../Resumes/Curvi13';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
@@ -92,6 +95,9 @@ function GenerateResume() {
                     :
                     <>
                       {mensagemAnimadora()}
+                      <Curvi13 user={user}/>
+                      <Curvi12 user={user}/>
+                      <Curvi11 user={user}/>
                       <Curvi10 user={user}/>
                       <Curvi9 user={user}/>
                       <Curvi5 user={user}/>
