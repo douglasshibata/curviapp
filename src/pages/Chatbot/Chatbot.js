@@ -10,13 +10,13 @@ export default function ChatBot() {
             selector={"#webchat"}
             interval={1000}
             customData={{ "language": "pt-BR" }}
-            socketUrl={"https://f06c71549455.ngrok.io"}
+            socketUrl={"https://733511241b23.ngrok.io"}
             socketPath={"/socket.io/"}
             title={"Curvi"}
             subtitle={"Digite Oi para começarmos seu currículo"}
             inputTextFieldHint={"Sua mensagem..."}
             connectingText={"Conectando..."}
-            hideWhenNotConnected={true}
+            hideWhenNotConnected={false}
             fullScreenMode={false}
             showFullScreenButton={false}
             profileAvatar={open}

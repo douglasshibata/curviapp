@@ -32,6 +32,7 @@ function GenerateResume() {
         setHide(true)
         setLoading(true)
         setError(false)
+        console.log(response.data)
       } catch (error) {
         setError(true)
         console.log(error);
@@ -95,18 +96,18 @@ function GenerateResume() {
                     :
                     <>
                       {mensagemAnimadora()}
-                      <Curvi13 user={user}/>
+                      <Curvi2 user={user} />
+                      {/* <Curvi13 user={user}/>
                       <Curvi12 user={user}/>
                       <Curvi11 user={user}/>
-                      <Curvi10 user={user}/>
-                      <Curvi9 user={user}/>
+                      <Curvi10 user={user}/> 
+                      <Curvi4 user={user}/>
+                      <Curvi9 user={user}/>*/}
                       <Curvi5 user={user}/>
                       <Curvi1 user={user} />
-                      <Curvi2 user={user} />
                       <ResumeCurvi3 user={user}/>
-                      <Curvi4 user={user}/>
                       <Curvi6 user={user}/> 
-                      <Curvi7 user={user}/>
+                      {/* <Curvi7 user={user}/> */}
                       <Curvi8 user={user} />
                     </>
               }
