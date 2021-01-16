@@ -99,7 +99,7 @@ function Curvi2(props) {
                         </text>
                         <text transform="matrix(1 0 0 1 70.3115 458.9541)" fill="#1B1119" fontFamily="'MyriadPro-Regular'" fontSize="12">({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
                         <text transform="matrix(1 0 0 1 70.3115 493.9541)" fill="#1B1119" fontFamily="'MyriadPro-Regular'" fontSize="12">{emailLength()}</text>
-                        <text transform="matrix(1 0 0 1 70.3115 503.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.email.substring(email, user.email.length)}</text>
+                        <text transform="matrix(1 0 0 1 68.3115 503.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='11'>{user.email.substring(email, user.email.length)}</text>
                         <text transform="matrix(1 0 0 1 65.3115 535.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.linkedln_link !== 'NOT_PRINT'? user.linkedln_link.substring(0,19):<></>}</text>
                         <text transform="matrix(1 0 0 1 65.3115 545.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='11'>{user.linkedln_link !== 'NOT_PRINT'? user.linkedln_link.substring(19,40):<></>}</text>
                         <text transform="matrix(1 0 0 1 70.3110 585.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.address.substring(0, fulladdress.length > 1 ? fulladdress[2] : <></>)}</text>

@@ -102,9 +102,9 @@ function GenerateResume() {
                       <Curvi11 user={user}/>
                       <Curvi10 user={user}/> 
                       <Curvi4 user={user}/>
+                      <Curvi1 user={user} />
                       <Curvi9 user={user}/>*/}
                       <Curvi5 user={user}/>
-                      <Curvi1 user={user} />
                       <ResumeCurvi3 user={user}/>
                       <Curvi6 user={user}/> 
                       {/* <Curvi7 user={user}/> */}
