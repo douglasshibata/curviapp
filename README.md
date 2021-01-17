@@ -1,3 +1,13 @@
+# Curvibot - Gerador de Currículos 
+<img src='https://github.com/douglasshibata/curviapp/blob/master/src/assets/logo.jpeg' alt='Logo Curvibot'/>
+
+Aplicação feita para ser realizada a geração de currículos.
+
+
+Desenvolvida em ReactJS.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
