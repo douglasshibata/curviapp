@@ -6,7 +6,7 @@ Aplicação feita para ser realizada a geração de currículos.
 
 Desenvolvida em ReactJS.
 
-
+Disponível em [Curvibot generator](https://curviapp.herokuapp.com/)
 
 # Getting Started with Create React App
 
