@@ -85,8 +85,8 @@ function Curvi1(props) {
                         <text fontSize="18px" fill="#1a1a1a" fontFamily="MyriadPro-Semibold Myriad Pro" fontWeight='700' transform="translate(33.35 267.73)">
                             Experiências Profissionais
                         </text>
-                        <text transform="matrix(1 0 0 1 199.2959 329.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' ? `Empresa: ${user.companyName}` : user.companyName.substring(0, 52)}</text>
-                        <text transform="matrix(1 0 0 1 199.2959 349.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' ? `` : user.companyName.substring(53, user.companyName.length)}</text>
+                        <text transform="matrix(1 0 0 1 199.2959 329.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'||user.companyName !== 'NOT_PRINT' ? `Empresa: ${user.companyName}` : user.companyName.substring(0, 52)}</text>
+                        <text transform="matrix(1 0 0 1 199.2959 349.1904)" fill="#58595B" fontFamily="'MyriadPro-Semibold'" fontSize="14">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.'||user.companyName !== 'NOT_PRINT' ? `` : user.companyName.substring(53, user.companyName.length)}</text>
                         <text transform="matrix(1 0 0 1 70.6631 329.1904)">
                             <tspan x="-20" y="0" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12">{user.companyOccupation !== "NOT_PRINT" ? `Cargo: ${user.companyOccupation}` : <></>}</tspan>
                             <tspan x="-42.899" y="20.4" fill="#808285" fontFamily="'MyriadPro-Regular'" fontSize="12"> {user.companyStartEnd !== "NOT_PRINT" ? `\nPeríodo: ${user.companyStartEnd}` : <></>}</tspan>
