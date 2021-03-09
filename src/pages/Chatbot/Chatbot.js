@@ -16,7 +16,7 @@ export default function ChatBot() {
             subtitle={"Digite Oi para começarmos seu currículo"}
             inputTextFieldHint={"Sua mensagem..."}
             connectingText={"Conectando..."}
-            hideWhenNotConnected={false}
+            hideWhenNotConnected={true}
             fullScreenMode={false}
             showFullScreenButton={false}
             profileAvatar={open}

@@ -28,7 +28,7 @@ function GenerateResume() {
     async function getUser() {
       try {
         const response = await api.get(`/api/user`, { headers: { email: email } })
-        setUser(response.data)
+        setUser(response.data.user)
         setHide(true)
         setLoading(true)
         setError(false)
@@ -97,7 +97,8 @@ function GenerateResume() {
                     <>
                       {mensagemAnimadora()}
                       <Curvi2 user={user} />
-                      {/* <Curvi13 user={user}/>
+                      {/* 
+                      <Curvi13 user={user}/>
                       <Curvi12 user={user}/>
                       <Curvi11 user={user}/>
                       <Curvi10 user={user}/> 

@@ -57,8 +57,8 @@ function Curvi2(props) {
                         <rect fill="#939393" x="28.35" y="228.93" width="154.65" height="562.41" />
                         <line fill="none" stroke="#1b1119" strokeMiterlimit='10' strokeWidth="2px" x1="39.91" y1="423.97" x2="170.64" y2="423.97" />
                         <rect fill="#1b1119" x="215" y="228.93" width="351.93" height="24.09" />
-                        <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.24556 66.86688)" fontSize="65.59" fontFamily="Roboto">{user.name.substring(0, fullname[3])}</text>
-                        <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 106.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length > 3 ? user.name.substring(fullname[3], fullname[4]) : <></>} </text>
+                        <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.24556 66.86688)" fontSize="65.59" fontFamily="Roboto">{user.name.substring(0, fullname[2])}</text>
+                        <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 106.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length > 2 ? user.name.substring(fullname[2], fullname[4]) : <></>} </text>
                         <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 145.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length > 4 ? user.name.substring(fullname[3], fullname[4]) : <></>} </text>
                         <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 60.94556 165.86688)" fontSize="65.59" fontFamily="Roboto">{fullname.length > 4 ? user.name.substring(fullname[4], fullname[5]) : <></>} </text>
                         <text fill="#f7f7eb" xmlSpace="preserve" transform="matrix(.7301169 0 0 .7301169 181.2702 187.9409)" fontSize="30.49" fontFamily="Roboto">{user.area} - {user.area_level}</text>
@@ -67,7 +67,7 @@ function Curvi2(props) {
                         </text>
                         <text transform="matrix(1 0 0 1 229.8784 286.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">Curso: {user.courseName} </text>
                         <text transform="matrix(1 0 0 1 229.8784 306.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">Instituição: {user.courseSchool}</text>
-                        <text transform="matrix(1 0 0 1 229.8784 326.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">  {user.courseEndYear === 'Completo'?user.courseEndYear:`Previsão de Conclusão: ${user.courseEndYear}`}</text>
+                        <text transform="matrix(1 0 0 1 229.8784 326.5454)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">  {user.courseEndYear === 'Completo' ? user.courseEndYear : `Previsão de Conclusão: ${user.courseEndYear}`}</text>
                         <rect fill="#1b1119" x="215" y="399.87" width="351.93" height="24.09" />
                         <text fontSize="18px" fontFamily="MyriadPro-Regular, Myriad Pro" fill="#e3dbca" transform="translate(224.87 417.6)">
                             Experiências
@@ -79,29 +79,29 @@ function Curvi2(props) {
                         <text transform="matrix(0.9856 0 0 1 229.5903 495.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyName !== 'Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.' ? `` : user.companyName.substring(75, user.companyName.length)}</text>
                         <text transform="matrix(0.9856 0 0 1 229.5903 485.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyStartEnd !== "NOT_PRINT" ? `Período: ${user.companyStartEnd}` : <></>}</text>
                         <text transform="matrix(0.9856 0 0 1 229.5903 505.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? `Principais Atividades:` : <></>}</text>
-                        <text transform="matrix(0.9856 0 0 1 229.5903 525.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(0,companyDescriptionArr.length > 3 ? companyDescriptionArr[4] : <></>) : <></>}</text>
-                        <text transform="matrix(0.9856 0 0 1 229.5903 545.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[4],companyDescriptionArr.length > 4 ? companyDescriptionArr[8] : <></>) : <></>}</text>
-                        <text transform="matrix(0.9856 0 0 1 229.5903 575.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[8],companyDescriptionArr.length > 8 ? companyDescriptionArr[12] : <></>) : <></>}</text>
-                        <text transform="matrix(0.9856 0 0 1 229.5903 585.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[12],companyDescriptionArr.length > 12 ? companyDescriptionArr[16] : <></>) : <></>}</text>
-                        <text transform="matrix(0.9856 0 0 1 229.5903 605.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[16],companyDescriptionArr.length > 16 ? companyDescriptionArr[20] : <></>) : <></>}</text>
+                        <text transform="matrix(0.9856 0 0 1 229.5903 525.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(0, companyDescriptionArr.length > 3 ? companyDescriptionArr[4] : <></>) : <></>}</text>
+                        <text transform="matrix(0.9856 0 0 1 229.5903 545.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[4], companyDescriptionArr.length > 4 ? companyDescriptionArr[8] : <></>) : <></>}</text>
+                        <text transform="matrix(0.9856 0 0 1 229.5903 575.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[8], companyDescriptionArr.length > 8 ? companyDescriptionArr[12] : <></>) : <></>}</text>
+                        <text transform="matrix(0.9856 0 0 1 229.5903 585.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[12], companyDescriptionArr.length > 12 ? companyDescriptionArr[16] : <></>) : <></>}</text>
+                        <text transform="matrix(0.9856 0 0 1 229.5903 605.1074)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="15.3958px">{user.companyDescription !== "NOT_PRINT" ? user.companyDescription.substring(companyDescriptionArr[16], companyDescriptionArr.length > 16 ? companyDescriptionArr[20] : <></>) : <></>}</text>
                         <text fontSize="18px" fontFamily="MyriadPro-Regular, Myriad Pro" fill="#e3dbca" transform="translate(224.87 629.6)">
                             Cursos
                             Complementares
                         </text>
-                        <text transform="matrix(1 0 0 1 229.1948 656.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(0,extraCourses.length > 3 ? extraCourses[7] : <></>):<></>} </text>
-                        <text transform="matrix(1 0 0 1 229.1948 676.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[7],extraCourses.length > 7 ? extraCourses[8] : <></>):<></>} </text>
-                        <text transform="matrix(1 0 0 1 229.1948 696.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[8],extraCourses.length > 8 ? extraCourses[12] : <></>):<></>} </text>
-                        <text transform="matrix(1 0 0 1 229.1948 716.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[12],extraCourses.length > 12 ? extraCourses[16] : <></>):<></>} </text>
-                        <text transform="matrix(1 0 0 1 229.1948 726.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[16],extraCourses.length > 16 ? extraCourses[20] : <></>):<></>} </text>
-                        <text transform="matrix(1 0 0 1 229.1948 736.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses!== 'NOT_PRINT'?user.courses.substring(extraCourses[20],extraCourses.length > 20 ? extraCourses[24] : <></>):<></>} </text>
+                        <text transform="matrix(1 0 0 1 229.1948 656.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(0, extraCourses.length > 3 ? extraCourses[7] : <></>) : <></>} </text>
+                        <text transform="matrix(1 0 0 1 229.1948 676.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(extraCourses[7], extraCourses.length > 7 ? extraCourses[8] : <></>) : <></>} </text>
+                        <text transform="matrix(1 0 0 1 229.1948 696.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(extraCourses[8], extraCourses.length > 8 ? extraCourses[12] : <></>) : <></>} </text>
+                        <text transform="matrix(1 0 0 1 229.1948 716.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(extraCourses[12], extraCourses.length > 12 ? extraCourses[16] : <></>) : <></>} </text>
+                        <text transform="matrix(1 0 0 1 229.1948 726.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(extraCourses[16], extraCourses.length > 16 ? extraCourses[20] : <></>) : <></>} </text>
+                        <text transform="matrix(1 0 0 1 229.1948 736.8257)" fontFamily="'MyriadPro-Semibold'" fill="#2C242D" fontSize="14px">{user.courses !== 'NOT_PRINT' ? user.courses.substring(extraCourses[20], extraCourses.length > 20 ? extraCourses[24] : <></>) : <></>} </text>
                         <text fill="#1b1119" fontSize="18px" fontFamily="MyriadPro-Regular, Myriad Pro" transform="translate(41.5 418.94)">
                             Contato
                         </text>
                         <text transform="matrix(1 0 0 1 70.3115 458.9541)" fill="#1B1119" fontFamily="'MyriadPro-Regular'" fontSize="12">({user.cellphone.substring(0, 2)}) {user.cellphone.substring(2, user.cellphone.length)}</text>
                         <text transform="matrix(1 0 0 1 70.3115 493.9541)" fill="#1B1119" fontFamily="'MyriadPro-Regular'" fontSize="12">{emailLength()}</text>
                         <text transform="matrix(1 0 0 1 68.3115 503.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='11'>{user.email.substring(email, user.email.length)}</text>
-                        <text transform="matrix(1 0 0 1 65.3115 535.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.linkedln_link !== 'NOT_PRINT'? user.linkedln_link.substring(0,19):<></>}</text>
-                        <text transform="matrix(1 0 0 1 65.3115 545.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='11'>{user.linkedln_link !== 'NOT_PRINT'? user.linkedln_link.substring(19,40):<></>}</text>
+                        <text transform="matrix(1 0 0 1 65.3115 535.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.linkedln_link !== 'NOT_PRINT' ? user.linkedln_link.substring(0, 19) : <></>}</text>
+                        <text transform="matrix(1 0 0 1 65.3115 545.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='11'>{user.linkedln_link !== 'NOT_PRINT' ? user.linkedln_link.substring(19, 40) : <></>}</text>
                         <text transform="matrix(1 0 0 1 70.3110 585.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.address.substring(0, fulladdress.length > 1 ? fulladdress[2] : <></>)}</text>
                         <text transform="matrix(1 0 0 1 70.3110 605.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.address.substring(fulladdress[2], fulladdress.length > 2 ? fulladdress[10] : <></>)}</text>
                         <line fill="none" stroke="#1b1119" strokeMiterlimit='10' strokeWidth="2px" x1="40.71" y1="253.03" x2="171.44" y2="253.03" />
@@ -120,14 +120,18 @@ function Curvi2(props) {
                         <path fill="#1b1119" d="M60.39,490.77H49l5.69,4.82Z" />
                         <path fill="#1b1119" d="M54.7,483.11a12.4,12.4,0,1,0,12.4,12.4A12.4,12.4,0,0,0,54.7,483.11Zm8.5,17.18-.09.33a2,2,0,0,1-2,1.35H48.27a2,2,0,0,1-1.72-.85,4.52,4.52,0,0,1-.36-.83v-9.57c0-.11.06-.22.1-.33a2,2,0,0,1,2-1.35H61.12a2,2,0,0,1,1.72.85,4.4,4.4,0,0,1,.36.82Z" />
                         <path fill="#1b1119" d="M61.48,492.2l-.2.16-5.6,4.74a.83.83,0,0,1-.57.21h-.8a.86.86,0,0,1-.62-.23l-5.61-4.74-.16-.13v.22q0,3.72,0,7.45c0,.26.05.38.38.38H61.1c.33,0,.39-.11.39-.38,0-2.49,0-5,0-7.47Z" />
-                        {user.linkedln_link !== 'NOT_PRINT'?
-                        <path fill="#1b1119" d="M53.9,527.06a12.4,12.4,0,1,0,12.4,12.4A12.4,12.4,0,0,0,53.9,527.06Zm-4.67,9.26a1.53,1.53,0,1,1,1.53-1.53A1.54,1.54,0,0,1,49.23,536.32Zm1.26,1.45v7.63H48v-7.63Zm9.35,7.63H57.3v-.17q0-2.12,0-4.23a1.28,1.28,0,0,0-.72-1.22,1.26,1.26,0,0,0-1.81,1,2.52,2.52,0,0,0,0,.28q0,2.08,0,4.16v.18H52.21v-7.63h2.55v.91c.17-.15.35-.33.54-.48a2.56,2.56,0,0,1,3-.22,2.92,2.92,0,0,1,1.48,2,3.07,3.07,0,0,1,.06.64c0,1.56,0,3.11,0,4.67C59.85,545.32,59.85,545.36,59.84,545.4Z" />
-                        :<></>}
+                        {user.linkedln_link !== 'NOT_PRINT' ?
+                            <path fill="#1b1119" d="M53.9,527.06a12.4,12.4,0,1,0,12.4,12.4A12.4,12.4,0,0,0,53.9,527.06Zm-4.67,9.26a1.53,1.53,0,1,1,1.53-1.53A1.54,1.54,0,0,1,49.23,536.32Zm1.26,1.45v7.63H48v-7.63Zm9.35,7.63H57.3v-.17q0-2.12,0-4.23a1.28,1.28,0,0,0-.72-1.22,1.26,1.26,0,0,0-1.81,1,2.52,2.52,0,0,0,0,.28q0,2.08,0,4.16v.18H52.21v-7.63h2.55v.91c.17-.15.35-.33.54-.48a2.56,2.56,0,0,1,3-.22,2.92,2.92,0,0,1,1.48,2,3.07,3.07,0,0,1,.06.64c0,1.56,0,3.11,0,4.67C59.85,545.32,59.85,545.36,59.84,545.4Z" />
+                            : <></>}
                         <line fill="none" stroke="#1b1119" strokeMiterlimit='10' strokeWidth="2px" x1="40.71" y1="653.03" x2="171.44" y2="653.03" />
-                        <text fill="#1b1119" fontSize="18px" fontFamily="MyriadPro-Regular, Myriad Pro" transform="translate(42.3 648)">
-                            Idioma
+                        {user.language !== undefined ?
+                            <>
+                                <text fill="#1b1119" fontSize="18px" fontFamily="MyriadPro-Regular, Myriad Pro" transform="translate(42.3 648)">
+                                    Idioma
                         </text>
-                        <text transform="matrix(1 0 0 1 42.3 668.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.language !== 'NOT_PRINT'? `${user.language} - ${user.language_level}` :<></>}</text>
+                                <text transform="matrix(1 0 0 1 42.3 668.9448)" fontFamily='MyriadPro-Semibold' fill='#1B1119' fontSize='12'>{user.language !== 'NOT_PRINT' ? `${user.language} - ${user.language_level}` : <></>}</text>
+                            </>
+                            : <></>}
                     </svg>
                 </div>
             </div>
