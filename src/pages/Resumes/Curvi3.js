@@ -8,12 +8,12 @@ const options = {
     format: 'a4',
     floatPrecision: 'smart'
 };
-const Curvi4 = (props)=> {
+const Curvi3 = (props)=> {
     const dados = props.user;
     // https://rawgit.com/MrRio/jsPDF/master/docs/jsPDF.html
     return (
         <>
-            <div id="curvi4" className="container-fluid" style={{height: '100%',width:'50rem',backgroundColor:"#FFF"}}   ref={ref} >
+            <div id="curvi3" className="container-fluid" style={{height: '100%',width:'50rem',backgroundColor:"#FFF"}}   ref={ref} >
         <div className="p-4 container" style={{backgroundColor: "#CEDFE4"}}>
             <div className="container text-center mt-4">
                 <h1 className="font-weight-light display-4" style={{color: "#3B3F3E"}}>
@@ -198,4 +198,4 @@ const Curvi4 = (props)=> {
         </>
     )
 }
-export default Curvi4;
+export default Curvi3;

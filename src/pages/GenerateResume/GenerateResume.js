@@ -4,19 +4,8 @@ import api from '../../services/api';
 import { Box, Form } from '../style';
 import ReactLoading from 'react-loading';
 import logo from '../../assets/bot.jpg';
-import Curvi1 from '../Resumes/Curvi1';
-import Curvi2 from '../Resumes/Curvi2';
-import ResumeCurvi3 from '../ResumeCurvi/ResumeCurvi3';
-import Curvi4 from '../Resumes/Curvi4';
-import Curvi5 from '../Resumes/Curvi5';
-import Curvi6 from '../Resumes/Curvi6';
-import Curvi7 from '../Resumes/Curvi7';
 import Curvi8 from '../Resumes/Curvi8';
-import Curvi9 from '../Resumes/Curvi9';
-import Curvi10 from '../Resumes/Curvi10';
-import Curvi11 from '../Resumes/Curvi11';
-import Curvi12 from '../Resumes/Curvi12';
-import Curvi13 from '../Resumes/Curvi13';
+import Curvi4 from '../Resumes/Curvi4';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
@@ -32,7 +21,6 @@ function GenerateResume() {
         setHide(true)
         setLoading(true)
         setError(false)
-        console.log(response.data)
       } catch (error) {
         setError(true)
         console.log(error);
@@ -69,49 +57,10 @@ function GenerateResume() {
         {loading ? <>
           {show &&
             <>
-              {user.area === 'Administração' ?
-                <>
-                  {mensagemAnimadora()}
-                  <Curvi5 user={user}/>
-                  <Curvi6 user={user}/> 
-                  <Curvi7 user={user}/>
-                </>
-                :
-                user.area === 'Engenharia' ?
-                <>
-                    {mensagemAnimadora()}
-                    
-                    <ResumeCurvi3 user={user}/>
-                    <Curvi4 user={user}/>
-                    <Curvi5 user={user}/>
-                    <Curvi6 user={user}/>
-                  </>
-                  :
-                  user.area === 'Saúde' ?
-                  <>
-                      {mensagemAnimadora()}
-                      <Curvi1 user={user} />
-                      <Curvi2 user={user} />
-                    </>
-                    :
-                    <>
-                      {mensagemAnimadora()}
-                      <Curvi2 user={user} />
-                      {/* 
-                      <Curvi13 user={user}/>
-                      <Curvi12 user={user}/>
-                      <Curvi11 user={user}/>
-                      <Curvi10 user={user}/> 
-                      <Curvi4 user={user}/>
-                      <Curvi1 user={user} />
-                      <Curvi9 user={user}/>*/}
-                      <Curvi5 user={user}/>
-                      <ResumeCurvi3 user={user}/>
-                      <Curvi6 user={user}/> 
-                      {/* <Curvi7 user={user}/> */}
-                      <Curvi8 user={user} />
-                    </>
-              }
+              {mensagemAnimadora()}
+
+              <Curvi4 user={user} />
+              <Curvi8 user={user} />
             </>
           }
           <Form>
