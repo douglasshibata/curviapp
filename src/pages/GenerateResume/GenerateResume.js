@@ -4,8 +4,11 @@ import api from '../../services/api';
 import { Box, Form } from '../style';
 import ReactLoading from 'react-loading';
 import logo from '../../assets/bot.jpg';
-import Curvi8 from '../Resumes/Curvi8';
-import Curvi4 from '../Resumes/Curvi4';
+import Curvi2 from '../Resumes/Curvi2';
+import Curvi4 from '../Resumes/Curvi3';
+import Curvi3 from '../Resumes/Curvi4';
+import Curvi1 from '../Resumes/Curvi1';
+import Curvi5 from '../Resumes/Curvi5';
 
 function GenerateResume() {
   const [user, setUser] = useState([]);
@@ -59,8 +62,11 @@ function GenerateResume() {
             <>
               {mensagemAnimadora()}
 
+              <Curvi1 user={user} />
+              <Curvi2 user={user} />
+              <Curvi3 user={user} />
               <Curvi4 user={user} />
-              <Curvi8 user={user} />
+              <Curvi5 user={user} />
             </>
           }
           <Form>
