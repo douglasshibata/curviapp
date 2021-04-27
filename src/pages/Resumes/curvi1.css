@@ -1,0 +1,23 @@
+.header {
+    background-color: #C7DAED;
+    width: 65%;
+    position: absolute;
+    left: 35%;
+    right: 25%;
+    top: -10px;
+}
+
+.quadrado {
+    border-style: solid;
+    margin: 45px;
+}
+
+.rodape {
+    background-color: #C7DAED;
+    position: absolute;
+    left: 35%;
+    right: 25%;
+    width: 30%;
+    margin-top: -20px;
+    padding: 40px 25px 30px;
+}

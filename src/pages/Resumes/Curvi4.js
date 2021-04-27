@@ -25,40 +25,39 @@ const Curvi4 = (props) => {
                     </div>
                 </div>
                 <div className="container">
-                  
-                        <div className="">
-                            <div className="mt-4">
+                    <div className='row mt-2'>
+                        <div className="col-6">
+                            <div className="mt-2">
                                 <div className="text-center" style={{ paddingLeft: '15px', paddingTop: '5px', paddingBottom: '5px' }}>
                                     <h5 className="font-weight-bold" style={{ color: "#3B3F3E" }}>Objetivo</h5>
                                 </div>
-                                <p className="container-fluid text-justify text-dark">
+                                <p className="container-fluid text-dark">
                                     {dados.goal}
                                 </p>
                             </div>
                         </div>
-                        <div className="">
+                        <div className="col-6">
 
-                            <div className="mt-4">
+                            <div className="mt-2">
                                 <div className=" text-center">
                                     <h5 className="font-weight-bold" style={{ color: "#3B3F3E" }}>Contato</h5>
                                 </div>
 
-                                <div className="row">
-                                    <div className="col-6 text-dark">
-                                        {dados.email}
-                                        <br />
-                                        {dados.address}
-                                        <br />
-                                    </div>
-                                    <div className="col-6 text-dark">
-                                        {dados.cellphone}
-                                        <br />
-                                        {dados.linkedln_link !== "NOT_PRINT" ? dados.linkedln_link : ''}
-                                        <br />
-                                    </div>
+                                <div className="text-dark">
+                                    {dados.email}
+                                    <br />
+                                    {dados.address}
+                                    <br />
+                                </div>
+                                <div className="text-dark">
+                                    {dados.cellphone}
+                                    <br />
+                                    {dados.linkedln_link !== "NOT_PRINT" ? dados.linkedln_link : ''}
+                                    <br />
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <hr color="#CEDFE4" />
                     <div className="row">
                         <div className="col-2 mt-4">
@@ -77,37 +76,39 @@ const Curvi4 = (props) => {
                             </span><br />
                         </div>
                     </div>
-                    <div className="row mt-4">
-                        <div className="col-2 mt-4">
-                            <div className="container m-2" style={{ color: "#CEDFE4" }}>
-                                <span className='font-weight-bold'>
-                                    {dados.companyStartEnd}
+                    {dados.companyOccupation !== "NOT_PRINT" && dados.companyOccupation ? <>
+                        <div className="row mt-4">
+                            <div className="col-2 mt-4">
+                                <div className="container m-2" style={{ color: "#CEDFE4" }}>
+                                    <span className='font-weight-bold'>
+                                        {dados.companyStartEnd}
+                                    </span><br />
+                                </div>
+                            </div>
+                            <div className="col-10 mt-4">
+                                <h5 className='font-weight-bold' style={{ color: "#3B3F3E" }}>Experiências</h5>
+                                <span className='text-dark' >
+                                    {dados.companyOccupation}  - {dados.companyName}
+                                    <br />
+                                    {dados.companyDescription}
                                 </span><br />
                             </div>
+                            {dados.companyDescriptionVolunteer !== "NOT_PRINT" ? <>
+                                <span className='font-weight-bold text-dark'>
+                                    {dados.companyNameVolunteer}
+                                </span><br />
+                                <span className='font-weight-bold text-dark'>
+                                    {dados.companyOccupationVolunteer}
+                                </span><br />
+                                <span className='font-weight-bold text-dark'>
+                                    {dados.companyDescriptionVolunteer}
+                                </span><br />
+                                <span className='font-weight-bold text-dark'>
+                                    {dados.companyStartEndVolunteer}
+                                </span><br />
+                            </> : ''}
                         </div>
-                        <div className="col-10 mt-4">
-                            <h5 className='font-weight-bold' style={{ color: "#3B3F3E" }}>Experiências</h5>
-                            <span className='text-dark' >
-                                {dados.companyOccupation}  - {dados.companyName}
-                                <br />
-                                {dados.companyDescription}
-                            </span><br />
-                        </div>
-                        {dados.companyDescriptionVolunteer !== "NOT_PRINT" ? <>
-                            <span className='font-weight-bold text-dark'>
-                                {dados.companyNameVolunteer}
-                            </span><br />
-                            <span className='font-weight-bold text-dark'>
-                                {dados.companyOccupationVolunteer}
-                            </span><br />
-                            <span className='font-weight-bold text-dark'>
-                                {dados.companyDescriptionVolunteer}
-                            </span><br />
-                            <span className='font-weight-bold text-dark'>
-                                {dados.companyStartEndVolunteer}
-                            </span><br />
-                        </> : ''}
-                    </div>
+                    </> : ''}
 
                     {dados.language !== 'NOT_PRINT' ?
                         <div className="row">
@@ -130,14 +131,10 @@ const Curvi4 = (props) => {
 
 
                     {dados.companyDescriptionVolunteer !== 'NOT_PRINT' ?
-
-
                         <div className="row">
                             <div className="col-2 mt-4">
                                 <div className="container m-2">
-                                    <span>
-
-                                    </span><br />
+                                    <br />
                                 </div>
                             </div>
                             <div className="col-10 mt-2">
@@ -159,14 +156,11 @@ const Curvi4 = (props) => {
                         : <></>}
 
 
-
                     {dados.courses !== 'NOT_PRINT' && dados.courses ?
                         <div className="row">
                             <div className="col-2 mt-4">
                                 <div className="container m-2">
-                                    <span>
-
-                                    </span><br />
+                                    <br />
                                 </div>
                             </div>
                             <div className="col-10 mt-2">
@@ -180,14 +174,10 @@ const Curvi4 = (props) => {
                         : <></>}
 
                     {dados.cientificResearch !== 'NOT_PRINT' ?
-
-
                         <div className="row">
                             <div className="col-2 mt-4">
                                 <div className="container m-2">
-                                    <span>
-
-                                    </span><br />
+                                    <br />
                                 </div>
                             </div>
                             <div className="col-10 mt-2">
@@ -204,9 +194,9 @@ const Curvi4 = (props) => {
 
             </div>
             <div className='container p-4'>
-            <ReactToPdf targetRef={ref} filename={`${dados.name}.pdf`} options={options} >
-        {({ toPdf }) => <button style={{width:'70%'}} className='btn btn-dark btn-lg' onClick={toPdf}><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i> Baixar Currículo</button>}
-      </ReactToPdf>
+                <ReactToPdf targetRef={ref} filename={`${dados.name}.pdf`} options={options} >
+                    {({ toPdf }) => <button style={{ width: '70%' }} className='btn btn-dark btn-lg' onClick={toPdf}><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i> Baixar Currículo</button>}
+                </ReactToPdf>
             </div>
         </>
     )

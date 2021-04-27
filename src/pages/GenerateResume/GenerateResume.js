@@ -4,10 +4,10 @@ import api from '../../services/api';
 import { Box, Form } from '../style';
 import ReactLoading from 'react-loading';
 import logo from '../../assets/bot.jpg';
-import Curvi2 from '../Resumes/Curvi2';
-import Curvi4 from '../Resumes/Curvi3';
-import Curvi3 from '../Resumes/Curvi4';
 import Curvi1 from '../Resumes/Curvi1';
+import Curvi2 from '../Resumes/Curvi2';
+import Curvi3 from '../Resumes/Curvi3';
+import Curvi4 from '../Resumes/Curvi4';
 import Curvi5 from '../Resumes/Curvi5';
 
 function GenerateResume() {
@@ -21,9 +21,9 @@ function GenerateResume() {
       try {
         const response = await api.get(`/api/user`, { headers: { email: email } })
         setUser(response.data.user)
-        setHide(true)
-        setLoading(true)
-        setError(false)
+        setHide(true);
+        setLoading(true);
+        setError(false);
       } catch (error) {
         setError(true)
         console.log(error);
@@ -61,7 +61,6 @@ function GenerateResume() {
           {show &&
             <>
               {mensagemAnimadora()}
-
               <Curvi1 user={user} />
               <Curvi2 user={user} />
               <Curvi3 user={user} />

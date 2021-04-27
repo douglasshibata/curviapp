@@ -1,10 +1,10 @@
 {
   "name": "curviapp",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "engines": {
     "node": "14.x",
-    "npm":"6.x"
+    "npm":"7.x"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",

@@ -1,0 +1,13 @@
+.contt {
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+}
+
+.borda {
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: 2px dashed black;
+    height: 15rem;
+    margin-top: 2rem;
+}
