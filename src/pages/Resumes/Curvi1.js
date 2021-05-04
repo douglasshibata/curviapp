@@ -43,10 +43,12 @@ function Curvi1(props) {
                   <br />
                   {dados.address}
                   <br />
-
+              {dados.linkedln_link && dados.linkedln_link !== 'NOT_PRINT'?
+              <div>
                   {dados.linkedln_link}
-                </div>
                 <br />
+              </div>:<></>}
+                </div>
               </div>
               <div className="col-6 mt-5 text-left ">
                 <h5 className="font-weight-bold" style={{ color: '#6E7C8E' }}>OBJETIVO</h5>
@@ -76,6 +78,7 @@ function Curvi1(props) {
                 </div>
                 <br />
               </div>
+              {dados.companyDescription&& dados.companyDescription !== 'NOT_PRINT'? 
               <div className="col-6 my-3 text-left ">
                 <h5 className="font-weight-bold" style={{ color: '#6E7C8E' }}>EXPERIÊNCIA</h5>
                 <div className="text-dark">
@@ -89,6 +92,7 @@ function Curvi1(props) {
                   {dados.companyDescription}
                 </div>
               </div>
+          :''}
             </div>
             <div className="row">
               {dados.language && dados.language !== 'NOT_PRINT'
