@@ -25,50 +25,50 @@ const Curvi2 = (props) => {
                 </div>
                 <div className="container" style={{ marginTop: '50px', color: "#6E7C8E" }}>
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-6 text-left">
                             <h5 style={{ color: "#6E7C8E" }}>OBJETIVO</h5>
-                            <hr width="70%" style={{ marginLeft: '10%' }} />
-
-                            <p className="mr-4">
+                            {/* <hr width="70%" /> */}
+                            <hr style={{ height: "1px", borderWidth: 0, backgroundColor: "#6E7C8E", width: '80%' }} />
+                            <p className="text-justify">
                                 {dados.goal}
                             </p>
                         </div>
-                        <div className="col-6">
+                        <div className="col-6 text-left">
                             <h5 style={{ color: '#6E7C8E' }}>FORMAÇÃO</h5>
-                            <hr width="70%" style={{ marginLeft: '10%' }} />
-
-                            <span>
+                            <hr style={{ height: "1px", borderWidth: 0, backgroundColor: "#6E7C8E", width: '80%' }} />
+                            <div>
                                 {dados.scholarity}  - {dados.courseName}
-                            </span><br />
-                            <span>
+                                <br />
                                 {dados.courseSchool}
-                            </span><br />
-                            <span>
+                                <br />
                                 {dados.courseEndYear}
-                            </span><br />
+                            </div>
                         </div>
                     </div>
                     <div className="row mt-4">
-                        <div className="col-6 mt-4">
+                        <div className="col-6 mt-4 text-left">
                             <h5 style={{ color: '#6E7C8E' }}>CONTATO</h5>
-                            <hr width="70%" style={{ marginLeft: '10%' }} />
-                            <span>
+                            {/* <hr width="70%" style={{ marginLeft: '10%' }} /> */}
+                            <hr style={{ height: "1px", borderWidth: 0, backgroundColor: "#6E7C8E", width: '80%' }} />
+                            <div className='text-justify'>
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                             &nbsp;
+                            &nbsp;
                                 {dados.cellphone}
-                            </span><br />
-                            <span>
+                                <br />
+
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             &nbsp;
+                            &nbsp;
                                 {dados.email}
-                            </span><br />
-                            <span>
+                                <br />
                                 <i class="fa fa-home" aria-hidden="true"></i>
                             &nbsp;
+                            &nbsp;
                                 {dados.address}
-                            </span><br />
+                            </div><br />
                             {dados.linkedln_link !== 'NOT_PRINT' && dados.linkedln_link ?
-                                <span>
+                                <span className='text-justify'>
                                     <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                                     &nbsp;
                                     {dados.linkedln_link}
@@ -77,22 +77,52 @@ const Curvi2 = (props) => {
                                 : <></>}
                         </div>
                         {dados.companyOccupation && dados.companyName !== 'NOT_PRINT' ?
-                            <div className="col-6 mt-4">
+                            <div className="col-6 mt-4 text-left">
                                 <h5 style={{ color: '#6E7C8E' }}>EXPERIÊNCIA</h5>
-                                <hr width="70%" style={{ marginLeft: '10%' }} />
-                                <div className='text-center'>
-                                <span>
+                                {/* <hr width="70%" style={{ marginLeft: '10%' }} /> */}
+                                <hr style={{ height: "1px", borderWidth: 0, backgroundColor: "#6E7C8E", width: '80%' }} />
+                                <div className='text-justify'>
                                     {dados.companyOccupation}  - {dados.companyName}
-                                </span><br />
-                                <span>
+                                    <br />
                                     {dados.companyStartEnd}
-                                </span><br />
-                                <span>
+                                    <br />
                                     {dados.companyDescription}
+                                </div><br />
+                            </div>
+                            : <></>}
+                    </div>
+                    {dados.language && dados.language !== 'NOT_PRINT' ?
+                        <div className="row">
+                            <div className="col-6 my-4 text-left">
+                                <h5 style={{ color: '#6E7C8E' }}>IDIOMAS</h5>
+                                {/* <hr width="70%" style={{ marginLeft: '10%' }} /> */}
+                                <hr style={{ height: "1px", borderWidth: 0, backgroundColor: "#6E7C8E", width: '80%' }} />
+                                <span className='text-justify'>
+                                    {dados.language}  - {dados.language_level}
                                 </span><br />
+                            </div>
+                            {dados.courses && dados.courses !== "NOT_PRINT" ?
+                                <div className="col-6 mt-4 text-left">
+                                    <h5 style={{ color: '#6E7C8E' }}>CURSOS</h5>
+                                    <hr style={{ height: "1px", borderWidth: 0, backgroundColor: "#6E7C8E", width: '80%' }} />
+                                    <span>
+                                        {dados.courses}
+                                    </span><br />
                                 </div>
+                                : <></>}
+                        </div>
+                        : <></>}
+                    {dados.cientificResearch && dados.cientificResearch !== 'NOT_PRINT' ?
+                        <div className="row">
+                            <div className="col-6 mt-4">
+                                <h5 style={{ color: '#6E7C8E' }}>ATIVIDADES COMPLEMENTARES</h5>
+                            <hr style={{ height: "1px", borderWidth: 0, backgroundColor: "#6E7C8E", width: '80%' }} />
+                                {/* <hr width="70%" style={{ marginLeft: '10%' }} /> */}
+                                <span className='text-justify'>
+                                    {dados.cientificResearch}
+                                </span><br />
                                 {dados.companyNameVolunteer && dados.companyOccupationVolunteer !== 'NOT_PRINT' ?
-                                <div className='text-center'>
+                                    <div className='text-justify'>
                                         <span>
                                             {dados.companyNameVolunteer}
                                         </span><br />
@@ -109,30 +139,6 @@ const Curvi2 = (props) => {
 
                                     : <></>}
                             </div>
-                            : <></>}
-                    </div>
-                    {dados.language && dados.language !== 'NOT_PRINT' ?
-                        <div className="row">
-                            <div className="col-6 mt-4">
-                                <h5 style={{ color: '#6E7C8E' }}>IDIOMAS</h5>
-                                <hr width="70%" style={{ marginLeft: '10%' }} />
-                                <span>
-                                    {dados.language}  - {dados.language_level}
-                                </span><br />
-                            </div>
-                            {dados.cientificResearch && dados.cientificResearch !== "NOT_PRINT" ?
-                                <div className="col-6 mt-4">
-                                    <h5 style={{ color: '#6E7C8E' }}>ATIVIDADES COMPLEMENTARES</h5>
-                                    <hr width="70%" style={{ marginLeft: '10%' }} />
-
-                                    <span>
-                                        {dados.courses}
-                                    </span><br />
-                                    <span>
-                                        {dados.cientificResearch}
-                                    </span><br />
-                                </div>
-                                : <></>}
                         </div>
                         : <></>}
                 </div>
@@ -143,6 +149,6 @@ const Curvi2 = (props) => {
                 </ReactToPdf>
             </div>
         </>
-    )
-}
+    );
+};
 export default Curvi2;

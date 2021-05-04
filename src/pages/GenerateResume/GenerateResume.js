@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../../App.css';
+import ReactLoading from 'react-loading';
 import api from '../../services/api';
 import { Box, Form } from '../style';
-import ReactLoading from 'react-loading';
 import logo from '../../assets/bot.jpg';
 import Curvi1 from '../Resumes/Curvi1';
 import Curvi2 from '../Resumes/Curvi2';
@@ -68,8 +68,8 @@ function GenerateResume() {
               <Curvi5 user={user} />
             </>
           }
-          <Form>
-            <div className="content">
+          <div className='container'>
+            <div className="border border-dark m-2">
               <h1>Dados Pessoais</h1>
               <p>{user.name.toUpperCase()}, {user.age}</p>
               <p>{user.area} - {user.area_level}</p>
@@ -78,48 +78,44 @@ function GenerateResume() {
               <p>Endereço: {user.address}</p>
               <p>{user.city} - {user.state}</p>
             </div>
-            <div className="content">
+            <div className="border border-dark m-2">
               <h2>Objetivo</h2>
               <p> {user.goal} </p>
             </div>
-            <div className="content">
+            <div className="border border-dark m-2">
               <h2>Experiencia</h2>
               {user.companyOccupation !== 'NOT_PRINT' ? <p> Cargo: {user.companyOccupation} </p> : <></>}
               {user.companyStartEnd !== 'NOT_PRINT' ? <p> Período: {user.companyStartEnd} </p> : <></>}
               <p>{user.companyName}</p>
               {user.companyDescription !== 'NOT_PRINT' ? <p>{user.companyDescription}</p> : <></>}
             </div>
-            <div className="content">
+            <div className="border border-dark m-2">
               <h2>Curso</h2>
               <p>{user.courseName}</p>
               <p>{user.courseSchool}</p>
               <p>{user.courseEndYear === 'Completo' ? user.courseEndYear : `Previsão de Conclusão: ${user.courseEndYear}`}</p>
             </div>
             {(user.courses !== 'NOT_PRINT') ?
-              <div className="content">
+              <div className="border border-dark m-2">
                 <h2>Formação Complementar</h2>
                 <p>{user.courses}</p>
               </div> : <></>}
             {(user.linkedln_link !== 'NOT_PRINT') ?
-              <div className="content">
+              <div className="border border-dark m-2">
                 <h2>Midias Sociais</h2>
                 <p> <a href={user.linkedln_link} target='_blank' rel="noreferrer" >{user.linkedln_link}</a></p>
               </div> : <></>}
             {(user.cientificResearch !== 'NOT_PRINT') ?
-              <div className="content">
+              <div className="border border-dark m-2">
                 <h2>Pesquisa Científica</h2>
                 <p> {user.cientificResearch}</p>
               </div> : <></>}
-            <div className="content">
+            <div className="border border-dark m-2">
               <h2>Feedback</h2>
               <p>{user.feedback}</p>
               <p>NOTA: {user.grade}</p>
             </div>
-            <div className="content">
-              <h2>Criado em</h2>
-              <p>{user.created_at}</p>
-            </div>
-          </Form></> : <ReactLoading type='bars' color="black" height={'5vh'} width={'10vh'} />}
+          </div></> : <ReactLoading type='bars' color="black" height={'5vh'} width={'10vh'} />}
       </header>
     </div>
   );

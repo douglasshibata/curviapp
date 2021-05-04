@@ -8,6 +8,7 @@ const options = {
     format: 'a4',
     floatPrecision: 'smart'
 };
+
 const Curvi4 = (props) => {
     const dados = props.user;
     // https://rawgit.com/MrRio/jsPDF/master/docs/jsPDF.html
@@ -28,28 +29,25 @@ const Curvi4 = (props) => {
                     <div className='row mt-2'>
                         <div className="col-6">
                             <div className="mt-2">
-                                <div className="text-center" style={{ paddingLeft: '15px', paddingTop: '5px', paddingBottom: '5px' }}>
+                                <div className="text-left" style={{ paddingLeft: '15px', paddingTop: '5px', paddingBottom: '5px' }}>
                                     <h5 className="font-weight-bold" style={{ color: "#3B3F3E" }}>Objetivo</h5>
                                 </div>
-                                <p className="container-fluid text-dark">
+                                <p className="text-justify text-dark">
                                     {dados.goal}
                                 </p>
                             </div>
                         </div>
                         <div className="col-6">
-
                             <div className="mt-2">
-                                <div className=" text-center">
+                                <div className=" text-left">
                                     <h5 className="font-weight-bold" style={{ color: "#3B3F3E" }}>Contato</h5>
                                 </div>
 
-                                <div className="text-dark">
+                                <div className="text-left text-dark">
                                     {dados.email}
                                     <br />
                                     {dados.address}
                                     <br />
-                                </div>
-                                <div className="text-dark">
                                     {dados.cellphone}
                                     <br />
                                     {dados.linkedln_link !== "NOT_PRINT" ? dados.linkedln_link : ''}
@@ -59,25 +57,25 @@ const Curvi4 = (props) => {
                         </div>
                     </div>
                     <hr color="#CEDFE4" />
-                    <div className="row">
+                    <div className="row text-justify">
                         <div className="col-2 mt-4">
                             <div className="container m-2 font-weight-bold" style={{ color: "#CEDFE4" }}>
-                                <span>
+                                <span className='pr-1'>
                                     {dados.courseEndYear}
                                 </span><br />
                             </div>
                         </div>
                         <div className="col-10">
                             <h5 className='font-weight-bold' style={{ color: "#3B3F3E" }}>Formação</h5>
-                            <span className='text-dark'>
+                            <div className='text-dark'>
                                 {dados.scholarity} - {dados.courseName}
                                 <br />
                                 {dados.courseSchool}
-                            </span><br />
+                            </div><br />
                         </div>
                     </div>
-                    {dados.companyOccupation !== "NOT_PRINT" && dados.companyOccupation ? <>
-                        <div className="row mt-4">
+                    {dados.companyOccupation !== "NOT_PRINT" && dados.companyOccupation && dados.companyName && dados.companyName !== 'NOT_PRINT'? <>
+                        <div className="row mt-2 text-justify">
                             <div className="col-2 mt-4">
                                 <div className="container m-2" style={{ color: "#CEDFE4" }}>
                                     <span className='font-weight-bold'>
@@ -110,9 +108,9 @@ const Curvi4 = (props) => {
                         </div>
                     </> : ''}
 
-                    {dados.language !== 'NOT_PRINT' ?
-                        <div className="row">
-                            <div className="col-2 mt-4">
+                    {dados.language !== 'NOT_PRINT' && dados.language ?
+                        <div className="row text-justify">
+                            <div className="col-2 mt-2">
                                 <div className="container m-2">
                                     <span>
 
@@ -131,8 +129,8 @@ const Curvi4 = (props) => {
 
 
                     {dados.companyDescriptionVolunteer !== 'NOT_PRINT' ?
-                        <div className="row">
-                            <div className="col-2 mt-4">
+                        <div className="row text-justify">
+                            <div className="col-2 mt-2">
                                 <div className="container m-2">
                                     <br />
                                 </div>
@@ -157,14 +155,14 @@ const Curvi4 = (props) => {
 
 
                     {dados.courses !== 'NOT_PRINT' && dados.courses ?
-                        <div className="row">
-                            <div className="col-2 mt-4">
+                        <div className="row text-justify">
+                            <div className="col-2 mt-2">
                                 <div className="container m-2">
                                     <br />
                                 </div>
                             </div>
                             <div className="col-10 mt-2">
-                                <h5 style={{ color: "#3B3F3E" }}>Cursos</h5>
+                                <h5 className='font-weight-bold' style={{ color: "#3B3F3E" }}>Cursos</h5>
                                 <span className='text-dark'>
                                     {dados.courses}
                                 </span><br />
