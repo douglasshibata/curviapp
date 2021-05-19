@@ -36,7 +36,7 @@ function Curvi1(props) {
             <div className="row mt-3">
               <div className="col-6 mt-5 text-left">
                 <h5 className="font-weight-bold" style={{ color: '#6E7C8E' }}>CONTATO</h5>
-                <div className="text-dark">
+                <div className="text-dark container">
                   {dados.cellphone}
                   <br />
                   {dados.email}
